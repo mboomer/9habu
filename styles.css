@@ -1,0 +1,510 @@
+/*
+font-family: 'Oswald', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+
+/* ****************************** DEFAULT RULES ****************************************** */
+* {
+    margin: 0;                              /* remove all preset margins */
+    padding: 0;                             /* removes all prest padding */
+    box-sizing: border-box;                 /* padding & border are subtractive */
+}
+html {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: #555;                            /* this is a grey */
+}
+a{
+    color: white;                           /* anchor tags need their own color rule */
+}    
+ul{
+    list-style: none;                       /* remove decoration from tags */
+}
+/* **************************************************************************************** */
+
+
+/* **************************************************************************************** */
+/*                                        NAVIGATION MENU                                   */
+/* **************************************************************************************** */
+header{
+    background-color: rgba(0,0,0,0.7); 
+    color: #fff;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    padding: 10px 10px;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+    opacity: 0.6;
+    cursor: pointer;
+}
+header a:hover {
+    opacity: 1;
+}
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;              /* align the text to right side (end) of the box */
+    font-size: 14px;
+}
+header nav li {
+    margin: 0 6px;
+}
+header nav li:first-child {                 /* set the first menu item (child) to the left side of the menu */
+    margin-left: 0;
+}
+header nav li:last-child {
+    margin-right: 0;                        /* set the last menu item (child) to the right side of the menu */
+}
+/* ************************************************************************************************* */
+@media(max-width: 800px){                  
+    header {
+        text-align: center;
+        flex-direction: column;
+        padding: 5px 0px;
+    }
+    header img {
+        width: 70%;
+    }
+    header nav {
+        justify-content: center;
+    }
+    header nav ul {
+        flex-direction: column;             /* wrap the menu items on to multiple lines */
+    }
+    header nav ul li {
+        margin: 0px;
+        padding: 5px;
+        font-size: 12px;
+    }
+    h2 {
+        margin-bottom: 0px;
+    }
+    .the-missing {
+        padding-top: 120px;
+    }
+}
+/* ************************************************************************************************* */
+/* ************************************************************************************************* */
+
+
+/* ************************************************************************************************* */
+/* ******************************   MAIN BODY SECTION     ****************************************** */
+/* ************************************************************************************************* */
+body {
+    padding-top: 100px;
+    background-color: white;
+}
+body ul {
+    padding: 5px 5px;                       /* adjust padding above and below the <ul> */
+    display: flex;                          /* display child items of parent element, ie the ul, into a row */
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+body ul li {
+    text-align: center;
+}
+
+/* ****************************** MISSING PERSONS ****************************************** */
+.the-missing {
+    background-color: white;
+}
+.missing-person h3 {
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+.missing-person p {
+    font-size: 12px;
+    padding-bottom: 5px;
+}
+/* ****************************** MAIN TEXT AREA ****************************************** */
+#main-text-area {
+    display: flex;                          /* display the main text and info panel side by side */
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px;
+}
+#main-text-area a {
+    color: deepskyblue;                     /* default for anchor tags is white, change this in the main text */
+}    
+.main-text {
+    padding: 5px;
+    font-size: 14px;
+    width: 79%;
+}
+.main-text-wide {                           /* use the full width as there is no information side bar */
+    width: 100%;
+}
+.main-text-wide ul {
+    display: block;                         /* this is to make sure the line items display vertically */
+    list-style: inside;                     /* make sure the item decoration is inside the list       */
+    font-size: 14px;
+    margin: 0px 0px 0px 10px;
+}
+.main-text-wide ul li {
+    text-align: left;                       /* this is to make sure the line items display vertically */
+}    
+.main-text-wide ol {
+    display: block;                         /* this is to make sure the line items display vertically */
+    list-style: inside;                     /* make sure the item decoration is inside the list       */
+    font-size: 14px;
+    margin-left: 10px;
+    text-align: left;
+}
+.main-text-wide ol li {
+    text-align: left;                       /* this is to make sure the line items display vertically */
+}    
+.main-text p {
+    padding: 10px;
+}
+.header-blue {
+    width: 100%;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: lightblue;
+    color: black;
+    display: block;
+    padding: 1px;
+    border: 1px solid grey;
+  }
+.side-bar {
+    width: 20%;
+    border: 2px solid lightgrey;
+    margin-right: 5px;
+    padding: 5px;
+    font-size: 14px;    
+}
+.side-bar-header-blue {
+    width: 100%;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: rgba(0,0,0,0.3);
+    color: black;
+    display: block;
+    padding: 1px;
+    border: 1px solid black;
+  }
+.side-bar p {
+    padding: 5px;
+}
+#main-text-area .side-bar p a {   /* need to specify this way to overwrite the setting from the #main-text-area rule */
+    display:inline-block;
+    background: #3498db;
+    border-radius: 50px;
+    color: white;
+    font-size: 15px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    margin-top: 2%;
+}
+#main-text-area .side-bar p a:hover {
+    background: cadetblue;
+    color: black;
+}
+.center-link{
+    text-align: center;
+}
+.side-bar span {
+    text-align: center;
+}
+#main-text-area .petition-para {          /* this is to center the on-line petition in the paragraph tag */
+    text-align: center;
+}
+#main-text-area .petition-link {                 /* set the link to the on-line petitio look like a box */
+    display:inline-block;
+    background: #3498df;
+    color: white;
+    font-size: 15px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    margin-top: 1%;
+}
+/* ************************************************************************************************* */
+/* *************************** ARTICLE RULES ******************************************************* */
+/* ************************************************************************************************* */
+.letter-head p {                                    
+    text-align: right;                      /* used to right align text to indicate a letter head */
+}
+.table-layout th {                          /* format the header row of the table                 */
+    text-align: left;
+    padding: 0px 10px 0px 10px;
+    background-color: lightgrey;
+}
+.table-layout td {                          /* format the cells of the table                      */
+    padding: 0px 10px 0px 10px;
+    text-align: left;
+}
+.article-image-r img {                      /* float the image displayed in article to the right*/
+    border-width: 1px;
+     border-color: black;
+     border-style: solid;
+     margin: 5px;
+     float: right;
+}
+.article-image-l img {                      /* float the image displayed in article to the left */
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    margin: 5px;
+    float: left;
+}
+.article-image-r-noborder img {               /* float the image with no border displayed in article to the right*/
+    margin: 5px;
+    float: right;
+}
+.article-image-l-noborder img {               /* float the image with no border displayed in article to the left */
+    margin: 5px;
+    float: left;
+}
+/* ************************************************************************************************* */
+@media(max-width: 800px) {                  /* sets behaviour when screen is 800px or less */
+    body ul {
+        padding: 5px 5px;                   /* adjust padding above and below the <ul> */
+        display: flex;                      /* display child items of parent element, ie the ul, into a row */
+        flex-direction: column;
+    }
+    body ul li {
+        padding: 15px 15px;                 /* spread the line items out vertically */
+    }
+    .header-blue {
+        font-size: 14px;                    /* reduce size of header text           */
+      }
+    #main-text-area {
+        flex-direction: column-reverse;     /* for the search page change to a column format and display search above results */
+    }
+
+    #main-text-area .article-ul {
+        display: block;                     /* this is to make sure the line items display with extra padding */
+        list-style: inside;                 /* make sure the item decoration is inside the list               */
+        margin: 0px 0px 0px 0px;
+    }
+    #main-text-area .article-li {
+        text-align: left;                      
+        font-size: 12px;
+        margin: 0px 0px 0px 5px;
+        padding: 0px;
+    }    
+    #main-text-area .article-ol {
+        display: block;                        
+        list-style: inside;                    
+        font-size: 12px;
+        margin-left: 15px;
+        padding: 0px;
+        text-align: left;
+    }
+    #main-text-area .article-ol-li {
+        text-align: left;                       /* this is to make sure the line items display vertically */
+    }
+    
+    .main-text {
+        font-size: 12px;                    /* reduce size of text                  */
+        border: 2px solid black;
+        padding: 5px;
+        font-size: 14px;
+        width: 100%;                        /* fill the space available             */
+    }
+    .main-text img {                        
+        max-width: 300px;                   /* set max width of image for mobile    */
+        align-content: center;              /* center image                         */
+    }
+    .main-text jwplayer {
+        width: auto;
+    }
+    .side-bar {
+        width: 100%;                        /* fill the space available             */
+        border: 2px solid black;
+        margin-right: 5px;
+        padding: 5px;
+        font-size: 12px;    
+    }
+    table h3 {                              /* adjust the images displayed in tables      */
+        font-size: 12px;
+        padding: 0px;
+        margin: 0px;
+    }
+    table ul {
+        line-height: normal;
+        padding: 0px;
+        margin: 0px;
+    }
+    table ul li {
+        list-style: none;
+        font-size: 12px;
+    }
+    table tr td img {
+        max-width: 35vh;
+    }
+}
+/* ************************************************************************************************* */
+/* ************************************************************************************************* */
+            
+/* ************************************************************************************************* */
+/* ************* LATEST-POPULAR-COMING SOON-LINKS SECTION ****************************************** */
+/* ************************************************************************************************* */
+
+#latest-popular-soon {
+    display: flex;                          /* display the main text and info panel side by side */
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 5px;
+    border: solid 2px lightgrey;
+}
+#latest-popular-soon p {
+    font-weight: 600;                          /* display the main text and info panel side by side */
+    margin: 5px;
+}
+.article-lists ul {
+    display: block;                         /* this is to make sure the line items display vertically */
+    list-style: inside;                     /* make sure the item decoration is inside the list       */
+    font-size: 12px;
+}
+.article-lists ul li {
+    text-align: left;                       /* this is to make sure the line items display vertically */
+}    
+.article-lists ul li a{
+    color: purple;                          /* default for anchor tags is white, change this in the main text */
+}    
+/* ************************************************************************************************* */
+@media(max-width: 800px) {                  /* sets behaviour when screen is 800px or less */
+    #latest-popular-soon {
+        flex-direction: column;             /* display the main text and info panel side by side */
+        justify-content: space-around;
+    }
+    #latest-popular-soon p {
+        font-size: 12px;                    /* reduce text size and margins                          */
+        margin: 2px;
+    }
+    .article-lists ul {
+        margin: 0px;
+        font-size: 12px;
+    }
+    .article-lists ul li {
+        display: list-item;
+        text-align: left;                       /* this is to make sure the line items display vertically */
+        padding: 5px;
+    }    
+}
+
+/* ************************************************************************************************* */
+/* ************************************************************************************************* */
+
+
+/* ************************************************************************************************* */
+/* *************************************** FOOTER SECTION ****************************************** */
+/* ************************************************************************************************* */
+
+footer{
+    background-color: #131622;
+    color: white;
+    text-align: center;
+    background: linear-gradient(to bottom, #284e7a, #000 100%); 
+    padding: 10px 0;                    /* 10px top and bottom and opx left and right */
+
+    display: flex;                      /* flex box - sets children of parent element, ie the footer, into a column */
+    flex-direction: column;
+    align-items: center;
+}  
+footer p {
+    text-transform: uppercase;          /* change text in para tags to uppercase */
+    font-size: 14px;
+    color: rgba(255,255,255,.6);        /* add a transparent overlay of white - 0.6 = 60% opacity */
+    margin-bottom: 10px;
+}
+footer ul {
+    margin-bottom: 25px;
+    display: flex;                      /* display child items of parent element, ie the ul, into a row */
+    flex-direction: row;
+}
+footer ul li {
+    margin: 0 10px;                     /* spreads out the line items containing the social media icons */
+}
+footer ul li a{
+    font-size: 36px;                    /* makes the icons bigger and ensure the cursor is always the pointer */
+    cursor: pointer;
+}
+/* **************************************************************************************** */
+@media(max-width: 800px) {              /* sets behaviour when screen is 800px or less */
+    footer{
+        padding: 5px 5px;
+    }
+}
+            
+/* **************************************************************************************** */
+/* **************************************************************************************** */
+
+/* ************************************************************************************************* */
+/* ***************************************  CONTACT FORM  ****************************************** */
+/* ************************************************************************************************* */
+#formcontainer {
+    font-family: 'Arial', sans-serif;
+    background-color: aliceblue;
+    margin: 10px;
+    width: 100%;
+}
+#formwrapper fieldset {
+    background-color: aliceblue;
+    max-width: 900px;
+    min-height: 100px;
+    border-radius: 5px;
+    padding: 2%;
+    margin: 0 auto 10px;    
+}
+#formwrapper {
+    display: flex;
+    flex-direction: row;
+}
+#left-col {                             /* the colums will be split across the screen */
+    width: 50%;
+    padding: 1%;
+}
+#left-col fieldset p {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;        /* line fields up to left */
+    flex-wrap: wrap;                    /* wrap fields when appropriate */
+ }
+#left-col input {                       /* this ensures the inut fields are centered and dont take up full width */
+    width:95%;
+    padding: 5px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+#right-col {
+    width: 50%;
+    padding: 1%;
+}
+#right-col fieldset p {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;      /* makes sure items are evenly spaced */
+}
+/* **************************************************************************************** */
+@media(max-width: 800px) {              /* sets behaviour when screen is 800px or less */
+    #formcontainer {
+        margin: 5px;
+        width: 98%;
+    }
+    #formwrapper {
+        flex-direction: column;         /* dispaly teh sections vertically */
+        padding-top: 10px;
+    }
+    #left-col, #right-col {                 /* the colums will sprewad across the screen */
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* ************************************************************************************************* */
+/* ************************************************************************************************* */
