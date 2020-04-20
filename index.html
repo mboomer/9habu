@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-      <meta charset="UTF-8" >
-      <title>The Mysterious Disappearance Of Flight 9habu</title>
+    <head>
+        <meta charset="UTF-8" >
+        <title>The Mysterious Disappearance Of Flight 9habu</title>
     
-      <meta name="viewport" content="width=device-width initial-scale=1"> <!-- sets initial scale to 100% -->
+        <meta name="viewport" content="width=device-width initial-scale=1"> <!-- sets initial scale to 100% -->
       
-      <link rel="shortcut icon" type="image/ico" href="img/icons/favicon.ico">
-      <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" type="image/ico" href="img/icons/favicon.ico">
+        <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway&display=swap" rel="stylesheet">
 
-      <script src="https://kit.fontawesome.com/130d5316ba.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/130d5316ba.js" crossorigin="anonymous"></script>
                                                                                             
-      <meta name="description" content="Desmond Boomer, a Belfast engineer working in the Libyan oil-fields, disappeared in December 1995.
-     Officially the plane on which he was a passenger, crashed as a result of mechanical failure and pilot error.
-     His travelling companions were an English engineer Michael Williams (49), a Polish national Tadeus Gorny (48) and
-     Maltese nationals Philip Farrugia (43) and Matthew Aquilina (22). The pilot, Carmelo Bartolo (47) was also Maltese." >
+        <meta name="description" content="Desmond Boomer, a Belfast engineer working in the Libyan oil-fields, disappeared in December 1995. Officially the plane on which he was a passenger, crashed as a result of mechanical failure and pilot error. His travelling companions were an English engineer Michael Williams (49), a Polish national Tadeus Gorny (48) and Maltese nationals Philip Farrugia (43) and Matthew Aquilina (22). The pilot, Carmelo Bartolo (47) was also Maltese.">
 
-    <!-- this is a downloaded google font  Use font-family: 'Cinzel', serif; in CSS-->
-    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+        <!-- this is a downloaded google font  Use font-family: 'Cinzel', serif; in CSS-->
+        <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
   
-    <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles.css">
     
-    <style>
-    </style>  
-      
+        <!-- **************************************************************************** -->
+        <!-- Load the VUE.js libraries to access Vue functionality                                    -->
+        <!-- **************************************************************************** -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+        <script src="main.js"></script>
     </head>
 
 <!-- ******************************************************************************************* -->
@@ -52,43 +51,11 @@
         <!-- **************************************************************************** -->
         <!-- section holding the images of the missing passengers                         -->
         <!-- **************************************************************************** -->
-        <ul class="the-missing">
+        <ul id="missing-passengers" class="the-missing" >
 
-            <li class="missing-person">
-                <h3>Desmond Boomer</h3>
-                <p><img src="img/desmondboomer-120p.jpg" /></p>
-                <p>38 year old Belfast born, engineer working in the Libyan oil fields</p>
-            </li>
-
-            <li class="missing-person">
-                <h3>Michael Williams</h3>
-                <p><img src="img/michaelwilliams-120p.jpg"/></p>
-                <p>49 year old English born engineer & manager of rock band "The Characters"</p>
-            </li>
-
-            <li class="missing-person">
-                <h3>Matthew Aquilina</h3>
-                <p><img src="img/matthewaquilina-120p.jpg" /></p>
-                <p>Matthew was a 22 year old Maltese national returning to Malta</p>
-            </li>
-        
-            <li class="missing-person">
-                <h3>Tadeus Gorny</h3>
-                <p><img src="img/tadeusgorny-120p.jpg" /></p>
-                <p>A 48 year Polish national working in the Libyan oil fields</p>
-            </li>
-
-            <li class="missing-person">
-                <h3>Philip Farrugia</h3>
-                <p><img src="img/philipfarrugia-120p.jpg" /></p>
-                <p>A 43 year old Maltese national returning to Malta</p>
-            </li>
-
-            <li class="missing-person">
-                <h3>Carmel Bartolo</h3>
-                <p><img src="img/carmelbartolo-120p.jpg" /></p>
-                <p>A 47 year Maltese national and the pilot of flight 9H-ABU</p>
-            </li>
+            <missing-person 
+                v-for="(missingperson, index) in passengers" v-bind:passenger="missingperson" :key="index">         
+            </missing-person>                              
             
         </ul> <!-- end of "the-missing" -->
     
@@ -102,7 +69,7 @@
 
             <span class="header-blue">The mysterious disappearance of flight 9habu</span>
 
-              <p>Desmond Boomer, a Belfast engineer working in the Libyan oil-fields, disappeared in December 1995. Officially the plane on which he was a passenger, crashed as a result of mechanical failure and pilot error. His travelling companions were an English engineer Michael Williams (49), a Polish national Tadeus Gorny (48) and Maltese nationals Philip Farrugia (43) and Matthew Aquilina (22).The pilot, Carmelo Bartolo (47) was also Maltese.</br></br>But is that the real story or did Desmond and his fellow passengers become unwitting victims of the shady war between Islamic fundamentalism and Mossad, Israel's intelligence network?</p>
+                <p>Desmond Boomer, a Belfast engineer working in the Libyan oil-fields, disappeared in December 1995. Officially the plane on which he was a passenger, crashed as a result of mechanical failure and pilot error. His travelling companions were an English engineer Michael Williams (49), a Polish national Tadeus Gorny (48) and Maltese nationals Philip Farrugia (43) and Matthew Aquilina (22).The pilot, Carmelo Bartolo (47) was also Maltese.</br></br>But is that the real story or did Desmond and his fellow passengers become unwitting victims of the shady war between Islamic fundamentalism and Mossad, Israel's intelligence network</p>
 
               <span class="header-blue">Family Connections</span>
 
@@ -197,5 +164,12 @@
         <p>&copy; <script>document.write(new Date().getFullYear());</script> The Mysterious Disappearance Of Flight 9H-ABU</p>
         <p>&ldquo;All Rights Reserved&mdash;Designed by Mark Boomer&rdquo; </p>
         </footer>
+
+        <!-- **************************************************************************** -->
+        <!-- Load the VUE.js libraries to access Vue functionality                                    -->
+        <!-- **************************************************************************** -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+        <script src="main.js"></script>
+
     </body>
 </html>

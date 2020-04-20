@@ -1,3 +1,69 @@
+// need to add the id so we can attach the vue instance missingPassengers
+
+<!-- **************************************************************************** -->
+<!-- section holding the images of the missing passengers                         -->
+<!-- **************************************************************************** -->
+    <ul id="missing-passengers" class="the-missing">
+
+        <missing-person 
+            v-for='missingperson in passengers'         // for each object in the data available from the vue  
+            v-bind:=passenger='missingperson'>          // bind the object to the prop in the component
+        </missing-person>                               // thereby creating a list of missing person objects
+
+    </ul>
+        
+<script>
+
+// this is the missing-person VUE componment that we bind to the VUE Instance 
+Vue.component(‘missing-person’, {
+    props: [
+            type: Array,
+            name: ‘passenger’
+        ],
+    template: `<li class="missing-person">
+                    <h3>{{ persons-name }}</h3>
+                    <p><img src="img/{{ persons-image }}" /></p>
+                    <p>{{ persons-desc }}</p>
+               </li>`
+})
+// this the vue instance that is attached to the UL html element and this contains the data for each person
+var missingPassengers = new Vue({
+    el: ‘#missing-passengers’,
+    data: {
+        passengers: [
+                    {   persons-name:  "Desmond Boomer", 
+                        persons-image: "desmondboomer-120p.jpg", 
+                        persons-desc:  "Desmond was a 38 year old Belfast born, engineer working in the Libyan oil fields" 
+                    },
+                    {   persons-name: "Michael Williams", 
+                        persons-image: "michaelwilliams-120p.jpg", 
+                        persons-desc:  "Michael was a 49 year old English born engineer & manager of rock band 'The Characters'" 
+                    },
+                    {   persons-name: "Matthew Aquilina", 
+                        persons-image: "matthewaquilina-120p.jpg", 
+                        persons-desc:  "Matthew was a 22 year old Maltese national returning to Malta" 
+                    },
+                    {   persons-name: "Tadeus Gorny", 
+                        persons-image: "tadeusgorny-120p.jpg", 
+                        persons-desc:  "Tadeus was a 48 year Polish national working in the Libyan oil fields" 
+                    },
+                    {   persons-name: "Philip Farrugia", 
+                        persons-image: "philipfaruggia-120p.jpg", 
+                        persons-desc:  "Philp was a 43 year old Maltese national returning to Malta" 
+                    },
+                    {   persons-name: "Carmel Bartolo", 
+                        persons-image: "carmelbartolo-120p.jpg", 
+                        persons-desc:  "Carmel was a 47 year Maltese national and the pilot of flight 9H-ABU" 
+                    }
+                ]
+        }
+})
+        
+</script>
+
+
+
+
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfPTfsJcxsKAMXMlmqgmLh0hgb2xXHaJnDb8tqXJRiAjS8qOQ/viewform?embedded=true" width="640" height="859" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
 
