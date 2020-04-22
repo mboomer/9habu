@@ -14,6 +14,11 @@ html {
     font-size: 16px;
     color: #555;                            /* this is a grey */
 }
+#body-top {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: #555;                            /* this is a grey */
+}
 a{
     color: white;                           /* anchor tags need their own color rule */
 }    
@@ -26,7 +31,7 @@ ul{
 /* **************************************************************************************** */
 /*                                        NAVIGATION MENU                                   */
 /* **************************************************************************************** */
-header{
+#header-menu {
     background-color: rgba(0,0,0,0.7); 
     color: #fff;
 
@@ -43,52 +48,52 @@ header{
     align-items: center;
 }
 
-header a{
+#header-menu a{
     text-decoration: none;
     color: white;
     opacity: 0.6;
     cursor: pointer;
 }
-header a:hover {
+#header-menu a:hover {
     opacity: 1;
 }
-header nav ul {
+#header-menu nav ul {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;              /* align the text to right side (end) of the box */
     font-size: 14px;
 }
-header nav li {
+#header-menu nav li {
     margin: 0 6px;
 }
-header nav li:first-child {                 /* set the first menu item (child) to the left side of the menu */
+#header-menu nav li:first-child {                 /* set the first menu item (child) to the left side of the menu */
     margin-left: 0;
 }
-header nav li:last-child {
+#header-menu nav li:last-child {
     margin-right: 0;                        /* set the last menu item (child) to the right side of the menu */
 }
 /* ************************************************************************************************* */
 @media(max-width: 800px){                  
-    header {
+    #header-menu {
         text-align: center;
         flex-direction: column;
         padding: 5px 0px;
     }
-    header img {
+    #header-menu img {
         width: 70%;
     }
-    header nav {
+    #header-menu nav {
         justify-content: center;
     }
-    header nav ul {
+    #header-menu nav ul {
         flex-direction: column;             /* wrap the menu items on to multiple lines */
     }
-    header nav ul li {
+    #header-menu nav ul li {
         margin: 0px;
         padding: 5px;
         font-size: 12px;
     }
-    h2 {
+    #header-menu h2 {
         margin-bottom: 0px;
     }
     .the-missing {
@@ -102,17 +107,17 @@ header nav li:last-child {
 /* ************************************************************************************************* */
 /* ******************************   MAIN BODY SECTION     ****************************************** */
 /* ************************************************************************************************* */
-body {
+#body-top {
     padding-top: 100px;
     background-color: white;
 }
-body ul {
+#body-top ul {
     padding: 5px 5px;                       /* adjust padding above and below the <ul> */
     display: flex;                          /* display child items of parent element, ie the ul, into a row */
     flex-direction: row;
     margin-bottom: 20px;
 }
-body ul li {
+#body-top ul li {
     text-align: center;
 }
 
@@ -167,6 +172,7 @@ body ul li {
 }    
 .main-text p {
     padding: 10px;
+    margin-bottom: 0px;
 }
 .header-blue {
     width: 100%;
@@ -267,14 +273,24 @@ body ul li {
     margin: 5px;
     float: left;
 }
+#wreckageCarousel {
+    width: 50%;
+    margin: auto;
+    border: 2px solid black;
+}
+.wreckageCarousel > img {
+    margin: 0 auto;
+    display:inline-block;
+}
+
 /* ************************************************************************************************* */
 @media(max-width: 800px) {                  /* sets behaviour when screen is 800px or less */
-    body ul {
+    #body-top ul {
         padding: 5px 5px;                   /* adjust padding above and below the <ul> */
         display: flex;                      /* display child items of parent element, ie the ul, into a row */
         flex-direction: column;
     }
-    body ul li {
+    #body-top ul li {
         padding: 15px 15px;                 /* spread the line items out vertically */
     }
     .header-blue {
@@ -423,8 +439,8 @@ footer p {
 }
 footer ul {
     margin-bottom: 25px;
-    display: flex;                      /* display child items of parent element, ie the ul, into a row */
     flex-direction: row;
+    display: flex;               /* display child items of parent element, ie the ul, into a row */
 }
 footer ul li {
     margin: 0 10px;                     /* spreads out the line items containing the social media icons */
