@@ -1,3 +1,23 @@
+        <!-- **************************************************************************** -->
+        <!-- Load the VUE.js libraries to access Vue functionality                                    -->
+        <!-- **************************************************************************** -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+        <script src="main.js"></script>
+
+
+        <!-- **************************************************************************** -->
+        <!-- section holding the images of the missing passengers                         -->
+        <!-- **************************************************************************** -->
+        <ul id="missing-passengers" class="the-missing" >
+
+            <missing-person 
+                v-for="(missingperson, index) in passengers" v-bind:passenger="missingperson" :key="index">         
+            </missing-person>                              
+            
+        </ul> <!-- end of "the-missing" -->
+        <!-- **************************************************************************** -->
+    
+
                 <!-- **************************************************************************** -->
                 <!-- Bootstrap carousel code                                                      -->
                 <!-- **************************************************************************** -->
