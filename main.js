@@ -31,7 +31,7 @@ Vue.component("latest", {
                        required: true
                     }
     },
-    template: '<li><a href="{{ latestarticle.latestlocation }}{{ latestarticle.latestname }}">{{ latestarticle.latesttitle }}</a></li>'
+    template: '<li><a :href="latestarticle.latestlocation">{{ latestarticle.latesttitle }}</a></li>'
 })
 //<!-- ********************************************************************************************* -->
 //<!-- this is the most read articles VUE componment that we bind to the latPopMostComOth VUE Instance  -->
@@ -43,7 +43,7 @@ Vue.component("most-read", {
                        required: true
                     }
     },
-    template: '<li><a href="{{ mostreadarticle.articlelocation }}{{ mostreadarticle.articlename }}">{{ mostreadarticle.articletitle }}</a></li>'
+    template: '<li><a :href="mostreadarticle.mostreadlocation">{{ mostreadarticle.mostreadtitle }}</a></li>'
 })
 //<!-- ********************************************************************************************* -->
 //<!-- this is the coming soon articles VUE componment that we bind to the latPopMostComOth VUE Instance  -->
@@ -51,11 +51,11 @@ Vue.component("most-read", {
 Vue.component("coming-soon", {
     props: {
         comingsoonarticle: {
-                       type: Array,
+                       type: Object,
                        required: true
                     }
     },
-    template: '<li>{{ comingsoonarticle.article }}</li>'
+    template: '<li>{{ comingsoonarticle.comingsoonname }}</li>'
 })
 //<!-- ********************************************************************************************* -->
 //<!-- this is the related sites VUE componment that we bind to the latPopMostComOth VUE Instance  -->
@@ -63,11 +63,11 @@ Vue.component("coming-soon", {
 Vue.component("related-sites", {
     props: {
         sitelist: {
-                    type: Array,
+                    type: Object,
                     required: true
                   }
     },
-    template: '<li><a href="{{ sitelist.siteurl }}">{{ sitelist.sitetitle }}</a></li>'
+    template: '<li><a :href="sitelist.siteurl">{{ sitelist.sitetitle }}</a></li>'
 })
 
 //<!-- ************************************************************************************************ -->
@@ -116,39 +116,44 @@ var latMosComRel = new Vue ({
         latestArticles: [
                             {   latestname     : "freedom-of-info-request-15112015.html",
                                 latesttitle    : "Freedom Of Information Request AAIB",
-                                latestlocation : "articles/"
+                                latestlocation : "articles/freedom-of-info-request-15112015.html"
                             },
                             {   latestname     : "freedom-of-info-response-14122015.html",
                                 latesttitle    : "FOI Response from AAIB",
-                                latestlocation : "articles/"
+                                latestlocation : "articles/freedom-of-info-response-14122015.html"
                             },
                             {   latestname     : "tv-documentary-first-shown-on-malta-television-26112011.html",
                                 latesttitle    : "Updated Video Player for Malta TV Documentary",
-                                latestlocation : "articles/"
+                                latestlocation : "articles/tv-documentary-first-shown-on-malta-television-26112011.html"
                             }
                         ],
         mostReadArticlesTitle: "Most Read",
         mostReadArticles: [
-                            {   articlename     : "banbridge-chronicle-30112011.html",
-                                articletitle    : "QUEST FOR TRUTH, Banbridge Chronicle",
-                                articlelocation : "articles/"
+                            {   mostreadname     : "banbridge-chronicle-30112011.html",
+                                mostreadtitle    : "QUEST FOR TRUTH, Banbridge Chronicle",
+                                mostreadlocation : "articles/banbridge-chronicle-30112011.html"
                             },
-                            {   articlename     : "death-in-the-mediterranean.html",
-                                articletitle    : "An Investigation By Don Mullan",
-                                articlelocation : "./"
+                            {   mostreadname     : "death-in-the-mediterranean.html",
+                                mostreadtitle    : "An Investigation By Don Mullan",
+                                mostreadlocation : "./death-in-the-mediterranean.html"
                             },
-                            {   articlename     : "maltese-board-of-inquiry-report.html",
-                                articletitle    : "Maltese Board of Inquiry Report",
-                                articlelocation : "./"
+                            {   mostreadname     : "maltese-board-of-inquiry-report.html",
+                                mostreadtitle    : "Maltese Board of Inquiry Report",
+                                mostreadlocation : "./maltese-board-of-inquiry-report.html"
                             },
-                            {   articlename  : "malta-tv-documentary.html",
-                                articletitle : "Malta TV Documentary",
-                                articlelocation : "./"
+                            {   mostreadname     : "malta-tv-documentary.html",
+                                mostreadtitle    : "Malta TV Documentary",
+                                mostreadlocation : "./malta-tv-documentary.html"
                             }
                         ],
         comingSoonArticlesTitle: "Coming Soon",
-        comingSoonArticles: [   "Updated responsive website suitable for mobile and tablets",
-                                "Improved Document Archive Search"
+        comingSoonArticles: [ 
+                                {   
+                                    comingsoonname   : "Updated responsive website suitable for mobile and tablets"
+                                },
+                                {   
+                                    comingsoonname   : "Improved Document Archive Search"
+                                }
                             ],
         relatedSitesTitle: "Related Web Sites",
         relatedSites: [

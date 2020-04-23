@@ -387,6 +387,12 @@ Vue.component("passener-details", {
                 <p>{{ passenger.personsDesc }}</p>
             </li>
             `
+<li class="missing-person">
+                <h3>{{ passenger.personsName }}</h3>
+                <p><img :src="passenger.personsImage" /></p>
+                <p>{{ passenger.personsDesc }}</p>
+            </li>
+            
 })
 
 //<!-- ********************************************************************************************* -->

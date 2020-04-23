@@ -387,15 +387,15 @@ ul{
     font-weight: 600;                          /* display the main text and info panel side by side */
     margin: 5px;
 }
-.article-lists ul {
+#body-top .article-lists ul {
     display: block;                         /* this is to make sure the line items display vertically */
     list-style: inside;                     /* make sure the item decoration is inside the list       */
     font-size: 12px;
 }
-.article-lists ul li {
+#body-top .article-lists ul li {
     text-align: left;                       /* this is to make sure the line items display vertically */
 }    
-.article-lists ul li a{
+#body-top .article-lists ul li a {
     color: purple;                          /* default for anchor tags is white, change this in the main text */
 }    
 /* ************************************************************************************************* */
@@ -408,11 +408,11 @@ ul{
         font-size: 12px;                    /* reduce text size and margins                          */
         margin: 2px;
     }
-    .article-lists ul {
+    #body-top .article-lists ul {
         margin: 0px;
         font-size: 12px;
     }
-    .article-lists ul li {
+    #body-top .article-lists ul li {
         display: list-item;
         text-align: left;                       /* this is to make sure the line items display vertically */
         padding: 5px;

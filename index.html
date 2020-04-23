@@ -113,7 +113,7 @@
                 <ul>
                     <latest 
                         v-for="(article, index) in latestArticles"                 
-                        v-bind:article="latestarticle"                           
+                        v-bind:latestarticle="article"                           
                         :key="index">                                            
                     </latest>                                                   
                 </ul>
@@ -124,7 +124,7 @@
                 <ul>
                     <most-read 
                         v-for="(article, index) in mostReadArticles"                 
-                        v-bind:article="mostreadarticle"                           
+                        v-bind:mostreadarticle="article"                           
                         :key="index">                                            
                     </most-read>                                        
                 </ul>
@@ -135,7 +135,7 @@
                 <ul>
                     <coming-soon 
                         v-for="(article, index) in comingSoonArticles"                 
-                        v-bind:article="comingsoonarticle"                           
+                        v-bind:comingsoonarticle="article"                           
                         :key="index">                                            
                     </coming-soon>                                      
                 </ul>
@@ -146,7 +146,7 @@
                 <ul>
                     <related-sites 
                         v-for="(site, index) in relatedSites"                 
-                        v-bind:site="sitelist"                           
+                        v-bind:sitelist="site"                           
                         :key="index">                                            
                     </related-sites>         
                 </ul>
