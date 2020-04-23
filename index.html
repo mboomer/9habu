@@ -18,12 +18,6 @@
   
         <link rel="stylesheet" href="styles.css">
     
-        <!-- **************************************************************************** -->
-        <!-- Load the VUE.js libraries to access Vue functionality                                    -->
-        <!-- **************************************************************************** -->
-        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
-        <script src="main.js"></script>
-
     </head>
 
 <!-- ******************************************************************************************* -->
@@ -54,9 +48,9 @@
         <!-- **************************************************************************** -->
         <ul id="missing-passengers" class="the-missing" >
 
-            <missing-person 
+            <passenger-details 
                 v-for="(missingperson, index) in passengers" v-bind:passenger="missingperson" :key="index">         
-            </missing-person>                              
+            </passenger-details>                              
             
         </ul> <!-- end of "the-missing" -->
     
@@ -117,10 +111,11 @@
               <div class="article-lists">
                 <p>{{ latestArticlesTitle }}...</p>
                 <ul>
-                    <latest-popular-soon 
-                        v-for='article in articleList'                  // for each object in the data available from the vue  
-                        v-bind:=articleList='latestArticles'>           // bind the object to the prop in the component
-                    </latest-popular-soon>                              // thereby creating a list of latest articles
+                    <latest 
+                        v-for="(article, index) in latestArticles"                 
+                        v-bind:article="latestarticle"                           
+                        :key="index">                                            
+                    </latest>                                                   
                 </ul>
               </div>
 
@@ -128,9 +123,10 @@
                 <p>{{ mostReadArticlesTitle }}...</p>
                 <ul>
                     <most-read 
-                        v-for='article in articleList'                  // for each object in the data available from the vue  
-                        v-bind:=articleList='mostReadArticles'>           // bind the object to the prop in the component
-                    </most-read>                                        // thereby creating a list of most read articles
+                        v-for="(article, index) in mostReadArticles"                 
+                        v-bind:article="mostreadarticle"                           
+                        :key="index">                                            
+                    </most-read>                                        
                 </ul>
               </div>
 
@@ -138,9 +134,10 @@
                 <p>{{ comingSoonArticlesTitle }}...</p>
                 <ul>
                     <coming-soon 
-                        v-for='article in articleList'                  // for each object in the data available from the vue  
-                        v-bind:=articleList='comingSoonArticles'>       // bind the object to the prop in the component
-                    </coming-soon>                                      // thereby creating a list of coming soon articles
+                        v-for="(article, index) in comingSoonArticles"                 
+                        v-bind:article="comingsoonarticle"                           
+                        :key="index">                                            
+                    </coming-soon>                                      
                 </ul>
               </div>
 
@@ -148,9 +145,10 @@
                 <p>{{ relatedSitesTitle }}...</p>
                 <ul>
                     <related-sites 
-                        v-for='site in siteList'                        // for each object in the data available from the vue  
-                        v-bind:=siteList='relatedSites'>                // bind the object to the prop in the component
-                    </related-sites>                                    // thereby creating a list of related sites
+                        v-for="(site, index) in relatedSites"                 
+                        v-bind:site="sitelist"                           
+                        :key="index">                                            
+                    </related-sites>         
                 </ul>
               </div>
         </div>              <!-- end of latest-popular-soon -->
@@ -210,6 +208,12 @@
             <p>&copy; <script>document.write(new Date().getFullYear());</script> The Mysterious Disappearance Of Flight 9H-ABU</p>
             <p>&ldquo;All Rights Reserved&mdash;Designed by Mark Boomer&rdquo; </p>
         </footer>
+
+        <!-- **************************************************************************** -->
+        <!-- Load the VUE.js libraries to access Vue functionality                                    -->
+        <!-- **************************************************************************** -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+        <script src="main.js"></script>
 
     </body>
 </html>

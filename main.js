@@ -1,82 +1,80 @@
 //<!-- **************************************************************************** -->
-//<!-- Define the VUE instance and the VUE components                                     -->
+//<!-- Define the VUE instances and the VUE components                              -->
 //<!-- **************************************************************************** -->
 
 //<!-- **************************************************************************** -->
-//<!-- this is the missing-person VUE componment that we bind to the VUE Instance                                     -->
+//<!-- this is the missing-person VUE componment that we bind to the VUE Instance   -->
 //<!-- **************************************************************************** -->
          
-Vue.component("missing-person", {
+Vue.component("passenger-details", {
     props: {
         passenger: {
             type: Object,
             required: true
         }
     },
-    template: `
-            <li class="missing-person">
+    template: `<li class="missing-person">
                 <h3>{{ passenger.personsName }}</h3>
                 <p><img :src="passenger.personsImage" /></p>
                 <p>{{ passenger.personsDesc }}</p>
             </li>
-    `
+            `
 })
 
 //<!-- ********************************************************************************************* -->
 //<!-- this is the latest articles VUE componment that we bind to the latPopMostComOth VUE Instance  -->
 //<!-- ********************************************************************************************* -->
-Vue.component(‘latest’, {
-    props: [
-        articleList: {
-                       type: Array,
+Vue.component("latest", {
+    props: {
+        latestarticle: {
+                       type: Object,
                        required: true
                     }
-        ],
-    template: '<li><a href="{{ article-location }}{{ article-name }}">{{ article-title }}</a></li>'
+    },
+    template: '<li><a href="{{ latestarticle.latestlocation }}{{ latestarticle.latestname }}">{{ latestarticle.latesttitle }}</a></li>'
 })
-
 //<!-- ********************************************************************************************* -->
 //<!-- this is the most read articles VUE componment that we bind to the latPopMostComOth VUE Instance  -->
 //<!-- ********************************************************************************************* -->
-Vue.component(‘most-read’, {
-    props: [
-        articleList: {
-                       type: Array,
+Vue.component("most-read", {
+    props: {
+        mostreadarticle: {
+                       type: Object,
                        required: true
                     }
-        ],
-    template: '<li><a href="{{ article-location }}{{ article-name }}">{{ article-title }}</a></li>'
+    },
+    template: '<li><a href="{{ mostreadarticle.articlelocation }}{{ mostreadarticle.articlename }}">{{ mostreadarticle.articletitle }}</a></li>'
 })
 //<!-- ********************************************************************************************* -->
 //<!-- this is the coming soon articles VUE componment that we bind to the latPopMostComOth VUE Instance  -->
 //<!-- ********************************************************************************************* -->
-Vue.component(‘coming-soon’, {
-    props: [
-        articleList: {
+Vue.component("coming-soon", {
+    props: {
+        comingsoonarticle: {
                        type: Array,
                        required: true
                     }
-        ],
-    template: '<li>{{ article }}</li>'
+    },
+    template: '<li>{{ comingsoonarticle.article }}</li>'
 })
 //<!-- ********************************************************************************************* -->
 //<!-- this is the related sites VUE componment that we bind to the latPopMostComOth VUE Instance  -->
 //<!-- ********************************************************************************************* -->
-Vue.component(‘related-sites’, {
-    props: [
-        siteList: {
+Vue.component("related-sites", {
+    props: {
+        sitelist: {
                     type: Array,
                     required: true
                   }
-        ],
-    template: '<li><a href="{{ site-url }}">{{ site-title }}</a></li>'
+    },
+    template: '<li><a href="{{ sitelist.siteurl }}">{{ sitelist.sitetitle }}</a></li>'
 })
 
 //<!-- ************************************************************************************************ -->
 //<!-- vue instance attached to the <UL> html element - contains the data for each person               -->
 //<!-- ************************************************************************************************ -->
 
-var missingPassengers = new Vue({
+var missingPassengers = new Vue ({
     el: "#missing-passengers",
     data: {
         passengers: [
@@ -108,44 +106,44 @@ var missingPassengers = new Vue({
     }
 })
 //<!-- *********************************************************************************************************** -->
-//<!-- vue instance attached to the DIV html element "latest-popular-soon" containing the data for each categories -->
+//<!-- vue instance attached to the DIV html element "latest-popular-soon" containing the data for each category   -->
 //<!-- *********************************************************************************************************** -->
 
-var latMosComRel = new Vue({
-    el: ‘#latest-popular-soon’,
+var latMosComRel = new Vue ({
+    el: "#latest-popular-soon",
     data: {
         latestArticlesTitle: "Latest Articles",
         latestArticles: [
-                            {   article-name     : "freedom-of-info-request-15112015.html",
-                                article-title    : "Freedom Of Information Request AAIB"
-                                article-location : "articles/"
+                            {   latestname     : "freedom-of-info-request-15112015.html",
+                                latesttitle    : "Freedom Of Information Request AAIB",
+                                latestlocation : "articles/"
                             },
-                            {   article-name     : "freedom-of-info-response-14122015.html",
-                                article-title    : "FOI Response from AAIB"
-                                article-location : "articles/"
+                            {   latestname     : "freedom-of-info-response-14122015.html",
+                                latesttitle    : "FOI Response from AAIB",
+                                latestlocation : "articles/"
                             },
-                            {   article-name     : "tv-documentary-first-shown-on-malta-television-26112011.html",
-                                article-title    : "Updated Video Player for Malta TV Documentary"
-                                article-location : "articles/"
+                            {   latestname     : "tv-documentary-first-shown-on-malta-television-26112011.html",
+                                latesttitle    : "Updated Video Player for Malta TV Documentary",
+                                latestlocation : "articles/"
                             }
                         ],
         mostReadArticlesTitle: "Most Read",
         mostReadArticles: [
-                            {   article-name     : "banbridge-chronicle-30112011.html",
-                                article-title    : "QUEST FOR TRUTH, Banbridge Chronicle"
-                                article-location : "articles/"
+                            {   articlename     : "banbridge-chronicle-30112011.html",
+                                articletitle    : "QUEST FOR TRUTH, Banbridge Chronicle",
+                                articlelocation : "articles/"
                             },
-                            {   article-name     : "death-in-the-mediterranean.html",
-                                article-title    : "An Investigation By Don Mullan"
-                                article-location : "./"
+                            {   articlename     : "death-in-the-mediterranean.html",
+                                articletitle    : "An Investigation By Don Mullan",
+                                articlelocation : "./"
                             },
-                            {   article-name     : "maltese-board-of-inquiry-report.html",
-                                article-title    : "Maltese Board of Inquiry Report"
-                                article-location : "./"
+                            {   articlename     : "maltese-board-of-inquiry-report.html",
+                                articletitle    : "Maltese Board of Inquiry Report",
+                                articlelocation : "./"
                             },
-                            {   article-name  : "malta-tv-documentary.html",
-                                article-title : "Malta TV Documentary"
-                                article-location : "./"
+                            {   articlename  : "malta-tv-documentary.html",
+                                articletitle : "Malta TV Documentary",
+                                articlelocation : "./"
                             }
                         ],
         comingSoonArticlesTitle: "Coming Soon",
@@ -154,14 +152,14 @@ var latMosComRel = new Vue({
                             ],
         relatedSitesTitle: "Related Web Sites",
         relatedSites: [
-                        {   site-url   : "www.flightlinemalta.com",
-                            site-title : "Flightline GA Malta"
+                        {   siteurl   : "www.flightlinemalta.com",
+                            sitetitle : "Flightline GA Malta"
                         },
-                        {   site-url   : "www.pprune.org",
-                            site-title : "Professional Pilots Rumour Network"
+                        {   siteurl   : "www.pprune.org",
+                            sitetitle : "Professional Pilots Rumour Network"
                         },
-                        {   site-url   : "https://jetphotos.com/photo/71054",
-                            site-title : "Jet Photos - 9H-ABU"
+                        {   siteurl   : "https://jetphotos.com/photo/71054",
+                            sitetitle : "Jet Photos - 9H-ABU"
                         }
                     ]
     }
