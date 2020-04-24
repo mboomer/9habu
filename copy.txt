@@ -1,317 +1,27 @@
+before end of body - check ../main.js for article folders only
+
         <!-- **************************************************************************** -->
-        <!-- Load the VUE.js libraries to access Vue functionality                                    -->
+        <!-- Load the VUE.js libraries to access Vue functionality                        -->
         <!-- **************************************************************************** -->
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
-        <script src="main.js"></script>
+        <script src="../main.js"></script>
 
+change top to body-top
+change header to id="header-menu"
 
+replace the the-missing
         <!-- **************************************************************************** -->
         <!-- section holding the images of the missing passengers                         -->
         <!-- **************************************************************************** -->
         <ul id="missing-passengers" class="the-missing" >
 
-            <missing-person 
+            <passenger-details 
                 v-for="(missingperson, index) in passengers" v-bind:passenger="missingperson" :key="index">         
-            </missing-person>                              
+            </passenger-details>                              
             
         </ul> <!-- end of "the-missing" -->
-        <!-- **************************************************************************** -->
     
-
-                <!-- **************************************************************************** -->
-                <!-- Bootstrap carousel code                                                      -->
-                <!-- **************************************************************************** -->
-
-                <div id="wreckageCarousel" class="carousel slide" data-ride="carousel">
-                    <ol style='display: inline-flex' class="carousel-indicators">
-                        <li data-target="#wreckageCarousel" data-slide-to="0" class="active">
-                        <li data-target="#wreckageCarousel" data-slide-to="1">
-                        <li data-target="#wreckageCarousel" data-slide-to="2">
-                        <li data-target="#wreckageCarousel" data-slide-to="3">
-                    </ol> 
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="article-images/wreckage 1 small.jpg" class="d-block w-100" alt="Instrument panel, steerting column and rudder pedals">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>The remains of the instrument panel</h5>
-                                <p>The steering column with the right arm missing. The rudder pedals and the control handles for the engine ailerons and flaps One of the seatbelts recovered</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="article-images/wreckage 2 small.jpg" class="d-block w-100" alt="Close Up Of Bottom Of Steering Column">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Close up of the bottom of the steering column</h5>
-                                <p>Accumulation of rust suggests this was out of the water and exposed to atmosphere for a long period of time. Also shown with the name Piper and the control handles</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="article-images/wreckage 3 small.jpg.jpg" class="d-block w-100" alt="Control cable and linkage from steering column">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Control cable and linkage from around the steering column</h5>
-                                <p>One end of the stainless steel cable is frayed and bent the investigator stated this condition is the result of being stretched beyond breaking point. The other end suggests a twisted wrung off break, no explanation why the two ends should be different</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="The landing gear leaver handle" class="d-block w-100" alt="Piper Lance distinct orange stripes">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>The landing gear leaver handle</h5>
-                                <p>This is in the first notch position. This would indicate the landing gear was partially lowered. Also depicted are two seat belts</p>
-                            </div>
-                        </div>
-                      </div>
-                    <a class="carousel-control-prev" href="#wreckageCarousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#wreckageCarousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div> <!-- end of bootstrap carousel component -->
-
-
-
-<!-- **************************************************************************** -->
-<!-- Bootstrap carousel code                                                      -->
-<!-- **************************************************************************** -->
-
-        <!-- Load Bootstrap CDN in <Head> -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        
-        <!-- Load Bootstrap CDN before </body> -->
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-    <!-- ********************************************************************************** -->
-        <div id="galleryCarousel" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#galleryCarousel" data-slide-to="0" class="active">
-            <li data-target="#galleryCarousel" data-slide-to="1">
-            <li data-target="#galleryCarousel" data-slide-to="2">
-            <li data-target="#galleryCarousel" data-slide-to="3">
-          </ol> 
-            <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="img/gallery-saint-annes-1.jpg" class="d-block w-100 center-image" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                <h5>St Annes 1</h5>
-                <p>This is St Annes 1</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="img/gallery-saint-annes-2.jpg" class="d-block w-100 center-image" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                <h5>St Annes 2</h5>
-                <p>This is St Annes 2</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="img/gallery-saint-annes-3.jpg" class="d-block w-100 center-image" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                <h5>St Annes 3</h5>
-                <p>This is St Annes 3</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="img/gallery-saint-annes-4.jpg" class="d-block w-100 center-image" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                <h5>St Annes 4</h5>
-                <p>This is St Annes 4</p>
-                </div>
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#galleryCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#galleryCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div> 
-        <hr />
-
-
-// need to add the id so we can attach the vue instance missingPassengers
-<!-- **************************************************************************** -->
-<!-- section holding the images of the missing passengers                         -->
-<!-- **************************************************************************** -->
-    <ul id="missing-passengers" class="the-missing">
-
-        <missing-person 
-            v-for='missingperson in passengers'         // for each object in the data available from the vue  
-            v-bind:=passenger='missingperson'>          // bind the object to the prop in the component
-        </missing-person>                               // thereby creating a list of missing person objects
-
-    </ul>
-        
-<script>
-
-// this is the missing-person VUE componment that we bind to the VUE Instance 
-Vue.component(‘missing-person’, {
-    props: [
-            type: Array,
-            name: ‘passenger’
-        ],
-    template: `<li class="missing-person">
-  {{ persons-name }}
-                    <p><img src="img/{{ persons-image }}" /></p>
-                    <p>{{ persons-desc }}</p>
-               `
-})
-// this the vue instance that is attached to the UL html element and this contains the data for each person
-var missingPassengers = new Vue({
-    el: ‘#missing-passengers’,
-    data: {
-        passengers: [
-                    {   persons-name:  "Desmond Boomer", 
-                        persons-image: "desmondboomer-120p.jpg", 
-                        persons-desc:  "Desmond was a 38 year old Belfast born, engineer working in the Libyan oil fields" 
-                    },
-                    {   persons-name: "Michael Williams", 
-                        persons-image: "michaelwilliams-120p.jpg", 
-                        persons-desc:  "Michael was a 49 year old English born engineer & manager of rock band 'The Characters'" 
-                    },
-                    {   persons-name: "Matthew Aquilina", 
-                        persons-image: "matthewaquilina-120p.jpg", 
-                        persons-desc:  "Matthew was a 22 year old Maltese national returning to Malta" 
-                    },
-                    {   persons-name: "Tadeus Gorny", 
-                        persons-image: "tadeusgorny-120p.jpg", 
-                        persons-desc:  "Tadeus was a 48 year Polish national working in the Libyan oil fields" 
-                    },
-                    {   persons-name: "Philip Farrugia", 
-                        persons-image: "philipfaruggia-120p.jpg", 
-                        persons-desc:  "Philp was a 43 year old Maltese national returning to Malta" 
-                    },
-                    {   persons-name: "Carmel Bartolo", 
-                        persons-image: "carmelbartolo-120p.jpg", 
-                        persons-desc:  "Carmel was a 47 year Maltese national and the pilot of flight 9H-ABU" 
-                    }
-                ]
-        }
-})
-        
-
-// need to add the id so we can attach the vue instance missingPassengers
-<!-- **************************************************************************** -->
-<!-- section holding the images of the missing passengers                         -->
-<!-- **************************************************************************** -->
-    <ul id="missing-passengers" class="the-missing">
-
-        <missing-person 
-            v-for='missingperson in passengers'         // for each object in the data available from the vue  
-            v-bind:=passenger='missingperson'>          // bind the object to the prop in the component
-        </missing-person>                               // thereby creating a list of missing person objects
-
-    </ul>
-
-
-
-
-
-// this is the Latest Articles VUE componment that we bind to the VUE Instance 
-Vue.component(‘latest-popular-soon’, {
-    props: [
-        articleList: {
-                       type: Array,
-                       required: true
-                    }
-        ],
-    template: '<li><a href="{{ article-location }}{{ article-name }}">{{ article-title }}</a></li>'
-})
-
-Vue.component(‘most-read’, {
-    props: [
-        articleList: {
-                       type: Array,
-                       required: true
-                    }
-        ],
-    template: '<li><a href="{{ article-location }}{{ article-name }}">{{ article-title }}</a></li>'
-})
-
-Vue.component(‘coming-soon’, {
-    props: [
-        articleList: {
-                       type: Array,
-                       required: true
-                    }
-        ],
-    template: '<li>{{ comingSoonArticles }}</li>'
-})
-
-Vue.component(‘related-sites’, {
-    props: [
-        siteList: {
-                    type: Array,
-                    required: true
-                  }
-        ],
-    template: '<li><a href="{{ site-url }}">{{ site-title }}</a></li>'
-})
-
-// this the vue instance that is attached to the DIV html element "latest-popular-soon" containing the data for each categories
-var latMostComRel = new Vue({
-    el: ‘#latest-popular-soon’,
-    data: {
-        latestArticlesTitle: "Latest Articles",
-        latestArticles: [
-                            {   article-name     : "freedom-of-info-request-15112015.html",
-                                article-title    : "Freedom Of Information Request AAIB"
-                                article-location : "articles/"
-                            },
-                            {   article-name     : "freedom-of-info-response-14122015.html",
-                                article-title    : "FOI Response from AAIB"
-                                article-location : "articles/"
-                            },
-                            {   article-name     : "tv-documentary-first-shown-on-malta-television-26112011.html",
-                                article-title    : "Updated Video Player for Malta TV Documentary"
-                                article-location : "articles/"
-                            }
-                        ],
-        mostReadArticlesTitle: "Most Read",
-        mostReadArticles: [
-                            {   article-name     : "banbridge-chronicle-30112011.html",
-                                article-title    : "QUEST FOR TRUTH, Banbridge Chronicle"
-                                article-location : "articles/"
-                            },
-                            {   article-name     : "death-in-the-mediterranean.html",
-                                article-title    : "An Investigation By Don Mullan"
-                                article-location : "./"
-                            },
-                            {   article-name     : "maltese-board-of-inquiry-report.html",
-                                article-title    : "Maltese Board of Inquiry Report"
-                                article-location : "./"
-                            },
-                            {   article-name  : "malta-tv-documentary.html",
-                                article-title : "Malta TV Documentary"
-                                article-location : "./"
-                            }
-                        ],
-        comingSoonArticlesTitle: "Coming Soon",
-        comingSoonArticles: [   "Updated responsive website suitable for mobile and tablets",
-                                "Improved Document Archive Search"
-                            ],
-        relatedSitesTitle: "Related Web Sites",
-        relatedSites: [
-                        {   site-url   : "www.flightlinemalta.com",
-                            site-title : "Flightline GA Malta"
-                        },
-                        {   site-url   : "www.pprune.org",
-                            site-title : "Professional Pilots Rumour Network"
-                        },
-                        {   site-url   : "https://jetphotos.com/photo/71054",
-                            site-title : "Jet Photos - 9H-ABU"
-                        }
-                    ]
-    }
-})
-
-</script>
+replace latest-popular-soon
 
         <!-- **************************************************************************** -->
         <!-- section holding the links to latest articles, most popular, coming soon, links                                    -->
@@ -322,10 +32,11 @@ var latMostComRel = new Vue({
               <div class="article-lists">
                 <p>{{ latestArticlesTitle }}...</p>
                 <ul>
-                    <latest-popular-soon 
-                        v-for='article in articleList'                  // for each object in the data available from the vue  
-                        v-bind:=articleList='latestArticles'>           // bind the object to the prop in the component
-                    </latest-popular-soon>                              // thereby creating a list of latest articles
+                    <latest 
+                        v-for="(article, index) in latestArticles"                 
+                        v-bind:latestarticle="article"                           
+                        :key="index">                                            
+                    </latest>                                                   
                 </ul>
               </div>
 
@@ -333,9 +44,10 @@ var latMostComRel = new Vue({
                 <p>{{ mostReadArticlesTitle }}...</p>
                 <ul>
                     <most-read 
-                        v-for='article in articleList'                  // for each object in the data available from the vue  
-                        v-bind:=articleList='mostReadArticles'>           // bind the object to the prop in the component
-                    </most-read>                                        // thereby creating a list of most read articles
+                        v-for="(article, index) in mostReadArticles"                 
+                        v-bind:mostreadarticle="article"                           
+                        :key="index">                                            
+                    </most-read>                                        
                 </ul>
               </div>
 
@@ -343,9 +55,10 @@ var latMostComRel = new Vue({
                 <p>{{ comingSoonArticlesTitle }}...</p>
                 <ul>
                     <coming-soon 
-                        v-for='article in articleList'                  // for each object in the data available from the vue  
-                        v-bind:=articleList='comingSoonArticles'>       // bind the object to the prop in the component
-                    </coming-soon>                                      // thereby creating a list of coming soon articles
+                        v-for="(article, index) in comingSoonArticles"                 
+                        v-bind:comingsoonarticle="article"                           
+                        :key="index">                                            
+                    </coming-soon>                                      
                 </ul>
               </div>
 
@@ -353,189 +66,11 @@ var latMostComRel = new Vue({
                 <p>{{ relatedSitesTitle }}...</p>
                 <ul>
                     <related-sites 
-                        v-for='site in siteList'                  // for each object in the data available from the vue  
-                        v-bind:=siteList='relatedSites'>       // bind the object to the prop in the component
-                    </coming-soon>                                      // thereby creating a list of coming soon articles
+                        v-for="(site, index) in relatedSites"                 
+                        v-bind:sitelist="site"                           
+                        :key="index">                                            
+                    </related-sites>         
                 </ul>
               </div>
-        </div>              <!-- end of latest-populat-soon -->
+        </div>              <!-- end of latest-popular-soon -->
 
-
-
-
-
-
-
-//<!-- **************************************************************************** -->
-//<!-- Define the VUE instances and the VUE components                              -->
-//<!-- **************************************************************************** -->
-
-//<!-- **************************************************************************** -->
-//<!-- this is the missing-person VUE componment that we bind to the VUE Instance   -->
-//<!-- **************************************************************************** -->
-         
-Vue.component("passener-details", {
-    props: {
-        passenger: {
-            type: Object,
-            required: true
-        }
-    },
-    template: `<li class="missing-person">
-                <h3>{{ passenger.personsName }}</h3>
-                <p><img :src="passenger.personsImage" /></p>
-                <p>{{ passenger.personsDesc }}</p>
-            </li>
-            `
-<li class="missing-person">
-                <h3>{{ passenger.personsName }}</h3>
-                <p><img :src="passenger.personsImage" /></p>
-                <p>{{ passenger.personsDesc }}</p>
-            </li>
-            
-})
-
-//<!-- ********************************************************************************************* -->
-//<!-- this is the latest articles VUE componment that we bind to the latPopMostComOth VUE Instance  -->
-//<!-- ********************************************************************************************* -->
-Vue.component("latest", {
-    props: {
-        articleList: {
-                       type: Array,
-                       required: true
-                    }
-    },
-    template: '<li><a href="{{ articleList.article-location }}{{ articleList.article-name }}">{{ articleList.article-title }}</a></li>'
-})
-
-//<!-- ********************************************************************************************* -->
-//<!-- this is the most read articles VUE componment that we bind to the latPopMostComOth VUE Instance  -->
-//<!-- ********************************************************************************************* -->
-Vue.component("most-read", {
-    props: {
-        articleList: {
-                       type: Array,
-                       required: true
-                    }
-    },
-    template: '<li><a href="{{ articleList.article-location }}{{ articleList.article-name }}">{{ articleList.article-title }}</a></li>'
-})
-//<!-- ********************************************************************************************* -->
-//<!-- this is the coming soon articles VUE componment that we bind to the latPopMostComOth VUE Instance  -->
-//<!-- ********************************************************************************************* -->
-Vue.component("coming-soon", {
-    props: {
-        articleList: {
-                       type: Array,
-                       required: true
-                    }
-    },
-    template: '<li>{{ articleList.article }}</li>'
-})
-//<!-- ********************************************************************************************* -->
-//<!-- this is the related sites VUE componment that we bind to the latPopMostComOth VUE Instance  -->
-//<!-- ********************************************************************************************* -->
-Vue.component("related-sites", {
-    props: {
-        siteList: {
-                    type: Array,
-                    required: true
-                  }
-    },
-    template: '<li><a href="{{ siteList.site-url }}">{{ siteList.site-title }}</a></li>'
-})
-
-//<!-- ************************************************************************************************ -->
-//<!-- vue instance attached to the <UL> html element - contains the data for each person               -->
-//<!-- ************************************************************************************************ -->
-
-var missingPassengers = new Vue ({
-    el: "#missing-passengers",
-    data: {
-        passengers: [
-            {   personsName:  "Desmond Boomer", 
-                personsImage: "img/desmondboomer-120p.jpg", 
-                personsDesc:  "Desmond was a 38 year old Belfast born, engineer working in the Libyan oil fields" 
-            },
-            {   personsName:  "Michael Williams", 
-                personsImage: "img/michaelwilliams-120p.jpg", 
-                personsDesc:  "Michael was a 49 year old English born engineer & manager of rock band 'The Characters'" 
-            },
-            {   personsName:  "Matthew Aquilina", 
-                personsImage: "img/matthewaquilina-120p.jpg", 
-                personsDesc:  "Matthew was a 22 year old Maltese national returning to Malta" 
-            },
-            {   personsName:  "Tadeus Gorny", 
-                personsImage: "img/tadeusgorny-120p.jpg", 
-                personsDesc:  "Tadeus was a 48 year Polish national working in the Libyan oil fields" 
-            },
-            {   personsName:  "Philip Farrugia", 
-                personsImage: "img/philipfarrugia-120p.jpg", 
-                personsDesc:  "Philp was a 43 year old Maltese national returning to Malta" 
-            },
-            {   personsName:  "Carmel Bartolo", 
-                personsImage: "img/carmelbartolo-120p.jpg", 
-                personsDesc:  "Carmel was a 47 year Maltese national and the pilot of flight 9H-ABU" 
-            }
-        ]
-    }
-})
-//<!-- *********************************************************************************************************** -->
-//<!-- vue instance attached to the DIV html element "latest-popular-soon" containing the data for each category   -->
-//<!-- *********************************************************************************************************** -->
-
-var latMosComRel = new Vue ({
-    el: "#latest-popular-soon",
-    data: {
-        latestArticlesTitle: "Latest Articles",
-        latestArticles: [
-                            {   articlename     : "freedom-of-info-request-15112015.html",
-                                articletitle    : "Freedom Of Information Request AAIB",
-                                articlelocation : "articles/"
-                            },
-                            {   articlename     : "freedom-of-info-response-14122015.html",
-                                articletitle    : "FOI Response from AAIB",
-                                articlelocation : "articles/"
-                            },
-                            {   articlename     : "tv-documentary-first-shown-on-malta-television-26112011.html",
-                                articletitle    : "Updated Video Player for Malta TV Documentary",
-                                articlelocation : "articles/"
-                            }
-                        ],
-        mostReadArticlesTitle: "Most Read",
-        mostReadArticles: [
-                            {   articlename     : "banbridge-chronicle-30112011.html",
-                                articletitle    : "QUEST FOR TRUTH, Banbridge Chronicle",
-                                articlelocation : "articles/"
-                            },
-                            {   articlename     : "death-in-the-mediterranean.html",
-                                articletitle    : "An Investigation By Don Mullan",
-                                articlelocation : "./"
-                            },
-                            {   articlename     : "maltese-board-of-inquiry-report.html",
-                                articletitle    : "Maltese Board of Inquiry Report",
-                                articlelocation : "./"
-                            },
-                            {   articlename  : "malta-tv-documentary.html",
-                                articletitle : "Malta TV Documentary",
-                                articlelocation : "./"
-                            }
-                        ],
-        comingSoonArticlesTitle: "Coming Soon",
-        comingSoonArticles: [   "Updated responsive website suitable for mobile and tablets",
-                                "Improved Document Archive Search"
-                            ],
-        relatedSitesTitle: "Related Web Sites",
-        relatedSites: [
-                        {   siteurl   : "www.flightlinemalta.com",
-                            sitetitle : "Flightline GA Malta"
-                        },
-                        {   siteurl   : "www.pprune.org",
-                            sitetitle : "Professional Pilots Rumour Network"
-                        },
-                        {   siteurl   : "https://jetphotos.com/photo/71054",
-                            sitetitle : "Jet Photos - 9H-ABU"
-                        }
-                    ]
-    }
-})

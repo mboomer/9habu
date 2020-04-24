@@ -78,9 +78,9 @@ var missingPassengers = new Vue ({
     el: "#missing-passengers",
     data: {
         passengers: [
-            {   personsName:  "Desmond Boomer", 
+            {   personsName :  "Desmond Boomer", 
                 personsImage: "img/desmondboomer-120p.jpg", 
-                personsDesc:  "Desmond was a 38 year old Belfast born, engineer working in the Libyan oil fields" 
+                personsDesc :  "Desmond was a 38 year old Belfast born, engineer working in the Libyan oil fields" 
             },
             {   personsName:  "Michael Williams", 
                 personsImage: "img/michaelwilliams-120p.jpg", 
