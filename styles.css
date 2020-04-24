@@ -289,7 +289,16 @@ ul{
     margin: 0 auto;
     display:inline-block;
 }
-
+#main-text-area .article-ul {
+    display: block;                     /* this is to make sure the line items display with extra padding */
+    list-style: inside;                 /* make sure the item decoration is inside the list               */
+    margin: 0px 0px 0px 0px;
+}
+#main-text-area .article-li {
+    text-align: left;                      
+    margin: 0px 0px 0px 5px;
+    padding: 0px;
+}    
 /* ************************************************************************************************* */
 @media(max-width: 800px) {                  /* sets behaviour when screen is 800px or less */
     #body-top ul {
@@ -306,7 +315,6 @@ ul{
     #main-text-area {
         flex-direction: column-reverse;     /* for the search page change to a column format and display search above results */
     }
-
     #main-text-area .article-ul {
         display: block;                     /* this is to make sure the line items display with extra padding */
         list-style: inside;                 /* make sure the item decoration is inside the list               */

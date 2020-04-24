@@ -84,7 +84,7 @@ var missingPassengers = new Vue ({
             },
             {   personsName:  "Michael Williams", 
                 personsImage: "img/michaelwilliams-120p.jpg", 
-                personsDesc:  "Michael was a 49 year old English born engineer & manager of rock band 'The Characters'" 
+                personsDesc:  "Michael was a 49 year old English born engineer and manager of rock band 'The Characters'" 
             },
             {   personsName:  "Matthew Aquilina", 
                 personsImage: "img/matthewaquilina-120p.jpg", 
