@@ -13,14 +13,13 @@ Vue.component("passenger-details", {
             required: true
         }
     },
-    template: `<li class="missing-person">
+    template: '<li class="missing-person">
                 <h3>{{ passenger.personsName }}</h3>
                 <p><img :src="passenger.personsImage" /></p>
                 <p>{{ passenger.personsDesc }}</p>
             </li>
-            `
+            '
 })
-
 //<!-- ********************************************************************************************* -->
 //<!-- this is the latest articles VUE componment that we bind to the latPopMostComOth VUE Instance  -->
 //<!-- ********************************************************************************************* -->
@@ -31,7 +30,7 @@ Vue.component("latest", {
                        required: true
                     }
     },
-    template: '<li><a :href="latestarticle.latestlocation + latestarticle.latestname">{{ latestarticle.latesttitle }}</a></li>'
+    template: '<li><a :href="latestarticle.latestlocation">{{ latestarticle.latesttitle }}</a></li>',
 })
 //<!-- ********************************************************************************************* -->
 //<!-- this is the most read articles VUE componment that we bind to the latPopMostComOth VUE Instance  -->
@@ -43,7 +42,7 @@ Vue.component("most-read", {
                        required: true
                     }
     },
-    template: '<li><a :href="mostreadarticle.mostreadlocation + mostreadarticle.mostreadname">{{ mostreadarticle.mostreadtitle }}</a></li>'
+    template: '<li><a :href="mostreadarticle.mostreadlocation">{{ mostreadarticle.mostreadtitle }}</a></li>',
 })
 //<!-- ********************************************************************************************* -->
 //<!-- this is the coming soon articles VUE componment that we bind to the latPopMostComOth VUE Instance  -->
@@ -79,27 +78,27 @@ var missingPassengers = new Vue ({
     data: {
         passengers: [
             {   personsName :  "Desmond Boomer", 
-                personsImage: "img/desmondboomer-120p.jpg", 
+                personsImage: "/img/desmondboomer-120p.jpg", 
                 personsDesc :  "Desmond was a 38 year old Belfast born, engineer working in the Libyan oil fields" 
             },
             {   personsName:  "Michael Williams", 
-                personsImage: "img/michaelwilliams-120p.jpg", 
+                personsImage: "/img/michaelwilliams-120p.jpg", 
                 personsDesc:  "Michael was a 49 year old English born engineer and manager of rock band 'The Characters'" 
             },
             {   personsName:  "Matthew Aquilina", 
-                personsImage: "img/matthewaquilina-120p.jpg", 
+                personsImage: "/img/matthewaquilina-120p.jpg", 
                 personsDesc:  "Matthew was a 22 year old Maltese national returning to Malta" 
             },
             {   personsName:  "Tadeus Gorny", 
-                personsImage: "img/tadeusgorny-120p.jpg", 
+                personsImage: "/img/tadeusgorny-120p.jpg", 
                 personsDesc:  "Tadeus was a 48 year Polish national working in the Libyan oil fields" 
             },
             {   personsName:  "Philip Farrugia", 
-                personsImage: "img/philipfarrugia-120p.jpg", 
+                personsImage: "/img/philipfarrugia-120p.jpg", 
                 personsDesc:  "Philp was a 43 year old Maltese national returning to Malta" 
             },
             {   personsName:  "Carmel Bartolo", 
-                personsImage: "img/carmelbartolo-120p.jpg", 
+                personsImage: "/img/carmelbartolo-120p.jpg", 
                 personsDesc:  "Carmel was a 47 year Maltese national and the pilot of flight 9H-ABU" 
             }
         ]
@@ -116,34 +115,34 @@ var latMosComRel = new Vue ({
         latestArticles: [
                             {   latestname     : "freedom-of-info-request-15112015.html",
                                 latesttitle    : "Freedom Of Information Request AAIB",
-                                latestlocation : "articles/"
+                                latestlocation : "/articles/freedom-of-info-request-15112015.html"
                             },
                             {   latestname     : "freedom-of-info-response-14122015.html",
                                 latesttitle    : "FOI Response from AAIB",
-                                latestlocation : "articles/"
+                                latestlocation : "/articles/freedom-of-info-response-14122015.html"
                             },
                             {   latestname     : "tv-documentary-first-shown-on-malta-television-26112011.html",
                                 latesttitle    : "Updated Video Player for Malta TV Documentary",
-                                latestlocation : "articles/"
+                                latestlocation : "/articles/tv-documentary-first-shown-on-malta-television-26112011.html"
                             }
                         ],
         mostReadArticlesTitle: "Most Read",
         mostReadArticles: [
                             {   mostreadname     : "banbridge-chronicle-30112011.html",
                                 mostreadtitle    : "QUEST FOR TRUTH, Banbridge Chronicle",
-                                mostreadlocation : "articles/"
+                                mostreadlocation : "/articles/banbridge-chronicle-30112011.html"
                             },
                             {   mostreadname     : "death-in-the-mediterranean.html",
                                 mostreadtitle    : "An Investigation By Don Mullan",
-                                mostreadlocation : "./"
+                                mostreadlocation : "/death-in-the-mediterranean.html"
                             },
                             {   mostreadname     : "maltese-board-of-inquiry-report.html",
                                 mostreadtitle    : "Maltese Board of Inquiry Report",
-                                mostreadlocation : "./"
+                                mostreadlocation : "/maltese-board-of-inquiry-report.html"
                             },
                             {   mostreadname     : "malta-tv-documentary.html",
                                 mostreadtitle    : "Malta TV Documentary",
-                                mostreadlocation : "./"
+                                mostreadlocation : "/malta-tv-documentary.html"
                             }
                         ],
         comingSoonArticlesTitle: "Coming Soon",

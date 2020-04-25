@@ -1,3 +1,15 @@
+<script>
+function myFunction() {
+
+    var urlPath = location.pathname;
+
+  if (urlPath.includes("jsref")) {
+ 	 document.getElementById("demo").innerHTML = urlPath + " includes jsref";
+	}
+}
+</script>
+
+
 before end of body - check ../main.js for article folders only
 
         <!-- **************************************************************************** -->
