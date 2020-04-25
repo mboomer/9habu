@@ -13,12 +13,12 @@ Vue.component("passenger-details", {
             required: true
         }
     },
-    template: '<li class="missing-person">
+    template: `<li class="missing-person">
                 <h3>{{ passenger.personsName }}</h3>
                 <p><img :src="passenger.personsImage" /></p>
                 <p>{{ passenger.personsDesc }}</p>
             </li>
-            '
+            `
 })
 //<!-- ********************************************************************************************* -->
 //<!-- this is the latest articles VUE componment that we bind to the latPopMostComOth VUE Instance  -->
@@ -113,13 +113,17 @@ var latMosComRel = new Vue ({
     data: {
         latestArticlesTitle: "Latest Articles",
         latestArticles: [
-                            {   latestname     : "freedom-of-info-request-15112015.html",
-                                latesttitle    : "Freedom Of Information Request AAIB",
-                                latestlocation : "/articles/freedom-of-info-request-15112015.html"
+                            {   latestname     : "F0013056-freedom-of-information-act-response-141042020.html",
+                                latesttitle    : "Response to Freedom Of Information from AAIB",
+                                latestlocation : "/articles/F0013056-freedom-of-information-act-response-141042020.html"
                             },
                             {   latestname     : "freedom-of-info-response-14122015.html",
                                 latesttitle    : "FOI Response from AAIB",
                                 latestlocation : "/articles/freedom-of-info-response-14122015.html"
+                            },
+                            {   latestname     : "freedom-of-info-request-15112015.html",
+                                latesttitle    : "Freedom Of Information Request AAIB",
+                                latestlocation : "/articles/freedom-of-info-request-15112015.html"
                             },
                             {   latestname     : "tv-documentary-first-shown-on-malta-television-26112011.html",
                                 latesttitle    : "Updated Video Player for Malta TV Documentary",
