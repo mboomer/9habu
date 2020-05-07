@@ -44,10 +44,6 @@ html {
 a{
     color: white;                           /* anchor tags need their own color rule */
 }    
-/* **************************************************************************************** */
-/*                                        MAIN TEXT BODY                                    */
-/* **************************************************************************************** */
-
 .header-blue {
     display: block;
     background-color: lightblue;
@@ -58,26 +54,23 @@ a{
     padding: 1px;
     border: 1px solid grey;
   }
-
 /* **************************************************************************************** */
 /*                                        NAVIGATION MENU                                   */
 /* **************************************************************************************** */
 #header-menu {
+    /* this controls the logo and the ul containing the menu items */
+    /* TODO: change this to use css grid */
+    display: flex;
+    justify-content: space-around;
     background-color: rgba(0,0,0,0.7); 
     color: #fff;
-
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 10;
-
     padding: 10px 10px;
     font-size: 14px;
-
-    /* this controls the logo and the ul containing the menu items */
-    display: flex;
-    justify-content: space-around;
 }
 #header-menu nav ul {
     display: flex;
@@ -110,14 +103,13 @@ a{
 #body-top .the-missing {                          /* display the missing below the menu                             */
     padding-top: 100px;
 }
-
 /* ****************************************************************************************  */
 /*                               MISSING PERSONS                                             */
 /* ****************************************************************************************  */
 .the-missing {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 0px 10px 0px 10px;
+    margin: 0px 10px 10px 10px;
     background-color: white;
     list-style: none;
     text-align: center;
@@ -130,7 +122,195 @@ a{
     font-size: 12px;
     padding-bottom: 5px;
 }
+/* **************************************************************************************** */
+/*                                        MAIN TEXT BODY                                    */
+/* **************************************************************************************** */
+#main-text-area {
+    display: grid;                          /* display the main text and info panel side by side */
+    grid-template-columns: 1fr;
+    margin: 5px;
+}
+#main-text-area a {
+    color: deepskyblue;                     /* default for anchor tags is white, change this in the main text */
+}    
+/* **************************************************************************************** */
+/*                                        MAIN TEXT DIV                                     */
+/* **************************************************************************************** */
+.main-text {
+    padding: 5px;
+    font-size: 14px;
+}
+.main-text > #listClass {                   /* this is to over ride the flex settings from #body-top */
+    flex-direction: column;
+    align-items: flex-start;
+}
+.main-text > #listClass > li {              /* this is to over ride the text align center setting from #body-top */
+    text-align: left;
+}
+.main-text p {
+    padding: 10px;
+    margin-bottom: 0px;
+}
+/* **************************************************************************************** */
+/*                        MAIN TEXT WIDE - USED BY ARTICLES                                 */
+/* **************************************************************************************** */
+.main-text-wide {                           /* use the full width as there is no information side bar */
+    width: 100%;
+}
+.main-text-wide ul {
+    display: block;                         /* this is to make sure the line items display vertically */
+    list-style: inside;                     /* make sure the item decoration is inside the list       */
+    font-size: 14px;
+    margin: 0px 0px 0px 10px;
+}
+.main-text-wide ul li {
+    text-align: left;                       /* this is to make sure the line items display vertically */
+}    
+.main-text-wide ol {
+    display: block;                         /* this is to make sure the line items display vertically */
+    list-style: inside;                     /* make sure the item decoration is inside the list       */
+    font-size: 14px;
+    margin-left: 10px;
+    text-align: left;
+}
+.main-text-wide ol li {
+    text-align: left;                       /* this is to make sure the line items display vertically */
+}    
 
+/* **************************************************************************************** */
+/*                                        SIDE BAR                                          */
+/* **************************************************************************************** */
+.side-bar {
+    border: 2px solid lightgrey;
+    margin-right: 0px;
+    padding: 5px;
+    font-size: 14px;    
+}
+.side-bar-header-blue {
+    display: block;
+    width: 100%;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: rgba(0,0,0,0.3);
+    color: black;
+    padding: 1px;
+    border: 1px solid black;
+  }
+.side-bar p {
+    padding: 5px;
+}
+
+/* **************************************************************************************** */
+/*                              LATEST POPULAR SOON AREA                                    */
+/* **************************************************************************************** */
+#latest-popular-soon {
+    display: grid;                                  /* display in a column */
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    justify-content: space-around;
+    margin: 5px;
+    border: solid 2px lightgrey;
+}
+#latest-popular-soon p {
+    font-weight: 600;                               /* bold the header text */
+    font-size: 14px;
+    margin: 5px;
+}
+#body-top .article-lists ul {
+    display: block;                                 /* this is to make sure the line items display vertically */
+    list-style: inside;                             /* make sure the item decoration is inside the list       */
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+#body-top .article-lists ul li {
+    text-align: left;                               /* this is to make sure the line items display vertically */
+}    
+#body-top .article-lists ul li a {
+    color: purple;                                  /* default for anchor tags is white, change this in the main text */
+}    
+/* ************************************************************************************************* */
+/*                               FOOTER SECTION                                                      */
+/* ************************************************************************************************* */
+#social-media {
+    display: flex;                                      /* display UL, P & P elements vertically and center them */ 
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;                                    /* 10px top and bottom and 0px left and right */
+
+    background-color: #131622;
+    background: linear-gradient(to bottom, #284e7a, #000 100%);
+    color: white;
+    text-align: center;
+}  
+#social-media  p {
+    text-transform: uppercase;          /* change text in para tags to uppercase */
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);        /* add a transparent overlay of white - 0.6 = 60% opacity */
+    margin-bottom: 10px;
+}
+#social-media  ul {
+    display: flex;                      /* display child items of parent element, ie the ul, into a row */
+    flex-direction: row;
+    list-style: none;
+    margin-bottom: 25px;
+}
+#social-media  ul li {
+    margin: 0 10px;                     /* spreads out the line items containing the social media icons */
+}
+#social-media  ul li a{
+    font-size: 36px;                    /* makes the icons bigger and ensure the cursor is always the pointer */
+    cursor: pointer;
+}
+/* ************************************************************************************************* */
+/*                                      CONTACT FORM                                                 */
+/* ************************************************************************************************* */
+/* TODO: Need to test this out on the web server */
+#formcontainer {
+    font-family: 'Arial', sans-serif;
+    background-color: aliceblue;
+    margin: 10px;
+    width: 100%;
+}
+#formwrapper fieldset {
+    background-color: aliceblue;
+    max-width: 900px;
+    min-height: 100px;
+    border-radius: 5px;
+    padding: 2%;
+    margin: 0 auto 10px;    
+}
+#formwrapper {
+    display: flex;
+    flex-direction: row;
+}
+#left-col {                             /* the colums will be split across the screen */
+    width: 50%;
+    padding: 1%;
+}
+#left-col fieldset p {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;        /* line fields up to left */
+    flex-wrap: wrap;                    /* wrap fields when appropriate */
+ }
+#left-col input {                       /* this ensures the inut fields are centered and dont take up full width */
+    width:95%;
+    padding: 5px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+#right-col {
+    width: 50%;
+    padding: 1%;
+}
+#right-col fieldset p {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;      /* makes sure items are evenly spaced */
+}
+
+/* ********************************************** MEDIA RULES ****************************************************************************   */
 
 /* ******************************************************************************************   */
 /* apply to any device that has a screen width of 576px or higher                               */
@@ -147,8 +327,11 @@ a{
     #body-top { 
         background: rgba(0,255,0,.25);                  /* GREEN  */
     }
-    .the-missing {
-        grid-template-columns: 1fr 1fr 1fr;
+    .the-missing { 
+        grid-template-columns: 1fr 1fr 1fr;                             /* display in 3 columns */
+    }
+    #latest-popular-soon {
+        grid-template-columns: 1fr 1fr;
     }
 }
 /* ******************************************************************************************   */
@@ -159,7 +342,13 @@ a{
         background: rgba(0,0,255,.25);                  /* BLUE */
     }
     .the-missing {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;                 /* display in 6 columns */
+    }
+    #main-text-area {
+        grid-template-columns: 8fr 2fr;
+    }
+    #latest-popular-soon {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
 /* ******************************************************************************************   */

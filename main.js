@@ -151,7 +151,7 @@ var latMosComRel = new Vue ({
                         ],
         comingSoonArticlesTitle: "Coming Soon",
         comingSoonArticles: [ 
-                                {comingsoonname   : "Updated responsive website suitable for mobile and tablets"},
+                                {comingsoonname   : "Updated responsive website for mobile and tablets"},
                                 {comingsoonname   : "Improved Document Archive Search"}
                             ],
         relatedSitesTitle: "Related Web Sites",
