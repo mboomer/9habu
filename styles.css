@@ -36,7 +36,7 @@ html {
     color: #555;                            /* this is a grey */
 }
 #body-top {
-    background: rgba(255,0,0,0.25);         /* TODO - pink - remove this once sizes are correct */
+/*    background: rgba(255,0,0,0.25);          TODO - pink - remove this once sizes are correct */
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
     color: #555;                            /* this is a grey */
@@ -58,14 +58,9 @@ a{
 /*                                        NAVIGATION MENU                                   */
 /* **************************************************************************************** */
 #header-menu {
-    /* this controls the logo and the ul containing the menu items */
-    /* TODO: change this to use css grid */
-/*
-    display: flex;
-    justify-content: space-around;
-*/
     display: grid;
     grid-template-columns: 1fr 3fr;
+    align-items: center;
     
     background-color: rgba(0,0,0,0.7); 
     color: #fff;
@@ -74,11 +69,17 @@ a{
     left: 0;
     width: 100%;
     z-index: 10;
-    padding: 10px 10px;
+    padding: 5px 5px;
     font-size: 14px;
 }
-#header-menu span img {
+#header-menu img {
     width: 93px;
+}
+#header-menu nav ul {
+    line-height: 1.0;
+}
+#header-menu h2 {
+    margin-bottom: 0;
 }
 #header-menu a {
     text-decoration: none;
@@ -87,14 +88,9 @@ a{
     cursor: pointer;
 }
 #header-menu nav ul {
-/*
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;                align the text to right side (end) of the box       
-*/
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin-bottom: 0;                              /* needed to override some bootstrap settings           */
     list-style: none;                              /* remove decoration from tags                          */
     font-size: 14px;
 }
@@ -111,7 +107,7 @@ a{
     margin-right: 0;                               /* set the last menu item (child) to the right side of the menu */
 }       
 #body-top .the-missing {                          /* display the missing section below the navigation menu        */
-    padding-top: 120px;
+    padding-top: 100px;
 }
 /* ****************************************************************************************  */
 /*                               MISSING PERSONS                                             */
@@ -127,6 +123,7 @@ a{
 .missing-person h3 {
     font-size: 16px;
     padding-bottom: 5px;
+    font-weight: bold;
 }
 .missing-person p {
     font-size: 12px;
@@ -137,54 +134,11 @@ a{
 /* **************************************************************************************** */
 #main-text-area {
     display: grid;                          /* display the main text and info panel side by side */
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr;             /* overriden in media rule for wider screens         */
     margin: 5px;
 }
 #main-text-area a {
     color: deepskyblue;                     /* default for anchor tags is white, change this in the main text */
-}    
-/* **************************************************************************************** */
-/*                                        MAIN TEXT DIV                                     */
-/* **************************************************************************************** */
-.main-text {
-    padding: 5px;
-    font-size: 14px;
-}
-.main-text > #listClass {                   /* this is to over ride the flex settings from #body-top */
-    flex-direction: column;
-    align-items: flex-start;
-}
-.main-text > #listClass > li {              /* this is to over ride the text align center setting from #body-top */
-    text-align: left;
-}
-.main-text p {
-    padding: 10px;
-    margin-bottom: 0px;
-}
-/* **************************************************************************************** */
-/*                        MAIN TEXT WIDE - USED BY ARTICLES                                 */
-/* **************************************************************************************** */
-.main-text-wide {                           /* use the full width as there is no information side bar */
-    width: 100%;
-}
-.main-text-wide ul {
-    display: block;                         /* this is to make sure the line items display vertically */
-    list-style: inside;                     /* make sure the item decoration is inside the list       */
-    font-size: 14px;
-    margin: 0px 0px 0px 10px;
-}
-.main-text-wide ul li {
-    text-align: left;                       /* this is to make sure the line items display vertically */
-}    
-.main-text-wide ol {
-    display: block;                         /* this is to make sure the line items display vertically */
-    list-style: inside;                     /* make sure the item decoration is inside the list       */
-    font-size: 14px;
-    margin-left: 10px;
-    text-align: left;
-}
-.main-text-wide ol li {
-    text-align: left;                       /* this is to make sure the line items display vertically */
 }    
 
 /* **************************************************************************************** */
@@ -209,7 +163,125 @@ a{
 .side-bar p {
     padding: 5px;
 }
-
+.center-link{
+    text-align: center;
+}
+#search-btn {
+    display: inline-block;
+    font-weight: 400;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid;
+    padding: 5px 5px;
+    font-size: 16px;
+    border-radius: .25rem;
+}
+#search-btn:hover {
+    background-color: ghostwhite;
+}
+/* **************************************************************************************** */
+/*                                        MAIN TEXT DIV                                     */
+/* **************************************************************************************** */
+.main-text {
+    padding: 5px;
+    font-size: 14px;
+}
+.main-text > #listClass {                   /* this is to over ride the flex settings from #body-top */
+    flex-direction: column;
+    align-items: flex-start;
+}
+.main-text > #listClass > li {              /* this is to over ride the text align center setting from #body-top */
+    text-align: left;
+}
+.main-text p {
+    padding: 10px;
+    margin-bottom: 0px;
+}
+/* **************************************************************************************** */
+/*                        MAIN TEXT WIDE - USED BY ARTICLES                                 */
+/* **************************************************************************************** */
+.main-text-wide ul {
+    display: block;                         /* this is to make sure the line items display vertically */
+    list-style: inside;                     /* make sure the item decoration is inside the list       */
+    font-size: 14px;
+    margin: 0px 0px 0px 10px;
+}
+.main-text-wide ul li {
+    text-align: left;                       /* this is to make sure the line items display vertically */
+}    
+.main-text-wide ol {
+    display: block;                         /* this is to make sure the line items display vertically */
+    list-style: inside;                     /* make sure the item decoration is inside the list       */
+    font-size: 14px;
+    margin-left: 10px;
+    text-align: left;
+}
+.main-text-wide ol li {
+    text-align: left;                       /* this is to make sure the line items display vertically */
+}    
+/* ************************************************************************************************* */
+/*                                   ARTICLE RULES                                                   */
+/* ************************************************************************************************* */
+.letter-head p {                                    
+    text-align: right;                      /* used to right align text to indicate a letter head */
+}
+.table-layout th {                          /* format the header row of the table                 */
+    text-align: left;
+    padding: 0px 10px 0px 10px;
+    background-color: lightgrey;
+}
+.table-layout td {                          /* format the cells of the table                      */
+    padding: 0px 10px 0px 10px;
+    text-align: left;
+}
+.article-image-r img {                      /* float the image displayed in article to the right*/
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    margin: 5px;
+    float: right;
+}
+.article-image-l img {                      /* float the image displayed in article to the left */
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    margin: 5px;
+    float: left;
+}
+.article-image-r-noborder img {               /* float the image with no border displayed in article to the right*/
+    margin: 5px;
+    float: right;
+}
+.article-image-l-noborder img {               /* float the image with no border displayed in article to the left */
+    margin: 5px;
+    float: left;
+}
+#main-text-area .article-ul {
+    display: block;                           /* this is to make sure the line items display with extra padding */
+    list-style: inside;                       /* make sure the item decoration is inside the list               */
+    margin: 0px 0px 0px 0px;
+}
+#main-text-area .article-li {
+    text-align: left;                      
+    margin: 0px 0px 0px 5px;
+    padding: 0px;
+}    
+/* **************************************************************************************** */
+/*               BOOTSTRAP COMPONENTS USED IN A COUPPLE OF ARTICLES                         */
+/* **************************************************************************************** */
+#wreckageCarousel {
+    width: 90%;
+    margin: auto;
+    border: 2px solid black;
+}
+.wreckageCarousel > img {
+    margin: 0 auto;
+    display:inline-block;
+}
 /* **************************************************************************************** */
 /*                              LATEST POPULAR SOON AREA                                    */
 /* **************************************************************************************** */
@@ -233,6 +305,7 @@ a{
     margin-bottom: 10px;
 }
 #body-top .article-lists ul li {
+    padding-left: 2px;
     text-align: left;                               /* this is to make sure the line items display vertically */
 }    
 #body-top .article-lists ul li a {
@@ -242,10 +315,10 @@ a{
 /*                               FOOTER SECTION                                                      */
 /* ************************************************************************************************* */
 #social-media {
-    display: flex;                                      /* display UL, P & P elements vertically and center them */ 
+    display: flex;                                  /* display UL, P & P elements vertically and center them */ 
     flex-direction: column;
     align-items: center;
-    padding: 10px 0;                                    /* 10px top and bottom and 0px left and right */
+    padding: 10px 0;                                /* 10px top and bottom and 0px left and right */
 
     background-color: #131622;
     background: linear-gradient(to bottom, #284e7a, #000 100%);
@@ -255,7 +328,7 @@ a{
 #social-media  p {
     text-transform: uppercase;          /* change text in para tags to uppercase */
     font-size: 14px;
-    color: rgba(255,255,255,0.6);        /* add a transparent overlay of white - 0.6 = 60% opacity */
+    color: rgba(255,255,255,0.6);       /* add a transparent overlay of white - 0.6 = 60% opacity */
     margin-bottom: 10px;
 }
 #social-media  ul {
@@ -274,12 +347,16 @@ a{
 /* ************************************************************************************************* */
 /*                                      CONTACT FORM                                                 */
 /* ************************************************************************************************* */
-/* TODO: Need to test this out on the web server */
 #formcontainer {
     font-family: 'Arial', sans-serif;
     background-color: aliceblue;
-    margin: 10px;
+    margin: auto;
     width: 100%;
+}
+#formwrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column: 1 / -1;
 }
 #formwrapper fieldset {
     background-color: aliceblue;
@@ -287,22 +364,18 @@ a{
     min-height: 100px;
     border-radius: 5px;
     padding: 2%;
-    margin: 0 auto 10px;    
-}
-#formwrapper {
-    display: flex;
-    flex-direction: row;
+    margin: 0px auto 10px;    
 }
 #left-col {                             /* the colums will be split across the screen */
-    width: 50%;
+    width: 100%;
     padding: 1%;
 }
 #left-col fieldset p {
     display:flex;
     flex-direction: column;
     justify-content: flex-start;        /* line fields up to left */
-    flex-wrap: wrap;                    /* wrap fields when appropriate */
- }
+    flex-wrap: wrap;                    /* wrap fields when appropriate  */
+}
 #left-col input {                       /* this ensures the inut fields are centered and dont take up full width */
     width:95%;
     padding: 5px;
@@ -310,43 +383,77 @@ a{
     margin-bottom: 10px;
 }
 #right-col {
-    width: 50%;
+    width: 100%;
     padding: 1%;
 }
 #right-col fieldset p {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;      /* makes sure items are evenly spaced */
+    justify-content: space-around;          /* makes sure items are evenly spaced */
 }
-
+#right-col textarea {                       /* this ensures the input fields are centered and dont take up full width */
+    width:95%;
+    padding: 5px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+#right-col div {
+    text-align: center;
+}
+/* ******************************************************************************************   */
+/* hide form fields to avoid spam bots                                                          */
+/* ******************************************************************************************   */
+#left-col fieldset #email {
+    display: none;
+}
+#right-col fieldset #subject {
+    display: none;
+}
 /* ********************************************** MEDIA RULES ****************************************************************************   */
 
 /* ******************************************************************************************   */
 /* apply to any device that has a screen width of 576px or higher                               */
 /* ******************************************************************************************   */
 @media screen and (min-width: 576px) {
+/*
     #body-top { 
-        background: rgba(255,255,0,.25);                /* YELLOW-ish */
+        background: rgba(255,255,0,.25);                 YELLOW-ish 
     }
-    #body-top .the-missing {                          /* display the missing section below the navigation menu        */
-        padding-top: 100px;
+*/
+    #body-top .the-missing {                            /* display the missing section below the navigation menu        */
+        padding-top: 90px;
     }
 }
 /* ******************************************************************************************   */
 /* apply to any device that has a screen width of 768px or higher                               */
 /* ******************************************************************************************   */
 @media screen and (min-width: 768px) {
+    #header-menu img {
+        width: 115px;                                   /* display a slightly large logo image  */
+    }
     #header-menu nav ul {
         grid-template-columns: 1fr 1fr 2fr 2fr 2fr 1fr;
         grid-auto-flow: column;
         font-size: 14px;
     }
+/*
     #body-top { 
-        background: rgba(0,255,0,.25);                  /* GREEN  */
+        background: rgba(0,255,0,.25);                   GREEN  
+    }
+*/
+    #body-top .the-missing {                            /* display the missing section below the navigation menu        */
+        padding-top: 80px;
     }
     .the-missing { 
         grid-template-columns: 1fr 1fr 1fr;                             /* display in 3 columns */
+    }
+    #wreckageCarousel {
+        width: 60%;
+    }
+    #formcontainer {
+        grid-template-columns: 1fr;
+        grid-column: 1 / -1;
     }
     #latest-popular-soon {
         grid-template-columns: 1fr 1fr;
@@ -356,14 +463,33 @@ a{
 /* apply to any device that has a screen width of 992px or higher                               */
 /* ******************************************************************************************   */
 @media screen and (min-width: 992px) {
+    #header-menu nav ul {                               /* keep the menu more centered          */
+        width: 90%;
+        text-align: left;
+    }
+    #header-menu img {
+        width: 138px;                                   /* display a slightly large logo image  */
+    }
+/*
     #body-top { 
-        background: rgba(0,0,255,.25);                  /* BLUE */
+        background: rgba(0,0,255,.25);                   BLUE 
+    }
+*/
+    #body-top .the-missing {                            /* display the missing section below the navigation menu        */
+        padding-top: 80px;
     }
     .the-missing {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;                 /* display in 6 columns */
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /* display in 6 columns */
+    }
+    .main-text-wide {
+        grid-column: 1 / -1;                            /* hack to make content span across all columns */
+                                                        /* https://blog.logrocket.com/the-simpletons-guide-to-css-grid-1767565b3cf7 */
     }
     #main-text-area {
-        grid-template-columns: 8fr 2fr;
+        grid-template-columns: 8fr 2fr;                                 /* display the side bar */
+    }
+    #wreckageCarousel {
+        width: 50%;
     }
     #latest-popular-soon {
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -373,7 +499,9 @@ a{
 /* apply to any device that has a screen width of 1200px or higher                              */
 /* ******************************************************************************************   */
 @media screen and (min-width: 1200px) {
+/*
     #body-top { 
-        background: rgba(150,150,150,.25);              /* GRAY */ 
+        background: rgba(150,150,150,.25);               GRAY  
     }
+*/
 }

@@ -1,3 +1,100 @@
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+
+<?php
+    if($_POST["submit"]) {
+        $recipient="mark.boomer@9habu.com";
+        $subject="Message from 9habu contact form";
+        $senderFirst=$_POST["firstname"];
+        $senderLast=$_POST["lastname"];
+        $senderEmail=$_POST["email"];
+        $senderMessage=$_POST["message"];
+
+        $mailBody="Name: $senderFirst $senderLast \n Email: $senderEmail\n\n $senderMessage";
+
+        mail($recipient, $subject, $mailBody, "From: $senderEmail <$senderEmail>");
+
+        $thankYou="<p><br /><strong>Thank you! Your message has been sent.</strong><br /></p>";
+    }
+?>
+        # spam protection
+        if (isset($_POST["email"]) && $_POST["email"] == "") && (isset($_POST["subject"]) && $_POST["subject"] == "") {
+                mail($recipient, $subject, $mailBody, "From: $senderEmail <$senderEmail>");
+                $thankYou="<p><br /><strong>Thank you! Your message has been sent.</strong><br /></p>";
+        } else {
+                $thankYou="<p><br /><strong>Sorry, your message has not been accepted</strong><br /></p>";
+                # http_response_code(400);
+                exit;
+        }
+    }
+
+
+#formcontainer {
+    font-family: 'Arial', sans-serif;
+    background-color: aliceblue;
+    margin: 10px;
+    width: 100%;
+}
+#formwrapper {
+/*
+    display: flex;
+    flex-direction: column;
+*/
+}
+#formwrapper fieldset {
+    background-color: aliceblue;
+    max-width: 900px;
+    min-height: 100px;
+    border-radius: 5px;
+    padding: 2%;
+    margin: 0 auto 10px;    
+}
+#left-col {                             /* the colums will be split across the screen */
+    width: 50%;
+    padding: 1%;
+}
+#left-col fieldset p {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;        /* line fields up to left */
+    flex-wrap: wrap;                    /* wrap fields when appropriate  */
+}
+#left-col input {                       /* this ensures the inut fields are centered and dont take up full width */
+    width:95%;
+    padding: 5px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+#right-col {
+    width: 50%;
+    padding: 1%;
+}
+#right-col fieldset p {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;       /* makes sure items are evenly spaced */
+}
+
+
+
+
 <script>
 function myFunction() {
 

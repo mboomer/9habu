@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <title>CSS Media Queries</title>
+
+        <!-- turns off mobile browser scaling / browser zoom -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <style>
+            /* ------------------------------------------------------------------------------------ */
+            /* means apply to every element unless over-ridden by other rules */
+            /* ------------------------------------------------------------------------------------ */
+            * { 
+                margin: 0;
+            }
+            /* this sets background as red but the 0.25 tells it to only 25% red (so a pink) */
+            body { 
+                background: rgba(255,0,0,0.25);
+            }
+            /* ------------------------------------------------------------------------------------ */
+            /* this a mobile first approach - any rules above the media queries will apply to entire layout */
+            /* unless overridden by media query */
+            /* ------------------------------------------------------------------------------------ */
+
+            /* ------------------------------------------------------------------------------------ */
+            /* this sets background as green                                                        */
+            /* apply to any device that has a screeen width of 768px or higher
+            /* ------------------------------------------------------------------------------------ */
+            @media screen and (min-width: 768px) {
+                body { 
+                    background: rgba(0,255,0,.25); 
+                }
+            }
+            /* ------------------------------------------------------------------------------------ */
+            /* this sets background as blue  */
+            /* apply to any device that has a screeen width of 1200px or higher
+            /* ------------------------------------------------------------------------------------ */
+            @media screen and (min-width: 1200px) {
+                body { 
+                    background: rgba(0,0,255,.25); 
+                }
+            }
+        </style>
+    
+    </head>
+
+    <body>
+        Hello World!
+    </body>
+
+</html>

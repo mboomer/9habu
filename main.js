@@ -78,27 +78,27 @@ var missingPassengers = new Vue ({
     data: {
         passengers: [
             {   personsName :  "Desmond Boomer", 
-                personsImage: "./img/desmondboomer-120p.jpg", 
+                personsImage: "/img/desmondboomer-120p.jpg", 
                 personsDesc :  "Desmond was a 38 year old Belfast born, engineer working in the Libyan oil fields" 
             },
             {   personsName:  "Michael Williams", 
-                personsImage: "./img/michaelwilliams-120p.jpg", 
+                personsImage: "/img/michaelwilliams-120p.jpg", 
                 personsDesc:  "Michael was a 49 year old English born engineer and manager of rock band 'The Characters'" 
             },
             {   personsName:  "Matthew Aquilina", 
-                personsImage: "./img/matthewaquilina-120p.jpg", 
+                personsImage: "/img/matthewaquilina-120p.jpg", 
                 personsDesc:  "Matthew was a 22 year old Maltese national returning to Malta" 
             },
             {   personsName:  "Tadeus Gorny", 
-                personsImage: "./img/tadeusgorny-120p.jpg", 
+                personsImage: "/img/tadeusgorny-120p.jpg", 
                 personsDesc:  "Tadeus was a 48 year Polish national working in the Libyan oil fields" 
             },
             {   personsName:  "Philip Farrugia", 
-                personsImage: "./img/philipfarrugia-120p.jpg", 
+                personsImage: "/img/philipfarrugia-120p.jpg", 
                 personsDesc:  "Philp was a 43 year old Maltese national returning to Malta" 
             },
             {   personsName:  "Carmel Bartolo", 
-                personsImage: "./img/carmelbartolo-120p.jpg", 
+                personsImage: "/img/carmelbartolo-120p.jpg", 
                 personsDesc:  "Carmel was a 47 year Maltese national and the pilot of flight 9H-ABU" 
             }
         ]

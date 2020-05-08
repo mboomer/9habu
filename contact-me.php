@@ -4,14 +4,24 @@
         $subject="Message from 9habu contact form";
         $senderFirst=$_POST["firstname"];
         $senderLast=$_POST["lastname"];
-        $senderEmail=$_POST["email"];
+        $senderEmail=$_POST["emailadd"];
         $senderMessage=$_POST["message"];
 
-        $mailBody="Name: $senderFirst $senderLast \n Email: $senderEmail\n\n $senderMessage";
+        # -------------------------------------------------------------------------------- #
+        # spam protection - check if hidden fields email/subject have been filled in       #
+        # spam protection - if they are then its likely a spam bot                         #
+        # -------------------------------------------------------------------------------- #
+        if (
+            (isset($_POST["email"]) && $_POST["email"] == "") && (isset($_POST["subject"]) && $_POST["subject"] == "")) {  
+            $mailBody="Name: $senderFirst $senderLast \n Email: $senderEmail\n\n $senderMessage";
+            mail($recipient, $subject, $mailBody, "From: $senderEmail <$senderEmail>");
+            $thankYou="<p><br /><strong>Thank you! Your message has been sent.</strong><br /></p>";
 
-        mail($recipient, $subject, $mailBody, "From: $senderEmail <$senderEmail>");
-
-        $thankYou="<p><br /><strong>Thank you! Your message has been sent.</strong><br /></p>";
+        } else {
+                $thankYou="<p><br /><strong>Sorry, your message has not been accepted</strong><br /></p>";
+                http_response_code(400);
+                exit;
+        }
     }
 ?>
 <!DOCTYPE html>
@@ -43,17 +53,16 @@
             <!-- ********************************************************************************** -->
             <!-- navigation menu displayed across the top of the page                               -->
             <!-- ********************************************************************************** -->
-            <header>
+            <header id="header-menu">
                 <h2><a href="#" target="_blank"><img src="img/logo.jpg" alt="Piper Lance 9h-abu"></a></h2>
                 <nav>
                     <ul>
-                        <li><a href="#body-top">Top</a></li>         <!-- returns to top the site -->
-
-                        <li><a href="index.html" title="Home Page" >Home</a></li>
-                        <li><a href="death-in-the-mediterranean.html" title="An Investigation By Don Mullan" >An Investigation By Don Mullan</a></li>
-                        <li><a href="maltese-board-of-inquiry-report.html" title="Maltese Board of Inquiry Report" >Maltese Board of Inquiry Report</a></li>
-                        <li><a href="malta-tv-documentary.html" title="Malta TV Documentary" >Malta TV Documentary</a></li>
-                        <li><a href="contact-me.php" title="Contact Us">Contact Us</a></li>
+                        <li><a href="#body-top">Top</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="death-in-the-mediterranean.html">An Investigation By Don Mullan</a></li>
+                        <li><a href="maltese-board-of-inquiry-report.html">Maltese Board of Inquiry Report</a></li>
+                        <li><a href="malta-tv-documentary.html">Malta TV Documentary</a></li>
+                        <li><a href="contact-me.php">Contact Us</a></li>
                     </ul>
                 </nav>
             </header>
@@ -91,16 +100,20 @@
                                 <p>
                                     <input id="firstname" name="firstname" type="text"  placeholder="First Name" autofocus tabindex="1">
                                     <input id="lastname"  name="lastname"  type="text"  placeholder="Last Name" tabindex="2">
-                                    <input id="email"     name="email"     type="email" placeholder="email@address.com" tabindex="3" required >
+                                    <input id="emailadd"  name="emailadd"  type="email" placeholder="email@address.com" tabindex="3" required >
+                                    <!-- this input field will be hidden as part of the spam protection -->
+                                    <input id="email"     name="email"     type="email" placeholder="email@address.com" tabindex="4">
                                 </p>
                             </fieldset>
                         </section>
                         <section id="right-col">
                             <fieldset>
                                 <legend>Message</legend>
-                                <textarea id="message" name="message" rows="10" cols="40" placeholder="Enter text here..." tabindex="4"></textarea>
+                                <!-- this input field will be hidden as part of the spam protection -->
+                                <input    id="subject" name="subject" type="text"  placeholder="Subject" tabindex="5">
+                                <textarea id="message" name="message" rows="10" placeholder="Enter text here..." tabindex="6"></textarea>
                             </fieldset>
-                                <input type="submit" name="submit" value="Submit Form" tabindex="5">
+                            <div><input name="submit" type="submit" value="Submit Form" tabindex="7"></div>
                         </section>    
                     </form>
 
