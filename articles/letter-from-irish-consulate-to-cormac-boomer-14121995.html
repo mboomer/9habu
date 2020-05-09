@@ -29,22 +29,21 @@
 
 <!-- ******************************************************************************************* -->
 
-    <body id="top"> <!-- the jquery will scroll to this point -->
+    <body id="body-top"> <!-- the jquery will scroll to this point -->
         
         <!-- ********************************************************************************** -->
         <!-- navigation menu displayed across the top of the page                               -->
         <!-- ********************************************************************************** -->
-        <header>
+        <header id="header-menu">
             <h2><a href="#" target="_blank"><img src="../img/logo.jpg" alt="Piper Lance 9h-abu"></a></h2>
             <nav>
                 <ul>
-                    <li><a href="#top">Top</a></li>         <!-- returns to top the site -->
-
-                    <li><a href="../index.html" title="Home Page" >Home</a></li>
-                    <li><a href="../death-in-the-mediterranean.html" title="An Investigation By Don Mullan" >An Investigation By Don Mullan</a></li>
-                    <li><a href="../maltese-board-of-inquiry-report.html" title="Maltese Board of Inquiry Report" >Maltese Board of Inquiry Report</a></li>
-                    <li><a href="../malta-tv-documentary.html" title="Malta TV Documentary" >Malta TV Documentary</a></li>
-                    <li><a href="../contact-me.php" title="Contact Us">Contact Us</a></li>
+                    <li><a href="#body-top">Top</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../death-in-the-mediterranean.html">An Investigation By Don Mullan</a></li>
+                    <li><a href="../maltese-board-of-inquiry-report.html">Maltese Board of Inquiry Report</a></li>
+                    <li><a href="../malta-tv-documentary.html">Malta TV Documentary</a></li>
+                    <li><a href="../contact-me.php">Contact Us</a></li>
                 </ul>
             </nav>
         </header>
@@ -145,40 +144,50 @@
         <div id="latest-popular-soon">
 
               <div class="article-lists">
-                <p>Latest Articles...</p>
+                <p>{{ latestArticlesTitle }}...</p>
                 <ul>
-                  <li><a href="../death-in-the-mediterranean.html">An Investigation By Don Mullan</a></li>
-                  <li><a href="../maltese-board-of-inquiry-report.html" >Maltese Board of Inquiry Report</a></li>
-                  <li><a href="../malta-tv-documentary.html">Malta TV Documentary</a></li>
+                    <latest 
+                        v-for="(article, index) in latestArticles"                 
+                        v-bind:latestarticle="article"                           
+                        :key="index">                                            
+                    </latest>                                                   
                 </ul>
               </div>
 
               <div class="article-lists">
-                <p>Most Read...</p>
+                <p>{{ mostReadArticlesTitle }}...</p>
                 <ul>
-                  <li><a href="../death-in-the-mediterranean.html" >An Investigation By Don Mullan</a></li>
-                  <li><a href="../maltese-board-of-inquiry-report.html">Maltese Board of Inquiry Report</a></li>
-                  <li><a href="../malta-tv-documentary.html">Malta TV Documentary</a></li>
+                    <most-read 
+                        v-for="(article, index) in mostReadArticles"                 
+                        v-bind:mostreadarticle="article"                           
+                        :key="index">                                            
+                    </most-read>                                        
                 </ul>
               </div>
 
               <div class="article-lists">
-                <p>Coming Soon...</p>
+                <p>{{ comingSoonArticlesTitle }}...</p>
                 <ul>
-                  <li><a href="#">Updated responsive website suitable for mobile and tablets</a></li>
+                    <coming-soon 
+                        v-for="(article, index) in comingSoonArticles"                 
+                        v-bind:comingsoonarticle="article"                           
+                        :key="index">                                            
+                    </coming-soon>                                      
                 </ul>
               </div>
 
               <div class="article-lists">
-                <p>Related Sites...</p>
+                <p>{{ relatedSitesTitle }}...</p>
                 <ul>
-                  <li><a href="www.flightlinemalta.com">Flightline GA Malta</a></li>
-                  <li><a href="pprune.org">Professional Pilots Rumour Network</a></li>
-                  <li><a href="https://jetphotos.com/photo/71054">Jet Photos</a></li>
+                    <related-sites 
+                        v-for="(site, index) in relatedSites"                 
+                        v-bind:sitelist="site"                           
+                        :key="index">                                            
+                    </related-sites>         
                 </ul>
               </div>
-        </div>              <!-- end of latest-populat-soon -->
-        
+        </div>              <!-- end of latest-popular-soon -->
+
         <!-- **************************************************************************** -->
         <!-- section holding the links to social media                                    -->
         <!-- **************************************************************************** -->
@@ -190,8 +199,15 @@
                 <li><a href="#" target="_blank"><i class="fab fa-youtube-square"></i></a></li>
                 <li><a href="#" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
             </ul>   
-        <p>&copy; <script>document.write(new Date().getFullYear());</script> The Mysterious Disappearance Of Flight 9H-ABU</p>
-        <p>&ldquo;All Rights Reserved&mdash;Designed by Mark Boomer&rdquo; </p>
+            <p>&copy; <script>document.write(new Date().getFullYear());</script> The Mysterious Disappearance Of Flight 9H-ABU</p>
+            <p>&ldquo;All Rights Reserved&mdash;Designed by Mark Boomer&rdquo; </p>
         </footer>
+
+        <!-- **************************************************************************** -->
+        <!-- Load the VUE.js libraries to access Vue functionality                        -->
+        <!-- **************************************************************************** -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+        <script src="../main.js"></script>
+
     </body>
 </html>

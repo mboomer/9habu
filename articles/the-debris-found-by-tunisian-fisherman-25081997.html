@@ -22,28 +22,30 @@
     <!-- this is a downloaded google font  Use font-family: 'Cinzel', serif; in CSS-->
     <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
   
+    <!-- Load Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
     <link rel="stylesheet" href="../styles.css">
     
     </head>
 
-<!-- ******************************************************************************************* -->
+    <!-- ******************************************************************************************* -->
 
-    <body id="top"> <!-- the jquery will scroll to this point -->
+    <body id="body-top"> <!-- the jquery will scroll to this point -->
         
         <!-- ********************************************************************************** -->
         <!-- navigation menu displayed across the top of the page                               -->
         <!-- ********************************************************************************** -->
-        <header>
+        <header id="header-menu">
             <h2><a href="#" target="_blank"><img src="../img/logo.jpg" alt="Piper Lance 9h-abu"></a></h2>
             <nav>
                 <ul>
-                    <li><a href="#top">Top</a></li>         <!-- returns to top the site -->
-
+                    <li><a href="#body-top">Top</a></li>
                     <li><a href="../index.html" title="Home Page" >Home</a></li>
-                    <li><a href="../death-in-the-mediterranean.html" title="An Investigation By Don Mullan" >An Investigation By Don Mullan</a></li>
-                    <li><a href="../maltese-board-of-inquiry-report.html" title="Maltese Board of Inquiry Report" >Maltese Board of Inquiry Report</a></li>
-                    <li><a href="../malta-tv-documentary.html" title="Malta TV Documentary" >Malta TV Documentary</a></li>
-                    <li><a href="../contact-me.php" title="Contact Us">Contact Us</a></li>
+                    <li><a href="../death-in-the-mediterranean.html">An Investigation By Don Mullan</a></li>
+                    <li><a href="../maltese-board-of-inquiry-report.html">Maltese Board of Inquiry Report</a></li>
+                    <li><a href="../malta-tv-documentary.html">Malta TV Documentary</a></li>
+                    <li><a href="../contact-me.php">Contact Us</a></li>
                 </ul>
             </nav>
         </header>
@@ -52,43 +54,11 @@
         <!-- **************************************************************************** -->
         <!-- section holding the images of the missing passengers                         -->
         <!-- **************************************************************************** -->
-        <ul class="the-missing">
+        <ul id="missing-passengers" class="the-missing" >
 
-            <li class="missing-person">
-                <h3>Desmond Boomer</h3>
-                <p><img src="../img/desmondboomer-120p.jpg" /></p>
-                <p>38 year old Belfast born, engineer working in the Libyan oil fields</p>
-            </li>
-
-            <li class="missing-person">
-                <h3>Michael Williams</h3>
-                <p><img src="../img/michaelwilliams-120p.jpg"/></p>
-                <p>49 year old English born engineer & manager of rock band "The Characters"</p>
-            </li>
-
-            <li class="missing-person">
-                <h3>Matthew Aquilina</h3>
-                <p><img src="../img/matthewaquilina-120p.jpg" /></p>
-                <p>Matthew was a 22 year old Maltese national returning to Malta</p>
-            </li>
-        
-            <li class="missing-person">
-                <h3>Tadeus Gorny</h3>
-                <p><img src="../img/tadeusgorny-120p.jpg" /></p>
-                <p>A 48 year Polish national working in the Libyan oil fields</p>
-            </li>
-
-            <li class="missing-person">
-                <h3>Philip Farrugia</h3>
-                <p><img src="../img/philipfarrugia-120p.jpg" /></p>
-                <p>A 43 year old Maltese national returning to Malta</p>
-            </li>
-
-            <li class="missing-person">
-                <h3>Carmel Bartolo</h3>
-                <p><img src="../img/carmelbartolo-120p.jpg" /></p>
-                <p>A 47 year Maltese national and the pilot of flight 9H-ABU</p>
-            </li>
+            <passenger-details 
+                v-for="(missingperson, index) in passengers" v-bind:passenger="missingperson" :key="index">         
+            </passenger-details>                              
             
         </ul> <!-- end of "the-missing" -->
     
@@ -106,228 +76,243 @@
 
                 <p>Note the volume of debris recovered is very small and specific given the overall size of the plane.</p>
 
-                  <table border="0">
-                  <tbody>
-                  <tr><td><img src="article-images/wreckage 1 small.jpg" border="0" alt="Instrument panel, steerting column and rudder pedals" title="Instrument panel, steerting column and rudder pedals" width="206" height="278" style="border: 2px solid black; float: left; margin: 2px;" /></td>
-                  <td>
-                  <h3>  This photograph shows</h3>
-                  <ul>
-                  <li>The remains of the instrument panel</li>
-                  <li>The steering column with the right arm missing</li>
-                  <li>The rudder pedals and the control handles for the engine ailerons and flaps</li>
-                  <li>One of the seatbelts recovered</li>
-                  </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                  <td><img src="article-images/wreckage 2 small.jpg" border="0" alt="Close Up Of Bottom Of Steering Column" title="Close Up Of Bottom Of Steering Column" width="206" height="278" style="border: 2px solid black; float: left; margin: 2px;" /></td>
-                  <td>
-                  <h3>  This photograph shows</h3>
-                  <ul>
-                  <li>Close up of the bottom of the steering column</li>
-                  <li>Accumulation of rust suggests this was out of the water and exposed to atmosphere for a long period of time</li>
-                  <li>Also shown with the name Piper and the control handles</li>
-                  </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                  <td><img src="article-images/wreckage 3 small.jpg" border="0" alt="Control cable and linkage from steering column" title="Control cable and linkage from steering column" width="206" height="278" style="border: 2px solid black; float: left; margin: 2px;" /></td>
-                  <td>
-                  <h3>  This photograph shows</h3>
-                  <ul>
-                  <li>This is control cable and linkage from around the steering column</li>
-                  <li>Note that one end of the stainless steel cable is frayed and bent</li>
-                  <li>the investigator stated this condition is the result of being stretched beyond breaking point</li>
-                  <li>The other end suggests a twisted wrung off break, no explanation why the two ends should be different</li>
-                  </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                  <td><img src="article-images/wreckage 4 small.jpg" border="0" alt="The landing gear leaver handle" title="The landing gear leaver handle" width="206" height="278" style="border: 2px solid black; float: left; margin: 2px;" /></td>
-                  <td>
-                  <h3>  This photograph shows</h3>
-                  <ul>
-                  <li>The landing gear leaver handle</li>
-                  <li>This is in the first notch position</li>
-                  <li>This would indicate the landing gear was partially lowered</li>
-                  <li>Also depicted are two seat belts</li>
-                  </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                  <td><img src="article-images/wreckage 5 small.jpg" border="0" alt="Close up of the rudder pedal" title="Close up of the rudder pedal" width="206" height="278" style="border: 2px solid black; float: left; margin: 2px;" /></td>
-                  <td>
-                  <h3>  This photograph shows</h3>
-                  <ul>
-                  <li>A closeup of the rudder pedal and the bottom of the steering column</li>
-                  </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                  <td><img src="article-images/wreckage 6 small.jpg" border="0" alt="Seat bolts ripped from the floor" title="Seat bolts ripped from the floor" width="206" height="278" style="border: 2px solid black; float: left; margin: 2px;" /></td>
-                  <td>
-                  <h3>  This photograph shows</h3>
-                  <ul>
-                  <li>One of the two seat bolts and securing fixtures which have been ripped from the floor</li>
-                  <li>Note the securing bolts are severely bent</li>
-                  <li>The material of these belts was stretched (elongated) beyond belief</li>
-                  <li>Note the release leaver is compressed into and on top of the retaining mechanism</li>
-                  <li>the name and number plate of the manufacturer is also visible</li>
-                  </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                  <td><img src="article-images/wreckage 7 small.jpg" border="0" alt="Aileron Servo Motor with manufacturers aluminium name plate" title="Aileron Servo Motor with manufacturers aluminium name plate" width="206" height="278" style="border: 2px solid black; float: left; margin: 2px;" /></td>
-                  <td>
-                  <h3>  This photograph shows</h3>
-                  <ul>
-                  <li>The Aileron Servo Motor</li>
-                  <li>Note the manufacturers aluminium name plate which shows no signs of salt pigment or corrosion</li>
-                  <li>We are asked to believe this item was eight months in the salt water of the Mediterranean sea</li>
-                  </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                  <td><img src="article-images/wreckage 8 small.jpg" border="0" alt="The Auto Pilot Motor" title="The Auto Pilot Motor" width="206" height="278" style="border: 2px solid black; float: left; margin: 2px;" /></td>
-                  <td>
-                  <h3>  This photograph shows</h3>
-                  <ul>
-                  <li>The Auto Pilot Motor</li>
-                  <li>Note the very good condition ofthe manufacturers name plate</li>
-                  </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                  <td><img src="article-images/wreckage 9 small.jpg" border="0" alt="Main spar with floor carpet " title="Main spar with floor carpet" width="206" height="278" style="border: 2px solid black; float: left; margin: 2px;" /></td>
-                  <td>
-                  <h3>  This photograph shows</h3>
-                  <ul>
-                  <li>This is part of the main spar with the floor carpet in place</li>
-                  <li>This spar is the component across the body of the aircraft to which the wing sections are attached</li>
-                  <li>It is positioned directly behind the pilot/co-pilot’s seats</li>
-                  </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                  <td><img src="article-images/wreckage 10 small.jpg" border="0" alt="Spar with the floor carpet in normal position" title="Spar with the floor carpet in normal position" width="206" height="278" style="border: 2px solid black; float: left; margin: 2px;" /></td>
-                  <td>
-                  <h3>  This photograph shows</h3>
-                  <ul>
-                  <li>The spar with the floor carpet in normal position</li>
-                  </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                  <td><img src="article-images/wreckage 11 small.jpg" border="0" alt="Registration Number 8040" title="Registration Number 8040" width="206" height="278" style="border: 2px solid black; float: left; margin: 2px;" /></td>
-                  <td>
-                  <h3>  This photograph shows</h3>
-                  <ul>
-                  <li>The carpet pulled back revels the number 80410</li>
-                  <li>This is the registration number allocated to this aircraft during manufacturer</li>
-                  <li>This is inscribed using an indelible marker on this component</li>
-                  </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                  <td><img src="article-images/wreckage 12 small.jpg" border="0" alt="Frames securing the pilots seats" title="Frames securing the pilots seats" width="206" height="278" style="border: 2px solid black; float: left; margin: 2px;" /></td>
-                  <td>
-                  <h3>  This photograph shows</h3>
-                  <ul>
-                  <li>This depicts the frames upon which the pilots seats are secured</li>
-                  <li>Note the retaining brackets have been ripped off</li>
-                  <li>There is no indication of stress visible on the adjoining cable looms</li>
-                  </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                  <td><img src="article-images/wreckage 13 small.jpg" border="0" alt="Frames securing the pilots seats" title="Frames securing the pilots seats" width="206" height="278" style="border: 2px solid black; float: left; margin: 2px;" /></td>
-                  <td>
-                  <h3>  This photograph shows</h3>
-                  <ul>
-                  <li>This depicts the frames upon which the pilots seats are secured</li>
-                  <li>Note the retaining brackets have been ripped off</li>
-                  <li>There is no indication of stress visible on the adjoining cable looms</li>
-                  </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                  <td><img src="article-images/wreckage 14 small.jpg" border="0" alt="Two pieces of fuselage skin" title="Two pieces of fuselage skin" width="206" height="278" style="border: 2px solid black; float: left; margin: 2px;" /></td>
-                  <td>
-                  <h3>  This photograph shows</h3>
-                  <ul>
-                  <li>These are two pieces of fuselage skin from which Mr. Lehman calculated the approximate angle of entry of the aircraft into the sea</li>
-                  <li>It is important to record here these items are totally different to the parts of fuselage depicted in the photographic evidence submitted by the court in November 1996</li>
-                  <li>The Court of Enquiry refused to make available to me (Cormac Boomer), even when the request was delivered through the Dept. of Foreign Affairs in Dublin</li>
-                  </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                  <td><img src="article-images/wreckage 15 small.jpg" border="0" alt="Indicator light bulb from intrument panel" title="Indicator light bulb from intrument panel" width="206" height="278" style="border: 2px solid black; float: left; margin: 2px;" /></td>
-                  <td>
-                  <h3>  This photograph shows</h3>
-                  <ul>
-                  <li>This is the only surviving item from the pilot’s instrument panel</li>
-                  <li>It is an indictor light bulb 2x1cm and is in perfect working order</li>
-                  <li>Mr Lehman explained this is an indicator light for the right wing tip navigation light</li>
-                  <li>He explained that had this light been on when the aircraft hit the water this would have caused a short in the filament of the bulb</li>
-                  <li>The condition of the bulb suggests the aircraft was flying without navigation lights in the on position</li>
-                  </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                  <td><img src="article-images/wreckage 16 small.jpg" border="0" alt="Section of floor to rear of pilot seat" title="Section of floor to rear of pilot seat" width="206" height="278" style="border: 2px solid black; float: left; margin: 2px;" /></td>
-                  <td>
-                  <h3>  This photograph shows</h3>
-                  <ul>
-                  <li>These depict sections of the floor area to the rear of the pilot’s seat</li>
-                  </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                  <td><img src="article-images/wreckage 17 small.jpg" border="0" alt="Section of floor to rear of pilot seat" title="Section of floor to rear of pilot seat" width="206" height="278" style="border: 2px solid black; float: left; margin: 2px;" /></td>
-                  <td>
-                  <h3>  This photograph shows</h3>
-                  <ul>
-                  <li>These depict sections of the floor area to the rear of the pilot’s seat</li>
-                  </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                  <td><img src="article-images/wreckage 18 small.jpg" border="0" alt="Close up view photograph 16/17" title="Close up view photograph 16/17" width="206" height="278" style="border: 2px solid black; float: left; margin: 2px;" /></td>
-                  <td>
-                  <h3>  This photograph shows</h3>
-                  <ul>
-                  <li>This is a close-up view of l6 &amp; l7</li>
-                  <li>Note the cable ends appear to be snipped off at the same point</li>
-                  <li>There is no sign of fray, stretch, or the rupture one would likely expect to find in an aircraft ripped apart by plunging in to the sea from 9000 feet</li>
-                  </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                  <td><img src="article-images/wreckage 19 small.jpg" border="0" alt="Close up view photograph 16/17" title="Close up view photograph 16/17" width="206" height="278" style="border: 2px solid black; float: left; margin: 2px;" /></td>
-                  <td>
-                  <h3>  This photograph shows</h3>
-                  <ul>
-                  <li>There is no sign of fray, stretch, or the rupture one would likely expect to find in an aircraft ripped apart by plunging in to the sea from 9000 feet</li>
-                  </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                  <td><img src="article-images/wreckage 20 small.jpg" border="0" alt="Coloured cloth found in debris" title="Coloured cloth found in debris" width="206" height="278" style="border: 2px solid black; float: left; margin: 2px;" /></td>
-                  <td>
-                  <h3>  This photograph shows</h3>
-                  <ul>
-                  <li>This is a piece of coloured cloth found amongst the debris</li>
-                  </ul>
-                  </td>
-                  </tr>
-                  </tbody>
-                  </table>
+                <!-- **************************************************************************** -->
+                <!-- Bootstrap carousel code                                                      -->
+                <!-- data-interval = false stops carousel from auto sliding                       -->
+                <!-- touch = true allows slide changes on touch devices                           -->
+                <!-- **************************************************************************** -->
 
+                <div id="wreckageCarousel" class="carousel slide" data-interval="false" touch="true">
+                    <ol style='display: inline-flex' class="carousel-indicators">
+                        <li data-target="#wreckageCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#wreckageCarousel" data-slide-to="1"></li>
+                        <li data-target="#wreckageCarousel" data-slide-to="2"></li>
+                        <li data-target="#wreckageCarousel" data-slide-to="3"></li>
+                        <li data-target="#wreckageCarousel" data-slide-to="4"></li>
+                        <li data-target="#wreckageCarousel" data-slide-to="5"></li>
+                        <li data-target="#wreckageCarousel" data-slide-to="6"></li>
+                        <li data-target="#wreckageCarousel" data-slide-to="7"></li>
+                        <li data-target="#wreckageCarousel" data-slide-to="8"></li>
+                        <li data-target="#wreckageCarousel" data-slide-to="9"></li>
+                        <li data-target="#wreckageCarousel" data-slide-to="10"></li>
+                        <li data-target="#wreckageCarousel" data-slide-to="11"></li>
+                        <li data-target="#wreckageCarousel" data-slide-to="12"></li>
+                        <li data-target="#wreckageCarousel" data-slide-to="13"></li>
+                        <li data-target="#wreckageCarousel" data-slide-to="14"></li>
+                        <li data-target="#wreckageCarousel" data-slide-to="15"></li>
+                        <li data-target="#wreckageCarousel" data-slide-to="16"></li>
+                        <li data-target="#wreckageCarousel" data-slide-to="17"></li>
+                        <li data-target="#wreckageCarousel" data-slide-to="18"></li>
+                        <li data-target="#wreckageCarousel" data-slide-to="19"></li>
+                    </ol> 
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="article-images/wreckage 1 small.jpg" class="d-block w-100" alt="Instrument panel, steerting column and rudder pedals">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>The remains of the instrument panel</h5>
+                                <p>The steering column with the right arm missing. The rudder pedals and the control handles for the engine ailerons and flaps One of the seatbelts recovered</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="article-images/wreckage 2 small.jpg" class="d-block w-100" alt="Close Up Of Bottom Of Steering Column">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Close up of the bottom of the steering column</h5>
+                                <p>Accumulation of rust suggests this was out of the water and exposed to atmosphere for a long period of time. Also shown with the name Piper and the control handles</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="article-images/wreckage 3 small.jpg" class="d-block w-100" alt="Control cable and linkage from steering column">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Control cable and linkage from around the steering column</h5>
+                                <p>One end of the stainless steel cable is frayed and bent the investigator stated this condition is the result of being stretched beyond breaking point. The other end suggests a twisted wrung off break, no explanation why the two ends should be different</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="article-images/wreckage 4 small.jpg" class="d-block w-100" alt="The landing gear leaver handle">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>The landing gear leaver handle</h5>
+                                <p>This is in the first notch position. This would indicate the landing gear was partially lowered. Also depicted are two seat belts</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="article-images/wreckage 5 small.jpg" class="d-block w-100" alt="Close up of the rudder pedal">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Closeup of the rudder pedal</h5>
+                                <p>A closeup of the rudder pedal and the bottom of the steering column</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="article-images/wreckage 6 small.jpg" class="d-block w-100" alt="Seat bolts ripped from the floor">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Seat bolts ripped from the floor</h5>
+                                <p>One of the two seat bolts and securing fixtures which have been ripped from the floor. Note the securing bolts are severely bent. The material of these belts was stretched (elongated) beyond belief. Note the release leaver is compressed into and on top of the retaining mechanism. The name and number plate of the manufacturer is also visible</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="article-images/wreckage 7 small.jpg" class="d-block w-100" alt="Aileron Servo Motor with manufacturers aluminium name plate">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Aileron Servo Motor with manufacturers aluminium name plate</h5>
+                                <p>Note the manufacturers aluminium name plate which shows no signs of salt pigment or corrosion. We are asked to believe this item was eight months in the salt water of the Mediterranean sea</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="article-images/wreckage 8 small.jpg" class="d-block w-100" alt="The Auto Pilot Motor">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>The Auto Pilot Motor</h5>
+                                <p>Note the very good condition ofthe manufacturers name plate</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="article-images/wreckage 9 small.jpg" class="d-block w-100" alt="Main spar with floor carpet">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Main spar with floor carpet</h5>
+                                <p>This is part of the main spar with the floor carpet in place. This spar is the component across the body of the aircraft to which the wing sections are attached. It is positioned directly behind the pilot/co-pilot’s seats</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="article-images/wreckage 10 small.jpg" class="d-block w-100" alt="Spar with the floor carpet in normal position">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Spar with the floor carpet in normal position</h5>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="article-images/wreckage 11 small.jpg" class="d-block w-100" alt="Registration Number 8040">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Registration Number 8040</h5>
+                                <p>The carpet pulled back revels the number 80410. This is the registration number allocated to this aircraft during manufacturer. This is inscribed using an indelible marker on this component</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="article-images/wreckage 12 small.jpg" class="d-block w-100" alt="Frames securing the pilots seats">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Frames securing the pilots seats</h5>
+                                <p>This depicts the frames upon which the pilots seats are secured. Note the retaining brackets have been ripped off. There is no indication of stress visible on the adjoining cable looms</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="article-images/wreckage 13 small.jpg" class="d-block w-100" alt="Frames securing the pilots seats">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Frames securing the pilots seats</h5>
+                                <p>This depicts the frames upon which the pilots seats are secured. Note the retaining brackets have been ripped off There is no indication of stress visible on the adjoining cable looms</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="article-images/wreckage 14 small.jpg" class="d-block w-100" alt="Two pieces of fuselage skin">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Two pieces of fuselage skin</h5>
+                                <p>These are two pieces of fuselage skin from which Mr. Lehman calculated the approximate angle of entry of the aircraft into the sea. It is important to record here these items are totally different to the parts of fuselage depicted in the photographic evidence submitted by the court in November 1996. The Court of Enquiry refused to make available to me (Cormac Boomer), even when the request was delivered through the Dept. of Foreign Affairs in Dublin</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="article-images/wreckage 15 small.jpg" class="d-block w-100" alt="Indicator light bulb from intrument panel">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Indicator light bulb from intrument panel</h5>
+                                <p>This is the only surviving item from the pilot’s instrument panel. It is an indictor light bulb 2x1cm and is in perfect working order. Mr Lehman explained this is an indicator light for the right wing tip navigation light. He explained that had this light been on when the aircraft hit the water this would have caused a short in the filament of the bulb. The condition of the bulb suggests the aircraft was flying without navigation lights in the on position</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="article-images/wreckage 16 small.jpg" class="d-block w-100" alt="Section of floor to rear of pilot seat">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Section of floor to rear of pilot seat</h5>
+                                <p>These depict sections of the floor area to the rear of the pilot’s seat</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="article-images/wreckage 17 small.jpg" class="d-block w-100" alt="Section of floor to rear of pilot seat">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Section of floor to rear of pilot seat</h5>
+                                <p>Sections of the floor area to the rear of the pilot’s seat</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="article-images/wreckage 18 small.jpg" class="d-block w-100" alt="Close up view photograph 16/17">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Close up view photograph 16/17</h5>
+                                <p>This is a close-up view of 16 &amp; 17. Note the cable ends appear to be snipped off at the same point. There is no sign of fray, stretch, or the rupture one would likely expect to find in an aircraft ripped apart by plunging in to the sea from 9000 feet</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="article-images/wreckage 19 small.jpg" class="d-block w-100" alt="Close up view photograph 16/17">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Close up view photograph 16/17</h5>
+                                <p>There is no sign of fray, stretch, or the rupture one would likely expect to find in an aircraft ripped apart by plunging in to the sea from 9000 feet</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="article-images/wreckage 20 small.jpg" class="d-block w-100" alt="Coloured cloth found in debris">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Coloured cloth found in debris</h5>
+                                <p>This is a piece of coloured cloth found amongst the debris</p>
+                            </div>
+                        </div>
+                      </div>
+                    <a class="carousel-control-prev" href="#wreckageCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#wreckageCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                
+                </div> <!-- end of bootstrap carousel component -->
+                
             </div> <!-- end of main-text -->
 
         </div> <!-- end of main-text-area -->
                
+        <!-- **************************************************************************** -->
+        <!-- section holding the links to latest articles, most popular, coming soon, links                                    -->
+        <!-- **************************************************************************** -->
+        
+        <div id="latest-popular-soon">
+
+              <div class="article-lists">
+                <p>{{ latestArticlesTitle }}...</p>
+                <ul>
+                    <latest 
+                        v-for="(article, index) in latestArticles"                 
+                        v-bind:latestarticle="article"                           
+                        :key="index">                                            
+                    </latest>                                                   
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ mostReadArticlesTitle }}...</p>
+                <ul>
+                    <most-read 
+                        v-for="(article, index) in mostReadArticles"                 
+                        v-bind:mostreadarticle="article"                           
+                        :key="index">                                            
+                    </most-read>                                        
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ comingSoonArticlesTitle }}...</p>
+                <ul>
+                    <coming-soon 
+                        v-for="(article, index) in comingSoonArticles"                 
+                        v-bind:comingsoonarticle="article"                           
+                        :key="index">                                            
+                    </coming-soon>                                      
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ relatedSitesTitle }}...</p>
+                <ul>
+                    <related-sites 
+                        v-for="(site, index) in relatedSites"                 
+                        v-bind:sitelist="site"                           
+                        :key="index">                                            
+                    </related-sites>         
+                </ul>
+              </div>
+        </div>              <!-- end of latest-popular-soon -->
+
         <!-- **************************************************************************** -->
         <!-- section holding the links to social media                                    -->
         <!-- **************************************************************************** -->
@@ -342,5 +327,24 @@
         <p>&copy; <script>document.write(new Date().getFullYear());</script> The Mysterious Disappearance Of Flight 9H-ABU</p>
         <p>&ldquo;All Rights Reserved&mdash;Designed by Mark Boomer&rdquo; </p>
         </footer>
+
+        <!-- **************************************************************************** -->
+        <!-- section holding the Bootstrap libraries                                    -->
+        <!-- **************************************************************************** -->
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <!-- **************************************************************************** -->
+
+        <!-- **************************************************************************** -->
+        <!-- Load the VUE.js libraries to access Vue functionality                        -->
+        <!-- **************************************************************************** -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+        <script src="../main.js"></script>
+
     </body>
 </html>

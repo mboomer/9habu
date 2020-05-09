@@ -23,28 +23,30 @@
     <!-- this is a downloaded google font  Use font-family: 'Cinzel', serif; in CSS-->
     <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
   
+    <!-- Load Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
     <link rel="stylesheet" href="../styles.css">
     
     </head>
 
 <!-- ******************************************************************************************* -->
 
-    <body id="top"> <!-- the jquery will scroll to this point -->
+    <body id="body-top"> <!-- the jquery will scroll to this point -->
         
         <!-- ********************************************************************************** -->
         <!-- navigation menu displayed across the top of the page                               -->
         <!-- ********************************************************************************** -->
-        <header>
+        <header id="header-menu">
             <h2><a href="#" target="_blank"><img src="../img/logo.jpg" alt="Piper Lance 9h-abu"></a></h2>
             <nav>
                 <ul>
-                    <li><a href="#top">Top</a></li>         <!-- returns to top the site -->
-
-                    <li><a href="../index.html" title="Home Page" >Home</a></li>
-                    <li><a href="../death-in-the-mediterranean.html" title="An Investigation By Don Mullan" >An Investigation By Don Mullan</a></li>
-                    <li><a href="../maltese-board-of-inquiry-report.html" title="Maltese Board of Inquiry Report" >Maltese Board of Inquiry Report</a></li>
-                    <li><a href="../malta-tv-documentary.html" title="Malta TV Documentary" >Malta TV Documentary</a></li>
-                    <li><a href="../contact-me.php" title="Contact Us">Contact Us</a></li>
+                    <li><a href="#body-top">Top</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../death-in-the-mediterranean.html">An Investigation By Don Mullan</a></li>
+                    <li><a href="../maltese-board-of-inquiry-report.html">Maltese Board of Inquiry Report</a></li>
+                    <li><a href="../malta-tv-documentary.html">Malta TV Documentary</a></li>
+                    <li><a href="../contact-me.php">Contact Us</a></li>
                 </ul>
             </nav>
         </header>
@@ -53,45 +55,13 @@
         <!-- **************************************************************************** -->
         <!-- section holding the images of the missing passengers                         -->
         <!-- **************************************************************************** -->
-        <ul class="the-missing">
+        <ul id="missing-passengers" class="the-missing" >
 
-            <li class="missing-person">
-                <h3>Desmond Boomer</h3>
-                <p><img src="../img/desmondboomer-120p.jpg" /></p>
-                <p>38 year old Belfast born, engineer working in the Libyan oil fields</p>
-            </li>
-
-            <li class="missing-person">
-                <h3>Michael Williams</h3>
-                <p><img src="../img/michaelwilliams-120p.jpg"/></p>
-                <p>49 year old English born engineer & manager of rock band "The Characters"</p>
-            </li>
-
-            <li class="missing-person">
-                <h3>Matthew Aquilina</h3>
-                <p><img src="../img/matthewaquilina-120p.jpg" /></p>
-                <p>Matthew was a 22 year old Maltese national returning to Malta</p>
-            </li>
-        
-            <li class="missing-person">
-                <h3>Tadeus Gorny</h3>
-                <p><img src="../img/tadeusgorny-120p.jpg" /></p>
-                <p>A 48 year Polish national working in the Libyan oil fields</p>
-            </li>
-
-            <li class="missing-person">
-                <h3>Philip Farrugia</h3>
-                <p><img src="../img/philipfarrugia-120p.jpg" /></p>
-                <p>A 43 year old Maltese national returning to Malta</p>
-            </li>
-
-            <li class="missing-person">
-                <h3>Carmel Bartolo</h3>
-                <p><img src="../img/carmelbartolo-120p.jpg" /></p>
-                <p>A 47 year Maltese national and the pilot of flight 9H-ABU</p>
-            </li>
+            <passenger-details 
+                v-for="(missingperson, index) in passengers" v-bind:passenger="missingperson" :key="index">         
+            </passenger-details>                              
             
-        </ul> <!-- end of "the-missing" -->
+        </ul> <!-- end of "the-missing" -->    
     
         <!-- **************************************************************************** -->
         <!-- section for the text on the main page                                        -->
@@ -120,33 +90,118 @@
 
                 <p>Senior investigator Paul Lehman concluded that the plane hit the water at high speed at 35 degrees. The angle was worked out from wrinkles on the fuselage skin, he believes the plane was leaning on the left wing with its nose down when it impacted with the water. But he threw no light on what could have happened to the plane for it to crash.</p>
 
-                <h3>Wreckage from the Piper Lance: </h3>
+                <span class="header-blue">Wreckage from the Piper Lance</span>
+
                 <p></p>
-                <table class="table-layout" border="0">
-<!--                    <tbody>-->
-                        <tr>
-                            <td><img src="article-images/malta times 1.jpg" alt="Paul Lehman shows where the pilot sits" title="Paul Lehman showing where the pilot sits" /></td>
-                            <td>Paul Lehman shows where the pilot sits</td>
-                        </tr>
-                        <tr>
-                            <td><img src="article-images/malta times 2.jpg" alt="Cormac Boomer chats to Joseph Aquilina" title="Cormac Boomer, father of Desmond, chats to Joseph Aquilina, father of Matthew" /></td>
-                            <td>Cormac Boomer chats to Joseph Aquilina</td>
-                        </tr>
-                        <tr>
-                            <td><img src="article-images/malta times 4.jpg" alt="Piper Lance distinct orange stripes" title="The Piper's distinct orange stripes form a perfect fit"  /></td>
-                            <td>Piper Lance distinct orange stripes</td>
-                        </tr>
-                        <tr>
-                            <td><img src="article-images/malta times 3.jpg" alt="Serial Number 80410 on fuselage" title="The Serial Number 80410 shows faintly on the back part of fuselage" /></td>
-                            <td>Serial Number 80410 on fuselage</td>
-                        </tr>
-<!--                    </tbody>-->
-                </table>
+
+                <!-- **************************************************************************** -->
+                <!-- Bootstrap carousel code                                                      -->
+                <!-- data-interval = false stops carousel from auto sliding                       -->
+                <!-- touch = true allows slide changes on touch devices                           -->
+                <!-- **************************************************************************** -->
+
+                <div id="wreckageCarousel" class="carousel slide" data-interval="false" touch="true">
+                    <ol style='display: inline-flex' class="carousel-indicators">
+                        <li data-target="#wreckageCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#wreckageCarousel" data-slide-to="1"></li>
+                        <li data-target="#wreckageCarousel" data-slide-to="2"></li>
+                        <li data-target="#wreckageCarousel" data-slide-to="3"></li>
+                    </ol> 
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="article-images/malta times 1.jpg" class="d-block w-100" alt="Paul Lehman shows where the pilot sits">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Pilot location</h5>
+                                <p>Paul Lehman demonstrates where the pilot would sit</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="article-images/malta times 2.jpg" class="d-block w-100" alt="Cormac Boomer chats to Joseph Aquilina">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Parents discussing wreckage</h5>
+                                <p>Cormac Boomer, father of Desmond, chats to Joseph Aquilina, father of Matthew</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="article-images/malta times 3.jpg" class="d-block w-100" alt="Serial Number on fuselage">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Serial Number 80410</h5>
+                                <p>The Serial Number 80410 shows faintly on the back part of fuselage</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="article-images/malta times 4.jpg" class="d-block w-100" alt="Piper Lance distinct orange stripes">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Distinctive orange stripes</h5>
+                                <p>The Piper's distinct orange stripes form a perfect fit</p>
+                            </div>
+                        </div>
+                      </div>
+                    <a class="carousel-control-prev" href="#wreckageCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#wreckageCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div> <!-- end of bootstrap carousel component -->
 
             </div> <!-- end of main-text -->
 
         </div> <!-- end of main-text-area -->
         
+        <!-- **************************************************************************** -->
+        <!-- section holding the links to latest articles, most popular, coming soon, links                                    -->
+        <!-- **************************************************************************** -->
+        
+        <div id="latest-popular-soon">
+
+              <div class="article-lists">
+                <p>{{ latestArticlesTitle }}...</p>
+                <ul>
+                    <latest 
+                        v-for="(article, index) in latestArticles"                 
+                        v-bind:latestarticle="article"                           
+                        :key="index">                                            
+                    </latest>                                                   
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ mostReadArticlesTitle }}...</p>
+                <ul>
+                    <most-read 
+                        v-for="(article, index) in mostReadArticles"                 
+                        v-bind:mostreadarticle="article"                           
+                        :key="index">                                            
+                    </most-read>                                        
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ comingSoonArticlesTitle }}...</p>
+                <ul>
+                    <coming-soon 
+                        v-for="(article, index) in comingSoonArticles"                 
+                        v-bind:comingsoonarticle="article"                           
+                        :key="index">                                            
+                    </coming-soon>                                      
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ relatedSitesTitle }}...</p>
+                <ul>
+                    <related-sites 
+                        v-for="(site, index) in relatedSites"                 
+                        v-bind:sitelist="site"                           
+                        :key="index">                                            
+                    </related-sites>         
+                </ul>
+              </div>
+        </div>              <!-- end of latest-popular-soon -->
+
         <!-- **************************************************************************** -->
         <!-- section holding the links to social media                                    -->
         <!-- **************************************************************************** -->
@@ -158,8 +213,27 @@
                 <li><a href="#" target="_blank"><i class="fab fa-youtube-square"></i></a></li>
                 <li><a href="#" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
             </ul>   
-        <p>&copy; <script>document.write(new Date().getFullYear());</script> The Mysterious Disappearance Of Flight 9H-ABU</p>
-        <p>&ldquo;All Rights Reserved&mdash;Designed by Mark Boomer&rdquo; </p>
+            <p>&copy; <script>document.write(new Date().getFullYear());</script> The Mysterious Disappearance Of Flight 9H-ABU</p>
+            <p>&ldquo;All Rights Reserved&mdash;Designed by Mark Boomer&rdquo; </p>
         </footer>
+
+        <!-- **************************************************************************** -->
+        <!-- section holding the Bootstrap libraries                                    -->
+        <!-- **************************************************************************** -->
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <!-- **************************************************************************** -->
+
+        <!-- **************************************************************************** -->
+        <!-- Load the VUE.js libraries to access Vue functionality                        -->
+        <!-- **************************************************************************** -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+        <script src="../main.js"></script>
+
     </body>
 </html>
