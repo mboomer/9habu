@@ -130,17 +130,16 @@ a{
     padding-bottom: 5px;
 }
 /* **************************************************************************************** */
-/*                                        MAIN TEXT BODY                                    */
+/*                                        MAIN TEXT AREA                                    */
 /* **************************************************************************************** */
 #main-text-area {
-    display: grid;                          /* display the main text and info panel side by side */
+    display: grid;                          /* display the main text and info panel below each other */
     grid-template-columns: 1fr;             /* overriden in media rule for wider screens         */
     margin: 5px;
 }
 #main-text-area a {
     color: deepskyblue;                     /* default for anchor tags is white, change this in the main text */
 }    
-
 /* **************************************************************************************** */
 /*                                        SIDE BAR                                          */
 /* **************************************************************************************** */
@@ -270,8 +269,13 @@ a{
     margin: 0px 0px 0px 5px;
     padding: 0px;
 }    
+#main-text-area .signatures {
+    width: 85%;
+    margin: 5px;
+    padding: 0px;
+}    
 /* **************************************************************************************** */
-/*               BOOTSTRAP COMPONENTS USED IN A COUPPLE OF ARTICLES                         */
+/*               BOOTSTRAP COMPONENTS USED IN A COUPLE OF ARTICLES                          */
 /* **************************************************************************************** */
 #wreckageCarousel {
     width: 90%;
@@ -448,6 +452,11 @@ a{
     .the-missing { 
         grid-template-columns: 1fr 1fr 1fr;                             /* display in 3 columns */
     }
+    #main-text-area .signatures {
+        width: 40%;
+        margin: 5px;
+        padding: 0px;
+    }    
     #wreckageCarousel {
         width: 60%;
     }
