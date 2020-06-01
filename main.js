@@ -113,21 +113,25 @@ var latMosComRel = new Vue ({
     data: {
         latestArticlesTitle: "Latest Articles",
         latestArticles: [
-                            {   latestname     : "F0013056-freedom-of-information-act-response-141042020.html",
-                                latesttitle    : "Response to Freedom Of Information from AAIB",
-                                latestlocation : "/articles/F0013056-freedom-of-information-act-response-141042020.html"
+                            {   latestname     : "cormac-boomer-letter-to-irish-news-14032003.html",
+                                latesttitle    : "Letter to Irish News rebuking Irish Government",
+                                latestlocation : "/articles/cormac-boomer-letter-to-irish-news-v2-14032003.html"
                             },
-                            {   latestname     : "freedom-of-info-response-14122015.html",
-                                latesttitle    : "FOI Response from AAIB",
-                                latestlocation : "/articles/freedom-of-info-response-14122015.html"
+                            {   latestname     : "email-from-cecilia-cormac-06122002.html",
+                                latesttitle    : "Email from Cecilia to Cormac re: Don Mullan",
+                                latestlocation : "/articles/email-from-cecilia-cormac-06122002.html"
                             },
-                            {   latestname     : "freedom-of-info-request-15112015.html",
-                                latesttitle    : "Freedom Of Information Request AAIB",
-                                latestlocation : "/articles/freedom-of-info-request-15112015.html"
+                            {   latestname     : "email-from-cecilia-cormac-06122002.html",
+                                latesttitle    : "Email discussing articles in Kullhad and Times Malta",
+                                latestlocation : "/articles/email-from-cecilia-cormac-06122002.html"
                             },
-                            {   latestname     : "tv-documentary-first-shown-on-malta-television-26112011.html",
-                                latesttitle    : "Updated Video Player for Malta TV Documentary",
-                                latestlocation : "/articles/tv-documentary-first-shown-on-malta-television-26112011.html"
+                            {   latestname     : "state-sponsored-assassination-21102002.html",
+                                latesttitle    : "Info relating to assassination of Fathi Shiqaqi",
+                                latestlocation : "/articles/state-sponsored-assassination-21102002.html"
+                            },
+                            {   latestname     : "info-to-don-departure-time-01022002.html",
+                                latesttitle    : "Info sent to Don Mollan re: departure of 9habu",
+                                latestlocation : "/articles/info-to-don-departure-time-01022002.html"
                             }
                         ],
         mostReadArticlesTitle: "Most Read",
@@ -151,7 +155,6 @@ var latMosComRel = new Vue ({
                         ],
         comingSoonArticlesTitle: "Coming Soon",
         comingSoonArticles: [ 
-                                {comingsoonname   : "Updated responsive website for mobile and tablets"},
                                 {comingsoonname   : "Improved Document Archive Search"}
                             ],
         relatedSitesTitle: "Related Web Sites",

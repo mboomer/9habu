@@ -274,7 +274,33 @@ a{
     width: 85%;
     margin: 5px;
     padding: 0px;
-}    
+}
+.hoffman-footer {
+    text-align: center;
+}
+.hoffman-header {
+    text-align: center;
+    font-size: 20px;
+    color: rgba(255,0,0, 0.75);
+}
+.hoffman-online {
+    font-size: 14px;
+    color: lightgray;
+}
+.mhoffman {
+    color: rgba(0,0,0, 0.85);    
+}
+.hoffman-image {
+    text-align: center;
+}
+.hoffman-image img {
+    max-width: 400px;
+}
+.hoffman-img-txt {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
 /* **************************************************************************************** */
 /*               BOOTSTRAP COMPONENTS USED IN A COUPLE OF ARTICLES                          */
 /* **************************************************************************************** */
