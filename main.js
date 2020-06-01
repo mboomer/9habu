@@ -121,9 +121,17 @@ var latMosComRel = new Vue ({
                                 latesttitle    : "Email from Cecilia to Cormac re: Don Mullan",
                                 latestlocation : "/articles/email-from-cecilia-cormac-06122002.html"
                             },
-                            {   latestname     : "tv-documentary-first-shown-on-malta-television-26112011.html",
-                                latesttitle    : "Updated Video Player for Malta TV Documentary",
-                                latestlocation : "/articles/tv-documentary-first-shown-on-malta-television-26112011.html"
+                            {   latestname     : "email-from-cecilia-cormac-06122002.html",
+                                latesttitle    : "Email discussing articles in Kullhad and Times Malta",
+                                latestlocation : "/articles/email-from-cecilia-cormac-06122002.html"
+                            },
+                            {   latestname     : "state-sponsored-assassination-21102002.html",
+                                latesttitle    : "Info relating to assassination of Fathi Shiqaqi",
+                                latestlocation : "/articles/state-sponsored-assassination-21102002.html"
+                            },
+                            {   latestname     : "info-to-don-departure-time-01022002.html",
+                                latesttitle    : "Info sent to Don Mollan re: departure of 9habu",
+                                latestlocation : "/articles/info-to-don-departure-time-01022002.html"
                             }
                         ],
         mostReadArticlesTitle: "Most Read",
