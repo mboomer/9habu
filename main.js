@@ -113,25 +113,25 @@ var latMosComRel = new Vue ({
     data: {
         latestArticlesTitle: "Latest Articles",
         latestArticles: [
-                            {   latestname     : "cormac-boomer-letter-to-irish-news-14032003.html",
-                                latesttitle    : "Letter to Irish News rebuking Irish Government",
-                                latestlocation : "/articles/cormac-boomer-letter-to-irish-news-v2-14032003.html"
+                            {   latestname     : "sunday-life-movie-article-11112001.html",
+                                latesttitle    : " Sunday Life fabricated movie bid article",
+                                latestlocation : "/articles/sunday-life-movie-article-11112001.html"
                             },
-                            {   latestname     : "email-from-cecilia-cormac-06122002.html",
-                                latesttitle    : "Email from Cecilia to Cormac re: Don Mullan",
-                                latestlocation : "/articles/email-from-cecilia-cormac-06122002.html"
+                            {   latestname     : "daniel-search-opportunity-06082001.html",
+                                latesttitle    : "Daniel opportunity for underwater search",
+                                latestlocation : "/articles/daniel-search-opportunity-06082001.html"
                             },
-                            {   latestname     : "email-from-cecilia-cormac-06122002.html",
-                                latesttitle    : "Email discussing articles in Kullhad and Times Malta",
-                                latestlocation : "/articles/email-from-cecilia-cormac-06122002.html"
+                            {   latestname     : "letter-sunday-life-11112001.html",
+                                latesttitle    : "Letter to Sunday Life requesting apology",
+                                latestlocation : "/articles/letter-sunday-life-11112001.html"
                             },
-                            {   latestname     : "state-sponsored-assassination-21102002.html",
-                                latesttitle    : "Info relating to assassination of Fathi Shiqaqi",
-                                latestlocation : "/articles/state-sponsored-assassination-21102002.html"
+                            {   latestname     : "press-complaints-commision-10122001.html",
+                                latesttitle    : "Response from press complaints commission",
+                                latestlocation : "/articles/press-complaints-commision-10122001.html"
                             },
-                            {   latestname     : "info-to-don-departure-time-01022002.html",
-                                latesttitle    : "Info sent to Don Mollan re: departure of 9habu",
-                                latestlocation : "/articles/info-to-don-departure-time-01022002.html"
+                            {   latestname     : "email-don-cormac-28062001.html",
+                                latesttitle    : "Emails discussing possible TV documentary",
+                                latestlocation : "/articles/email-don-cormac-28062001.html"
                             }
                         ],
         mostReadArticlesTitle: "Most Read",
