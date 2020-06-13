@@ -96,7 +96,7 @@
                         <section id="left-col">
                             <fieldset>
                                 <legend>Personal Details</legend>
-                                <?=$thankYou ?>                         <!-- insert thank you test via php -->   
+                                <?=$thankYou ?>                         <!-- insert thank you text via php -->   
                                 <p>
                                     <input id="firstname" name="firstname" type="text"  placeholder="First Name" autofocus tabindex="1">
                                     <input id="lastname"  name="lastname"  type="text"  placeholder="Last Name" tabindex="2">

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <title>Article pubished in KullHadd newspaper discussing people travelling to work in Libya via Tunisia</title>
+    
+    <meta name="viewport" content="width=device-width initial-scale=1"> <!-- sets initial scale to 100% -->
+     
+    <link rel="shortcut icon" type="image/ico" href="../img/icons/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/130d5316ba.js" crossorigin="anonymous"></script>
+                                                                                            
+    <meta name="keywords" content="'9HABU','9H-ABU','Malta','Djerba','Libya,'disappearance of flight','mysterious disappearance','Desmond Boomer','conspiracy theory','air crash investigation','cover up','plane crash investigation'" />
+
+    <meta name="description" content="Article pubished in KullHadd newspaper discussing people travelling to work in Lybia via Tunisia. This article suggests that one pilot (may be Bartolo) in particular is not licensed." />
+    <meta name="author" content="Kullhadd" />
+    <meta name="category" content="newspaper" />
+    <meta name="created-day" content="26" />
+    <meta name="created-month" content="November" />
+    <meta name="created-year" content="1995" />
+
+    <!-- this is a downloaded google font  Use font-family: 'Cinzel', serif; in CSS-->
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="../styles.css">
+    
+    </head>
+
+    <!-- ******************************************************************************************* -->
+
+    <body id="body-top"> <!-- the jquery will scroll to this point -->
+        
+        <!-- ********************************************************************************** -->
+        <!-- navigation menu displayed across the top of the page                               -->
+        <!-- ********************************************************************************** -->
+        <header id="header-menu">
+            <h2><a href="#" target="_blank"><img src="../img/logo.jpg" alt="Piper Lance 9h-abu"></a></h2>
+            <nav>
+                <ul>
+                    <li><a href="#body-top">Top</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../death-in-the-mediterranean.html">An Investigation By Don Mullan</a></li>
+                    <li><a href="../maltese-board-of-inquiry-report.html">Maltese Board of Inquiry Report</a></li>
+                    <li><a href="../malta-tv-documentary.html">Malta TV Documentary</a></li>
+                    <li><a href="../contact-me.php">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- ********************************************************************************** -->
+
+        <!-- **************************************************************************** -->
+        <!-- section holding the images of the missing passengers                         -->
+        <!-- **************************************************************************** -->
+        <ul id="missing-passengers" class="the-missing" >
+
+            <passenger-details 
+                v-for="(missingperson, index) in passengers" v-bind:passenger="missingperson" :key="index">         
+            </passenger-details>                              
+            
+        </ul> <!-- end of "the-missing" -->
+    
+        <!-- **************************************************************************** -->
+        <!-- section for the text on the main page                                        -->
+        <!-- **************************************************************************** -->
+
+        <div id="main-text-area">
+
+            <div class="main-text main-text-wide">
+
+                <span class="header-blue">Danger in the air - newspaper article discussing people travelling to work in Lybia via Tunisia</span>
+
+                <div class="article-image-r"><img src="article-images/kullhadd article.jpg" alt="kullhadd article" title="kullhadd article"/></div>
+
+                <h3>Translation</h3>
+                <p>ll Kullhadd</p>
+                <p>26 November. 1995</p>
+
+                <p><strong>Danger in the Air</strong></p>
+
+                <p>People close to air travel are very worried about the danger that is being brought now that a lot of people have to fly to Tunisia on small planes because the ship between Malta and Libya is not operating.</p>
+
+                <p>Persons who are taking these planes are not being given tickets to show when they leave on the plane. They are being told to go to the airport and they have to be there at a certain time to take the flight.</p>
+
+                <p>This is being done so that people who want to go to Libya for work in connection with oil are being taken as if to pretend that someone is doing them a favour and are not taking the commercial flight where they have to pay money.</p>
+
+                <p>The planes that take these passengers that pay need pilots with commerical licences to fly them and also neex to have serious insurances. The small planes that are carrying people to Tunisia to go to Libya have no licences to carry passengers more than 30 miles off Malta.</p>
+
+                <p>Amongst the ones flying these planes there are pilots that have only a licences to fly a private plane and that is not enough to be able to fly a commerical plane for passengers.</p>
+
+                <p>The Dept of Aviation is allowing these flights to take place knowing the dangers that could arise. lf a plane of this type had to crash being driven by a<br />pilot holding a private licence only and if these companies have no schemes of large insurancesrenought to be able to cover in case of a crash there are going to be big problems.</p>
+
+                <p>The families of the passengers that are hit with such incidents can sue these companies for big amounts. The Maltese passengers can sue the companies that operate these flights for thousands. But the families of Americans and Germans that are using this service can sue for millions. They can sue the companies, the Dept of Civil Aviation and the Govt. of Malta that are allowing these flights to take place in this manner.</p>
+      
+            </div> <!-- end of main-text -->
+
+        </div> <!-- end of main-text-area -->
+                
+        <!-- **************************************************************************** -->
+        <!-- section holding the links to latest articles, most popular, coming soon, links                                    -->
+        <!-- **************************************************************************** -->
+        
+        <div id="latest-popular-soon">
+
+              <div class="article-lists">
+                <p>{{ latestArticlesTitle }}...</p>
+                <ul>
+                    <latest 
+                        v-for="(article, index) in latestArticles"                 
+                        v-bind:latestarticle="article"                           
+                        :key="index">                                            
+                    </latest>                                                   
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ mostReadArticlesTitle }}...</p>
+                <ul>
+                    <most-read 
+                        v-for="(article, index) in mostReadArticles"                 
+                        v-bind:mostreadarticle="article"                           
+                        :key="index">                                            
+                    </most-read>                                        
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ comingSoonArticlesTitle }}...</p>
+                <ul>
+                    <coming-soon 
+                        v-for="(article, index) in comingSoonArticles"                 
+                        v-bind:comingsoonarticle="article"                           
+                        :key="index">                                            
+                    </coming-soon>                                      
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ relatedSitesTitle }}...</p>
+                <ul>
+                    <related-sites 
+                        v-for="(site, index) in relatedSites"                 
+                        v-bind:sitelist="site"                           
+                        :key="index">                                            
+                    </related-sites>         
+                </ul>
+              </div>
+        </div>              <!-- end of latest-popular-soon -->
+
+        <!-- **************************************************************************** -->
+        <!-- section holding the links to social media                                    -->
+        <!-- **************************************************************************** -->
+
+        <footer id="social-media">
+            <ul>
+                <li><a href="https://www.facebook.com/The-mysterious-disappearance-of-flight-9h-Abu-110054825767796/" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-youtube-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
+            </ul>   
+            <p>&copy; <script>document.write(new Date().getFullYear());</script> The Mysterious Disappearance Of Flight 9H-ABU</p>
+            <p>&ldquo;All Rights Reserved&mdash;Designed by Mark Boomer&rdquo; </p>
+        </footer>
+
+        <!-- **************************************************************************** -->
+        <!-- Load the VUE.js libraries to access Vue functionality                        -->
+        <!-- **************************************************************************** -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+        <script src="../main.js"></script>
+
+    </body>
+</html>

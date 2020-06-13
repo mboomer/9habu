@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8" >
+      <title>Press Complaint Form - "Movie Bid Over Mystery Flight"</title>
+    
+      <meta name="viewport" content="width=device-width initial-scale=1"> <!-- sets initial scale to 100% -->
+      
+      <link rel="shortcut icon" type="image/ico" href="../img/icons/favicon.ico">
+      <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway&display=swap" rel="stylesheet">
+
+      <script src="https://kit.fontawesome.com/130d5316ba.js" crossorigin="anonymous"></script>
+                                                                                            
+      <meta name="keywords" content="'9HABU','9H-ABU','Malta','Djerba','Lybia,'disappearance of flight','mysterious disappearance','Desmond Boomer','conspiracy theory','air crash investigation','cover up','plane crash investigation'" />
+      <meta name="description" content="Press Complaint Form, completed by Cormac Boomer, regarding the Sunday Life 'Movie Bid Over Mystery Flight' article" >
+      <meta name="author" content="Cormac Boomer" />
+      <meta name="category" content="Newspaper" />
+      <meta name="created-day" content="25" />
+      <meta name="created-month" content="November" />
+      <meta name="created-year" content="2001" />
+
+      <!-- this is a downloaded google font  Use font-family: 'Cinzel', serif; in CSS-->
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="../styles.css">
+    
+    </head>
+
+    <!-- ******************************************************************************************* -->
+
+    <body id="body-top"> <!-- the jquery will scroll to this point -->
+        
+        <!-- ********************************************************************************** -->
+        <!-- navigation menu displayed across the top of the page                               -->
+        <!-- ********************************************************************************** -->
+        <header id="header-menu">
+            <h2><a href="#" target="_blank"><img src="../img/logo.jpg" alt="Piper Lance 9h-abu"></a></h2>
+            <nav>
+                <ul>
+                    <li><a href="#body-top">Top</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../death-in-the-mediterranean.html">An Investigation By Don Mullan</a></li>
+                    <li><a href="../maltese-board-of-inquiry-report.html">Maltese Board of Inquiry Report</a></li>
+                    <li><a href="../malta-tv-documentary.html">Malta TV Documentary</a></li>
+                    <li><a href="../contact-me.php">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- ********************************************************************************** -->
+
+        <!-- **************************************************************************** -->
+        <!-- section holding the images of the missing passengers                         -->
+        <!-- **************************************************************************** -->
+        <ul id="missing-passengers" class="the-missing" >
+
+            <passenger-details 
+                v-for="(missingperson, index) in passengers" v-bind:passenger="missingperson" :key="index">         
+            </passenger-details>                              
+            
+        </ul> <!-- end of "the-missing" -->
+        
+        <!-- **************************************************************************** -->
+        <!-- section for the text on the main page                                        -->
+        <!-- **************************************************************************** -->
+
+        <div id="main-text-area">
+
+            <div class="main-text main-text-wide">
+
+                <span class="header-blue">Press Complaint Form - "Movie Bid Over Mystery Flight"</span>
+
+                <p style="text-align: center;">PCC Thanks</p>
+
+                <p>thanks</p>
+
+                <p>Thank you for taking the time to complete our complaints form. The next step is for you print this page and post it to the Press Complaints Commission along with a dated copy of the article in question and any relevant correspondence. </p>
+
+                <p>If we do not receive the hard copy of your complaint and the article within seven days the Commission will not process your complaint.</p>
+
+                <p>Our postal address is:</p>
+
+                <p style="margin-left: 10px;">
+                    Press Complaints Commission<br>
+                    1 Salisbury Square<br>
+                    London<br>
+                    EC4Y BJB<br>
+                    25th Novermber 2001<br>
+                </p>
+
+                <p>Mr. Cormac Boomer</p>
+
+                <p>[Address]<br>
+                    36 Riverdale Park North Belfast BT11 9DL</p>
+
+                <p>02890 202624</p>
+
+                <p>cormac.boomer@ntlworld.com</p>
+
+                <p>Dear Sir or Madam</p>
+                
+                <p>I am writing to complain about the following publication: Sunday Life</p>
+
+                <p>On the date of:<br>
+                   11th November 2001</p>
+
+                <p>The Headline was:<br>
+                    Movie Bid Over Mystery Flight</p>
+
+                <p>My complaint details are as follows:</p>
+                <p>It would be my opinion that this article contravenes section 1(i) of the Code of Practice, as the story obviously has no factual background and is plainly just a sensationalist "filler". </p>
+
+                <p>It also contravenes Section l(iv) as it very clearly fails to distinguish between conjecture and fact. </p>
+
+                <p>In relation to Section 3, as the paper have never contacted my family to discuss this story or felt it necessary to enlighten us as to who these supposed "Hollywood scriptwriters" are, I would suggest that they have also failed to respect my familys private life and should be held to account for this unjustified intrusion. </p>
+
+                <p>Section 5 states that in cases involving personal grief or shock, publication must be handled sensitively at such times. I think you will agree that this type of sensationalist story is the lowest form of journalism. No account was taken of our feelings, especially as we are nearing the 6th anniversary of my sons disappearance. </p>
+
+                <p>If as your Code of Practice states that all journalists have to "maintain the highest professional and ethical standards", I think you will agree from reading the article that this paper and this journalist in particular fall far below these standards. </p>
+
+                <p>Lastly I believe that the journalist also falsely attempts to give the impression that the Sunday life has in some way been working closely with my family to help us discover the truth about the disappearance of my son. </p>
+
+                <p>Nothing could be farther from the truth.</p>
+
+                <p>Yours Sincerely</p>
+                
+            </div> <!-- end of main-text -->
+
+        </div> <!-- end of main-text-area -->
+        
+        <!-- **************************************************************************** -->
+        <!-- section holding the links to latest articles, most popular, coming soon, links                                    -->
+        <!-- **************************************************************************** -->
+        
+        <div id="latest-popular-soon">
+
+              <div class="article-lists">
+                <p>{{ latestArticlesTitle }}...</p>
+                <ul>
+                    <latest 
+                        v-for="(article, index) in latestArticles"                 
+                        v-bind:latestarticle="article"                           
+                        :key="index">                                            
+                    </latest>                                                   
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ mostReadArticlesTitle }}...</p>
+                <ul>
+                    <most-read 
+                        v-for="(article, index) in mostReadArticles"                 
+                        v-bind:mostreadarticle="article"                           
+                        :key="index">                                            
+                    </most-read>                                        
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ comingSoonArticlesTitle }}...</p>
+                <ul>
+                    <coming-soon 
+                        v-for="(article, index) in comingSoonArticles"                 
+                        v-bind:comingsoonarticle="article"                           
+                        :key="index">                                            
+                    </coming-soon>                                      
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ relatedSitesTitle }}...</p>
+                <ul>
+                    <related-sites 
+                        v-for="(site, index) in relatedSites"                 
+                        v-bind:sitelist="site"                           
+                        :key="index">                                            
+                    </related-sites>         
+                </ul>
+              </div>
+        </div>              <!-- end of latest-popular-soon -->
+
+        <!-- **************************************************************************** -->
+        <!-- section holding the links to social media                                    -->
+        <!-- **************************************************************************** -->
+
+        <footer id="social-media">
+            <ul>
+                <li><a href="https://www.facebook.com/The-mysterious-disappearance-of-flight-9h-Abu-110054825767796/" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-youtube-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
+            </ul>   
+            <p>&copy; <script>document.write(new Date().getFullYear());</script> The Mysterious Disappearance Of Flight 9H-ABU</p>
+            <p>&ldquo;All Rights Reserved&mdash;Designed by Mark Boomer&rdquo; </p>
+        </footer>
+
+        <!-- **************************************************************************** -->
+        <!-- Load the VUE.js libraries to access Vue functionality                                    -->
+        <!-- **************************************************************************** -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+        <script src="../main.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>CSS Grid Newspaper Layout</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <style>
+            .newspaper-layout {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(10, auto);
+                grid-gap: 1px;
+
+/*                background-color: white;*/
+                
+            }
+            .newspaper-col {
+                display: flex;                          /* Center the contents of the grid items. Making each grid item a Flex Container */
+                justify-content: center;                /* Horizontal and Vertical centering */
+                align-items: center;
+                padding: 5px;
+            }
+            .newspaper-header {
+                background-color: rgba(0,0,0, 0.5);
+                color: white;
+                font-size: 1.5em;
+                font-family: sans-serif;
+                font-weight: bold;
+                text-align: center;
+            }
+            .newspaper-headline {
+                color: black;
+                font-size: 54px;
+                font-family: Impact;
+                font-weight: bold;
+            }
+            .newspaper-side-img {
+            }
+            /* grid-column: 4 / 5;            */
+            .newspaper-col-1 {
+               grid-row: 4;
+            }
+            .newspaper-mid-img {
+               grid-row: 5;
+                width: 65%;
+                margin: auto;
+            }
+            .newspaper-col-2 {
+               grid-row: 6;
+            }
+            .newspaper-col-3 {
+               grid-row: 7;
+            }
+            .newspaper-col-4 {
+               grid-row: 8;
+            }
+            
+/* ******************************************************************************************   */
+/* apply to any device that has a screen width of 768px or higher                               */
+/* ******************************************************************************************   */
+            @media screen and (min-width: 768px) {
+                .newspaper-layout {
+/*                    background-color: lightblue;*/
+                    width: 100%;
+                    margin: auto;
+
+                    display: grid;
+                    grid-template-columns: 1fr, 1fr, 1fr, 1fr, 1fr;
+                    grid-template-rows: repeat(10, auto);
+                    grid-gap: 2px;
+                }
+                .newspaper-col {
+                    display: flex;                     /* Center the contents of the grid items. Making each grid item a Flex Container */
+                    justify-content: center;           /* Horizontal and Vertical centering */
+                    align-items: center;
+                    padding: 5px;
+                    font-size: 0.9em;
+                }
+                .newspaper-header {
+                    grid-column: span 5;
+
+                    background-color: rgba(0,0,0, 0.5);
+                    color: white;
+                    font-size: 1.5em;
+                    font-family: sans-serif;
+                    font-weight: bold;
+                }
+                .newspaper-headline {
+                    grid-column: span 4;
+                    grid-row: span 2;
+
+                    color: black;
+                    font-size: 54px;
+                    font-family: Impact;
+                    font-weight: bold;
+                }
+                .newspaper-side-img {
+                    grid-row: span 7;
+                }
+                .newspaper-side-img img {
+                    height: 100%;
+                }
+                .newspaper-mid-img {
+                    align-self: flex-start;
+                    width: 85%;
+                    grid-column: span 2;
+                    grid-row: span 3;
+                }
+                .newspaper-col-1, .newspaper-col-4 {
+                    grid-row: span 6;
+                    align-self: flex-start;
+                }
+                .newspaper-col-2, .newspaper-col-3 {
+                    align-self: center;
+                    grid-row: span 2;
+                }
+            }
+/* ******************************************************************************************   */
+/* apply to any device that has a screen width of 992px or higher                               */
+/* ******************************************************************************************   */
+            @media screen and (min-width: 992px) {
+                .newspaper-layout {
+/*                    background-color: lightyellow;*/
+                    width: 90%;
+                    margin: auto;
+
+                    display: grid;
+                    grid-template-columns: 1fr, 1fr, 1fr, 1fr, 1fr;
+                    grid-template-rows: repeat(10, auto);
+                    grid-gap: 4px;
+                }
+                .newspaper-col {
+                    display: flex;                     /* Center the contents of the grid items. Making each grid item a Flex Container */
+                    justify-content: center;           /* Horizontal and Vertical centering */
+                    align-items: center;
+                    padding: 5px;
+                    font-size: 1em;
+                }
+                .newspaper-header {
+                    grid-column: span 5;
+
+                    background-color: rgba(0,0,0, 0.5);
+                    color: white;
+                    font-size: 2em;
+                    font-family: sans-serif;
+                    font-weight: bold;
+                }
+                .newspaper-headline {
+                    grid-column: span 4;
+                    grid-row: span 2;
+
+                    color: black;
+                    font-size: 72px;
+                    font-family: Impact;
+                    font-weight: bold;
+                }
+                .newspaper-side-img {
+                    grid-row: span 7;
+                }
+                .newspaper-side-img img {
+                    height: 100%;
+                }
+                .newspaper-mid-img {
+                    align-self: flex-start;
+                    width: 90%;
+                    grid-column: span 2;
+                    grid-row: span 3;
+                }
+                .newspaper-col-1, .newspaper-col-4 {
+                    grid-row: span 6;
+                    align-self: flex-start;
+                }
+                .newspaper-col-2, .newspaper-col-3 {
+                    align-self: center;
+                    grid-row: span 2;
+                }
+            }
+/* ******************************************************************************************   */
+/* apply to any device that has a screen width of 1200px or higher                               */
+/* ******************************************************************************************   */
+            @media screen and (min-width: 1200px) {
+                .newspaper-layout {
+/*                    background-color: lightpink;*/
+                    width: 95%;
+                    margin: auto;
+
+                    display: grid;
+                    grid-template-columns: 1fr, 1fr, 1fr, 1fr, 1fr;
+                    grid-template-rows: repeat(10, auto);
+                    grid-gap: 6px;
+                }
+                .newspaper-col {
+                    display: flex;                     /* Center the contents of the grid items. Making each grid item a Flex Container */
+                    justify-content: center;           /* Horizontal and Vertical centering */
+                    align-items: center;
+                    padding: 5px;
+                }
+                .newspaper-header {
+                    grid-column: span 5;
+
+                    background-color: rgba(0,0,0, 0.5);
+                    color: white;
+                    font-size: 2em;
+                    font-family: sans-serif;
+                    font-weight: bold;
+                }
+                .newspaper-headline {
+                    grid-column: span 4;
+                    grid-row: span 2;
+
+                    color: black;
+                    font-size: 72px;
+                    font-family: Impact;
+                    font-weight: bold;
+                }
+                .newspaper-side-img {
+                    grid-row: span 7;
+                }
+                .newspaper-side-img img {
+                    height: 100%;
+                }
+                .newspaper-mid-img {
+                    align-self: flex-start;
+                    width: 90%;
+                    grid-column: span 2;
+                    grid-row: span 3;
+                }
+                .newspaper-col-1, .newspaper-col-4 {
+                    grid-row: span 6;
+                    align-self: flex-start;
+                }
+                .newspaper-col-2, .newspaper-col-3 {
+                    align-self: center;
+                    grid-row: span 2;
+                }
+            }
+        </style>
+
+    </head>
+    
+    <body>
+        <div class="newspaper-layout">
+            <div class="newspaper-col newspaper-header">
+                Story of missing Ulsterman interests Hollywood film moguls
+            </div>
+            
+            <div class="newspaper-col newspaper-side-img">
+                <img height="100%" src="article-images/sunday-life-movie-1.jpg" alt="Dessie during Desert Storm">
+            </div>
+            
+            <div class="newspaper-col newspaper-headline">
+                MOVIE BID OVER<br>MYSTERY FLIGHT
+            </div>
+            
+            <div class="newspaper-col newspaper-col-1">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOLLYWOOD scriptwriters are planning to turn the mystery disappearance of Ulsterman, Dessie Boomer, into a hit movie, Sunday Life can reveal.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Banbridge father-of five was last heard of nearly six years ago, when he vanished without trace, while making his way back to Ulster after working on a Libyan oil field.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The baffling disappearance of Mr Boomer, and the rest of the passengers on Piper Lance flight 9H-ABU, remains one of the greatest mysteries in aviation history.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;And, now the story will be told on the silver screen - with the help of Sunday Life.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A Maltese public inquiry last year ruled that Mr Boomer, and five others, died when travelling on the single-engine plane, which apparently went down over the Mediterranean during vio-<br>
+            </div>
+            
+            <div class="newspaper-col newspaper-mid-img">
+                <img width="100%" src="article-images/sunday-life-movie-2.jpg" alt="Pics from other articles">
+            </div>
+            
+            <div class="newspaper-col newspaper-col-4">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;That theory was fuelled by newspaper reports that linked the pilot of the ill-fated aircraft, Carmelo Bartolo, with the murder of the Palestinian terrorist leader. And, it has intrigued a team of movie scriptwriters from Hollywood, who have now started work on the story.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;They contacted Sunday Life, who highlighted the mystery in a series of articles from 1995 onwards, to ﬁrm up on the facts behind the story.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;And, now they are expecting a bidding war between movie-makers for the rights to their script.<br>
+                "It is a fascinating mystery, made even more fascinating by the fact it is real."<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The ﬁlm industry here is a bit sensitive at the minute, after the September 11 tragedies, but we hope that it will settle down again, and we can move the project on to the next stage."<br>
+            </div>
+            
+            <div class="newspaper-col newspaper-col-2">
+                lent storms. But, unconvincing evi-dence, and suggestions of dirty tricks, mean that the case remains shrouded in mystery. The public hearing was told that there were six pos-sible explanations for the dis-
+            </div>
+            
+            <div class="newspaper-col newspaper-col-3">
+                appearance of the men. Among them was the the story that the plane had been sabotaged, or hijacked by Is-lamic terrorists, following the murder, five weeks ear-lier, of the Islamic Jihad leader, Fathi Shaqaqi.
+            </div>
+
+        </div>
+        
+    </body>
+    
+</html>

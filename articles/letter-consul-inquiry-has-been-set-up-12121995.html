@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <title>Fax from Carol Zammit-Briffa Secretary to Cormac Boomer, Dr. Philip Scibenas LL.D. has been appointed the inquiry Commissioner</title>
+    
+    <meta name="viewport" content="width=device-width initial-scale=1"> <!-- sets initial scale to 100% -->
+     
+    <link rel="shortcut icon" type="image/ico" href="../img/icons/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/130d5316ba.js" crossorigin="anonymous"></script>
+                                                                                            
+    <meta name="keywords" content="'9HABU','9H-ABU','Malta','Djerba','Lybia,'disappearance of flight','mysterious disappearance','Desmond Boomer','conspiracy theory','air crash investigation','cover up','plane crash investigation'" />
+
+    <meta name="description" content="Fax sent 12 December 1995 from Carol Zammit-Briffa Secretary f/ Hon. Consul to Cormac Boomer informing that Anthony Mangion, Permanent Secretary at the Ministry of Transport has set up the Public Enquiry, Dr. Philip Scibenas LL.D. has been appointed the Commissioner." />
+    <meta name="author" content="Carol Zammit-Briffa" />
+    <meta name="category" content="Inquiry" />
+    <meta name="created-day" content="12" />
+    <meta name="created-month" content="December" />
+    <meta name="created-year" content="1995" />
+
+    <!-- this is a downloaded google font  Use font-family: 'Cinzel', serif; in CSS-->
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="../styles.css">
+    
+    </head>
+
+    <!-- ******************************************************************************************* -->
+
+    <body id="body-top"> <!-- the jquery will scroll to this point -->
+        
+        <!-- ********************************************************************************** -->
+        <!-- navigation menu displayed across the top of the page                               -->
+        <!-- ********************************************************************************** -->
+        <header id="header-menu">
+            <h2><a href="#" target="_blank"><img src="../img/logo.jpg" alt="Piper Lance 9h-abu"></a></h2>
+            <nav>
+                <ul>
+                    <li><a href="#body-top">Top</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../death-in-the-mediterranean.html">An Investigation By Don Mullan</a></li>
+                    <li><a href="../maltese-board-of-inquiry-report.html">Maltese Board of Inquiry Report</a></li>
+                    <li><a href="../malta-tv-documentary.html">Malta TV Documentary</a></li>
+                    <li><a href="../contact-me.php">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- ********************************************************************************** -->
+
+        <!-- **************************************************************************** -->
+        <!-- section holding the images of the missing passengers                         -->
+        <!-- **************************************************************************** -->
+        <ul id="missing-passengers" class="the-missing" >
+
+            <passenger-details 
+                v-for="(missingperson, index) in passengers" v-bind:passenger="missingperson" :key="index">         
+            </passenger-details>                              
+            
+        </ul> <!-- end of "the-missing" -->
+    
+        <!-- **************************************************************************** -->
+        <!-- section for the text on the main page                                        -->
+        <!-- **************************************************************************** -->
+
+        <div id="main-text-area">
+
+            <div class="main-text main-text-wide">
+
+                <span class="header-blue">Fax from Carol Zammit-Briffa to Cormac Boomer informing that the Public Enquiry has been set up</span>
+
+                <div class="letter-head">
+                    <p>CONSULATE OF IRELAND<br />MAHSOVIN.<br />The Winery<br />Marsa PLA 01,<br />Malta</p>
+                </div>
+                
+                <p><strong>F A X  C O V E R  S H E E T</strong></p>
+
+                <p>(Not signed, computer transmission)</p>
+
+                <p><span style="font-family: courier new,courier;">DATE: December 12th 1995                   TIME: 3:15 PM<br /></span><span style="font-family: courier new,courier;"><br />TO:   Niahm                                PHONE: +353 12851675<br /> FOREIGN AFFAIRS                      FAX:   +353 1 6686518 </span></p>
+
+                <p><span style="font-family: courier new,courier;">FROM: HON. CONSUL                          Tel:   +356 824918<br /> Irish Consulate, Malta               FAX:   +356 826548</span></p>
+
+                <p>Number of pages including cover sheet: One</p>
+
+                <p>Re: Desmond Boomer</p>
+
+                <p>Further to our telephone conversation of this morning this is the latest information the Consulate has received regarding the aircraft which disappeared last week.</p>
+
+                <p>Mr. Anthony Mangion, Permanent Secretary at the Ministry of Transport (Tel: 00356 243272) has set up the Public Enquiry, Dr. Philip Scibenas LL.D. has been appointed the Commissioner. He will be assisted by various experts in the field of aeronautics. The Enquiry will have all the powers of a Court of Magistrates. lt is what it says it is a "Public" enquiry and therefore anyone can attend. The Attorney General wlll be presenting the case with the aim of determining what happened. A report will then be submitted to the Minister of Transport (Aviation).</p>
+
+                <p>The family of Mr. Boomer are free to attend if they so wish. They can also apply to become part of the proceedings. The Court will decide whether or not to accept them as pan of the proceedings. Mr. Mangion confirms that the search has now been called off. An official Press Release is due to appear in the papers to this effect. The date ofthe first hearing of this Public Enquiry will also be published. No date has as<br />yet been fixed.</p>
+
+                <p>This Is all the infomation we have so far. We will naturally keep you informed as usual. Please contactus if we can be of help.</p>
+
+                <p>Carol Zammit-Briffa</p>
+                <p><br />Secretary f/ Hon. Consul</p>
+            
+            </div> <!-- end of main-text -->
+
+        </div> <!-- end of main-text-area -->
+                
+        <!-- **************************************************************************** -->
+        <!-- section holding the links to latest articles, most popular, coming soon, links                                    -->
+        <!-- **************************************************************************** -->
+        
+        <div id="latest-popular-soon">
+
+              <div class="article-lists">
+                <p>{{ latestArticlesTitle }}...</p>
+                <ul>
+                    <latest 
+                        v-for="(article, index) in latestArticles"                 
+                        v-bind:latestarticle="article"                           
+                        :key="index">                                            
+                    </latest>                                                   
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ mostReadArticlesTitle }}...</p>
+                <ul>
+                    <most-read 
+                        v-for="(article, index) in mostReadArticles"                 
+                        v-bind:mostreadarticle="article"                           
+                        :key="index">                                            
+                    </most-read>                                        
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ comingSoonArticlesTitle }}...</p>
+                <ul>
+                    <coming-soon 
+                        v-for="(article, index) in comingSoonArticles"                 
+                        v-bind:comingsoonarticle="article"                           
+                        :key="index">                                            
+                    </coming-soon>                                      
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ relatedSitesTitle }}...</p>
+                <ul>
+                    <related-sites 
+                        v-for="(site, index) in relatedSites"                 
+                        v-bind:sitelist="site"                           
+                        :key="index">                                            
+                    </related-sites>         
+                </ul>
+              </div>
+        </div>              <!-- end of latest-popular-soon -->
+
+        <!-- **************************************************************************** -->
+        <!-- section holding the links to social media                                    -->
+        <!-- **************************************************************************** -->
+
+        <footer id="social-media">
+            <ul>
+                <li><a href="https://www.facebook.com/The-mysterious-disappearance-of-flight-9h-Abu-110054825767796/" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-youtube-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
+            </ul>   
+            <p>&copy; <script>document.write(new Date().getFullYear());</script> The Mysterious Disappearance Of Flight 9H-ABU</p>
+            <p>&ldquo;All Rights Reserved&mdash;Designed by Mark Boomer&rdquo; </p>
+        </footer>
+
+        <!-- **************************************************************************** -->
+        <!-- Load the VUE.js libraries to access Vue functionality                        -->
+        <!-- **************************************************************************** -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+        <script src="../main.js"></script>
+
+    </body>
+</html>
