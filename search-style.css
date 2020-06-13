@@ -6,6 +6,23 @@ p {
     margin: 10px;
     padding: 0px;
 }
+
+#filter-container {
+    border: 1px solid grey;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr;
+    grid-template-rows: auto;
+    grid-gap: 5px;
+}
+.drop-down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border: 1px solid blue;
+    padding: 5px;
+}
 #searchBox {
     border: 1px solid black;
     border-right: none;

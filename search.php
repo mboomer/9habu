@@ -50,10 +50,107 @@
     </head>
 
     <body>         
-        <form id="searchForm" method="GET" action="search.php" >
-            <input id="searchBox" name="q" type="text" placeholder="" value="Search..." maxlength="50" autocomplete="off" onmousedown="active();" onblur="inactive();" /><input id="searchBtn" name="submit" type="submit" value="Go!" />
-        </form>
-        
+        <div id="filter-container">
+            
+            <div class="drop-down">
+                <div class="category-container">
+                    <label>Category : </label>
+                    <select id="category" name="category">
+                    <option value="">Select Category</option>
+                    <?php 
+                        $sqlCatg = "SELECT DISTINCT category FROM articles ORDER BY category ASC";
+                        $rsCatg  = mysqli_query($conn, $sqlCatg);
+
+                        while($rows = mysqli_fetch_assoc($rsCatg)) {
+                            echo '<option value="'.$rows['category'].'">'.$rows['category'].'</option>';
+                        }
+                    ?>
+                    </select>
+                <img src="" id="loader">
+                </div>
+            </div>
+
+            <div class="drop-down">
+                <div class="author-container">
+                    <label>Author : </label>
+                    <select id="author" name="author">
+                    <option value="">Select Author</option>
+                    <?php 
+                        $sqlAuth = "SELECT DISTINCT author FROM articles ORDER BY author ASC";
+                        $rsAuth  = mysqli_query($conn, $sqlAuth);
+
+                        while($rows = mysqli_fetch_assoc($rsAuth)) {
+                            echo '<option value="'.$rows['author'].'">'.$rows['author'].'</option>';
+                        }
+                    ?>
+                    </select>
+<!--                <img src="" id="loader">-->
+                </div>
+            </div>
+
+            <div class="drop-down">
+                <div class="year-container">
+                    <label>Year : </label>
+                    <select id="year" name="year">
+                    <option value="">Select Year</option>
+                    <?php 
+                        $sqlYear = "SELECT DISTINCT year     FROM articles ORDER BY year ASC";
+                        $rsYear  = mysqli_query($conn, $sqlYear);
+
+                        while($rows = mysqli_fetch_assoc($rsYear)) {
+                            echo '<option value="'.$rows['year'].'">'.$rows['year'].'</option>';
+                        }
+                    ?>
+                    </select>
+                <img src="" id="loader">
+                </div>
+            </div>
+
+            <div class="drop-down">
+                <div class="month-container">
+                    <label>Month : </label>
+                    <select id="month" name="month">
+                    <option value="">Select Month</option>
+                    <?php 
+                        $sqlMnth = "SELECT DISTINCT month FROM articles ORDER BY year ASC";
+                        $rsMnth  = mysqli_query($conn, $sqlMnth);
+
+                        while($rows = mysqli_fetch_assoc($rsMnth)) {
+                            echo '<option value="'.$rows['month'].'">'.$rows['month'].'</option>';
+                        }
+                    ?>
+                    </select>
+                <img src="" id="loader">
+                </div>
+            </div>
+
+            <div class="drop-down">
+                <div class="day-container">
+                    <label>Day : </label>
+                    <select id="day" name="day">
+                    <option value="">Select Day</option>
+                    <?php 
+                        $sqlDays = "SELECT DISTINCT day FROM articles ORDER BY day ASC";
+                        $rsDays  = mysqli_query($conn, $sqlDays);
+
+                        while($rows = mysqli_fetch_assoc($rsDays)) {
+                            echo '<option value="'.$rows['day'].'">'.$rows['day'].'</option>';
+                        }
+                    ?>
+                    </select>
+                <img src="" id="loader">
+                </div>
+            </div>
+
+            <div id="search" class="drop-down">
+                <form id="searchForm" method="GET" action="search.php" >
+                    <input id="searchBox" name="q" type="text" placeholder="" value="Search..." maxlength="50" autocomplete="off" onmousedown="active();" onblur="inactive();" /><input id="searchBtn" name="submit" type="submit" value="Go!" />
+                </form>
+
+            </div>
+
+        </div>
+
         <?php
             if (!isset($searchString)) {
                 echo "no search entered";
@@ -90,9 +187,8 @@
                     $searchString = "";
             }
         ?>
-        
+                
     </body>
-
 
 </html>
 <!-- =================================================================== -->
@@ -100,3 +196,12 @@
 <!--        mysql -u 9habu_db -p -h mysql.9habu.com 9habu_archive        -->
 <!-- =================================================================== -->
         
+<!--
+                     <select id = "myList">
+                       <option value = "1">one</option>
+                       <option value = "2">two</option>
+                       <option value = "3">three</option>
+                       <option value = "4">four</option>
+                     </select>
+
+-->
