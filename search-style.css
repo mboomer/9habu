@@ -1,3 +1,25 @@
+/* *****************************************************************************************
+/* recommended media breakpoints
+/* *****************************************************************************************
+
+    /* Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) { ... }                       */
+
+    /* Medium devices (tablets, 768px and up) 
+    @media (min-width: 768px) { ... }                       */
+
+    /* Large devices (desktops, 992px and up)
+    @media (min-width: 992px) { ... }                       */
+
+    /* Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) { ... }                      */
+
+/* *****************************************************************************************    */
+
+/* ******************************************************************************************   */
+/* mobile first approach - any rules above the media queries will apply to entire layout        */
+/* unless overridden by a specific media query                                                  */
+/* ******************************************************************************************   */
 h3 {
     margin: 10px 0px 0px 10px;
     padding: 0px;
@@ -6,49 +28,116 @@ p {
     margin: 10px;
     padding: 0px;
 }
-
 #filter-container {
+    background: pink;
+}
+#search-form {
     border: 1px solid grey;
-    
+
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr;
-    grid-template-rows: auto;
-    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-gap: 1px;
 }
 .drop-down {
     display: flex;
-    justify-content: center;
     align-items: center;
-    
-    border: 1px solid blue;
-    padding: 5px;
+    padding: 1px;
+    border: 1px dotted grey;
+}
+#search {
+    border: none;
 }
 #searchBox {
     border: 1px solid black;
     border-right: none;
-    font-size: 16px;
-    padding: 10px;
+    font-size: 14px;
+    padding: 1px;
     outline: none;
-    width: 250px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    width: 80%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 #searchBtn {
     border: 1px solid black;
     border-left: none;
-    font-size: 16px;
-    padding: 10px;
+    font-size: 14px;
+    padding: 1px;
     background: #f1d829;
     font-weight: bold;
     cursor: pointer;
     outline: none;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 #searchBtn:hover {
     background: #f6e049;
 }
-#results {
+.results {
     font-family: arial;
 }
 
+/* ********************************************** MEDIA RULES********************************   */
+
+/* ******************************************************************************************   */
+/* apply to any device that has a screen width of 576px or higher                               */
+/* ******************************************************************************************   */
+@media screen and (min-width: 576px) {
+    #filter-container {
+        background: red;
+    }
+    #search-form {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+}
+/* ******************************************************************************************   */
+/* apply to any device that has a screen width of 768px or higher                               */
+/* ******************************************************************************************   */
+@media screen and (min-width: 768px) {
+    #filter-container {
+        background: lightgray;
+    }
+    #search-form {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 3fr;
+        grid-template-rows: auto;
+        grid-gap: 1px;
+    }
+    .drop-down {
+/*        display: flex;*/
+/*
+        justify-content: center;
+        align-items: center;
+*/
+        padding: 1px;
+    }
+    #searchBox {
+        font-size: 16px;
+        padding: 5px;
+        width: 80%;
+    }
+    #searchBtn {
+        font-size: 16px;
+        padding: 5px;
+    }
+    #search {
+        width: 100%; 
+    }
+}
+/* ******************************************************************************************   */
+/* apply to any device that has a screen width of 992px or higher                               */
+/* ******************************************************************************************   */
+@media screen and (min-width: 992px) {
+    #filter-container {
+        background: lightgreen;
+    }
+}
+
+/* ******************************************************************************************   */
+/* apply to any device that has a screen width of 1200px or higher                               */
+/* ******************************************************************************************   */
+@media screen and (min-width: 1200px) {
+    #filter-container {
+        background: lightyellow;
+    }
+}
