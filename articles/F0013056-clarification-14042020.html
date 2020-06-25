@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8" >
+      <title>F0013056 -FREEDOM OF INFORMATION ACT - Request AAIB to Clarify Previous FOI Response</title>
+    
+      <meta name="viewport" content="width=device-width initial-scale=1"> <!-- sets initial scale to 100% -->
+      
+      <link rel="shortcut icon" type="image/ico" href="../img/icons/favicon.ico">
+      <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway&display=swap" rel="stylesheet">
+
+      <script src="https://kit.fontawesome.com/130d5316ba.js" crossorigin="anonymous"></script>
+                                                                                            
+      <meta name="description" content="Response from AAIB clarifying the initial statement in 2015 which stated “following a search of our paper and electronic records, I have established that the information you requested is not held by the AAIB.  The accident was not investigated by the AAIB in the UK" >
+
+      <meta name="keywords" content="'9HABU','9H-ABU','Malta','Djerba','Lybia,'disappearance of flight','mysterious disappearance','Desmond Boomer','conspiracy theory','air crash investigation','cover up','plane crash investigation'" />
+      <meta name="author" content="Ian Bass" />
+      <meta name="category" content="FOI" />
+      <meta name="created-day" content="14" />
+      <meta name="created-month" content="April" />
+      <meta name="created-year" content="2020" />
+
+      <!-- this is a downloaded google font  Use font-family: 'Cinzel', serif; in CSS-->
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="../styles.css">
+    
+    </head>
+
+    <!-- ******************************************************************************************* -->
+
+    <body id="body-top"> <!-- the jquery will scroll to this point -->
+        
+        <!-- ********************************************************************************** -->
+        <!-- navigation menu displayed across the top of the page                               -->
+        <!-- ********************************************************************************** -->
+        <header id="header-menu">
+            <h2><a href="#" target="_blank"><img src="../img/logo.jpg" alt="Piper Lance 9h-abu"></a></h2>
+            <nav>
+                <ul>
+                    <li><a href="#body-top">Top</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../death-in-the-mediterranean.html">An Investigation By Don Mullan</a></li>
+                    <li><a href="../maltese-board-of-inquiry-report.html">Maltese Board of Inquiry Report</a></li>
+                    <li><a href="../malta-tv-documentary.html">Malta TV Documentary</a></li>
+                    <li><a href="../contact-me.php">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- ********************************************************************************** -->
+
+        <!-- **************************************************************************** -->
+        <!-- section holding the images of the missing passengers                         -->
+        <!-- **************************************************************************** -->
+        <ul id="missing-passengers" class="the-missing" >
+
+            <passenger-details 
+                v-for="(missingperson, index) in passengers" v-bind:passenger="missingperson" :key="index">         
+            </passenger-details>                              
+            
+        </ul> <!-- end of "the-missing" -->
+        
+        <!-- **************************************************************************** -->
+        <!-- section for the text on the main page                                        -->
+        <!-- **************************************************************************** -->
+
+        <div id="main-text-area">
+
+            <div class="main-text main-text-wide">
+
+                <span class="header-blue">F0013056 -FREEDOM OF INFORMATION ACT - Request AAIB to Clarify Previous FOI Response</span>
+
+                <p>FOI (FOI@aaib.gov.uk)<br>
+                Tue, Apr 14, 10:57 AM<br>
+                to me, FOI<br>
+                <br>
+                Dear Mr Boomer<br>
+                </p>
+
+                <p><strong>Request AAIB to Clarify Previous FOI Response – Maltese Investigation to Piper Lance 9H-ABU on 3rd December 1995, Djerba, Tunisia to Malta</strong></p>
+
+                <p>Thank you for your email of Tuesday 24th March 2020. This relates to my response of 14th December 2015 (F0013056) to your FOI request for any information held on record for the above accident investigation.</p>
+
+                <p>The AAIB response back in 2015 stated “following a search of our paper and electronic records, I have established that the information you requested is not held by the AAIB.  The accident was not investigated by the AAIB in the UK”.</p>
+
+                <p>In your email you have asked that the AAIB clarify their statement that the ATC tape for 9H-ABU was not investigated by the AAIB. You have attached a word document that appears to contradict this statement. You have said this document was scanned from one of the original documents from the inquiry in Malta.</p>
+
+                <p>I have revisited my FOI response. I confirm the accident was not investigated by the AAIB in the UK and the AAIB holds no records.  That said, you have provided clear evidence that Peter Sheppard did provide a report providing recorded data assistance to the Maltese investigation. Mr Sheppard was Head of the Flight Recorder Group at the time and left the AAIB in 2003. </p>
+
+                <p>I have spoken to our Recorded Data Team who have checked our archives and at no time did we retain a copy of Mr Sheppard’s report. Neither do we hold a copy of the ATC tape that is referred to.</p>
+
+                <p>It may be useful to provide some background. The AAIB is quite often approached by overseas investigations requesting assistance. In general, the assistance required is to replay flight recorders as very few States have the same comprehensive facilities as the AAIB. The appropriate means for a State to request such assistance is via an email/fax to the AAIB Chief Inspector and should be accompanied by an ACCID/INCID (as appropriate) in accordance with ICAO Annex 13. The AAIB also logs such requests on their internal database with the details of the accident. However, this is the modern-day practice which has been in use for the last decade or so. Before that time, and in particular for relatively less time-consuming requests, a State very often made an informal approach which bypasses the standard AAIB procedures. As the AAIB holds no records related to the request for assistance or for the response made by Mr Sheppard, it is very likely that this request fell into that category. Additionally, the AAIB database does not contain an entry related to this accident.</p>
+
+                <p>Regards</p>
+
+                <p>Ian</p> 
+                
+            </div> <!-- end of main-text -->
+
+        </div> <!-- end of main-text-area -->
+        
+        <!-- **************************************************************************** -->
+        <!-- section holding the links to latest articles, most popular, coming soon, links                                    -->
+        <!-- **************************************************************************** -->
+        
+        <div id="latest-popular-soon">
+
+              <div class="article-lists">
+                <p>{{ latestArticlesTitle }}...</p>
+                <ul>
+                    <latest 
+                        v-for="(article, index) in latestArticles"                 
+                        v-bind:latestarticle="article"                           
+                        :key="index">                                            
+                    </latest>                                                   
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ mostReadArticlesTitle }}...</p>
+                <ul>
+                    <most-read 
+                        v-for="(article, index) in mostReadArticles"                 
+                        v-bind:mostreadarticle="article"                           
+                        :key="index">                                            
+                    </most-read>                                        
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ comingSoonArticlesTitle }}...</p>
+                <ul>
+                    <coming-soon 
+                        v-for="(article, index) in comingSoonArticles"                 
+                        v-bind:comingsoonarticle="article"                           
+                        :key="index">                                            
+                    </coming-soon>                                      
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ relatedSitesTitle }}...</p>
+                <ul>
+                    <related-sites 
+                        v-for="(site, index) in relatedSites"                 
+                        v-bind:sitelist="site"                           
+                        :key="index">                                            
+                    </related-sites>         
+                </ul>
+              </div>
+        </div>              <!-- end of latest-popular-soon -->
+
+        <!-- **************************************************************************** -->
+        <!-- section holding the links to social media                                    -->
+        <!-- **************************************************************************** -->
+
+        <footer id="social-media">
+            <ul>
+                <li><a href="https://www.facebook.com/The-mysterious-disappearance-of-flight-9h-Abu-110054825767796/" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-youtube-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
+            </ul>   
+            <p>&copy; <script>document.write(new Date().getFullYear());</script> The Mysterious Disappearance Of Flight 9H-ABU</p>
+            <p>&ldquo;All Rights Reserved&mdash;Designed by Mark Boomer&rdquo; </p>
+        </footer>
+
+        <!-- **************************************************************************** -->
+        <!-- Load the VUE.js libraries to access Vue functionality                                    -->
+        <!-- **************************************************************************** -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+        <script src="../main.js"></script>
+
+    </body>
+</html>

@@ -113,25 +113,41 @@ var latMosComRel = new Vue ({
     data: {
         latestArticlesTitle: "Latest Articles",
         latestArticles: [
-                            {   latestname     : "sunday-life-movie-article-11112001.html",
-                                latesttitle    : " Sunday Life fabricated movie bid article",
-                                latestlocation : "/articles/sunday-life-movie-article-11112001.html"
+                            {   latestname     : "email-cecilia-cormac-10121995.html",
+                                latesttitle    : "Commercial flights by unlicensed pilots",
+                                latestlocation : "/articles/email-cecilia-cormac-10121995.html"
                             },
-                            {   latestname     : "daniel-search-opportunity-06082001.html",
-                                latesttitle    : "Daniel opportunity for underwater search",
-                                latestlocation : "/articles/daniel-search-opportunity-06082001.html"
+                            {   latestname     : "email-don-cecilia-070103.html",
+                                latesttitle    : "Did Kullhadd implicate 9HABU and Bartolo",
+                                latestlocation : "/articles/email-don-cecilia-070103.html"
                             },
-                            {   latestname     : "letter-sunday-life-11112001.html",
-                                latesttitle    : "Letter to Sunday Life requesting apology",
-                                latestlocation : "/articles/letter-sunday-life-11112001.html"
+                            {   latestname     : "email-joe-mifsud-felix-agius-07012003.html",
+                                latesttitle    : "Joe Mifsud & Felix Agius - Shqaqis movements in Malta",
+                                latestlocation : "/articles/email-joe-mifsud-felix-agius-07012003.html"
                             },
-                            {   latestname     : "press-complaints-commision-10122001.html",
-                                latesttitle    : "Response from press complaints commission",
-                                latestlocation : "/articles/press-complaints-commision-10122001.html"
+                            {   latestname     : "email-kullhadd-translation-060103.html",
+                                latesttitle    : "Email translation of Kullhadd article",
+                                latestlocation : "/articles/email-kullhadd-translation-060103.html"
                             },
-                            {   latestname     : "email-don-cormac-28062001.html",
-                                latesttitle    : "Emails discussing possible TV documentary",
-                                latestlocation : "/articles/email-don-cormac-28062001.html"
+                            {   latestname     : "email-kullhadd-translation-2-060103.html",
+                                latesttitle    : "Email translation Kullhadd article (2)",
+                                latestlocation : "/articles/email-kullhadd-translation-2-060103.html"
+                            },
+                            {   latestname     : "email-daniel-don-070103.html",
+                                latesttitle    : "Daniel Aquilina - link between Bartolo and assassination",
+                                latestlocation : "/articles/email-daniel-don-070103.html"
+                            },
+                            {   latestname     : "email-cecilia-times-article-07012003.html",
+                                latesttitle    : "Email from Cecilia re: Sharon Spiteri article",
+                                latestlocation : "/articles/email-cecilia-times-article-07012003.html"
+                            },
+                            {   latestname     : "email-translation-kullhadd-07012003.html",
+                                latesttitle    : "Attacker lived in Sliema before and after assassination",
+                                latestlocation : "/articles/email-translation-kullhadd-07012003.html"
+                            },
+                            {   latestname     : "email-don-concerned-about-facts-04012003.html",
+                                latesttitle    : "Don Mullan concerned about facts for Magill article",
+                                latestlocation : "/articles/email-don-concerned-about-facts-04012003.html"
                             }
                         ],
         mostReadArticlesTitle: "Most Read",
@@ -155,7 +171,7 @@ var latMosComRel = new Vue ({
                         ],
         comingSoonArticlesTitle: "Coming Soon",
         comingSoonArticles: [ 
-                                {comingsoonname   : "Improved Document Archive Search"}
+                                {comingsoonname   : "Document Archive Search - upgrade"}
                             ],
         relatedSitesTitle: "Related Web Sites",
         relatedSites: [

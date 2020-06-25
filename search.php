@@ -19,10 +19,6 @@
     }
     //    echo "Connected successfully";
 ?>
-<!-- =================================================================== -->
-<!--        Connect from command line                                    -->
-<!--        mysql -u 9habu_db -p -h mysql.9habu.com 9habu_archive        -->
-<!-- =================================================================== -->
 <!DOCTYPE html>
 <html lang="en">
     <head>

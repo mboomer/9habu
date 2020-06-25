@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8" >
+      <title>Cecilia Pellegrini, another translation from Kullhadd</title>
+    
+      <meta name="viewport" content="width=device-width initial-scale=1"> <!-- sets initial scale to 100% -->
+      
+      <link rel="shortcut icon" type="image/ico" href="../img/icons/favicon.ico">
+      <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway&display=swap" rel="stylesheet">
+
+      <script src="https://kit.fontawesome.com/130d5316ba.js" crossorigin="anonymous"></script>
+                                                                                            
+      <meta name="description" content="Translation of article in Kullhadd which maintains that Shqaqis killers left at about 5am from a ﬂat in Bugibba on a motorcycle. Also that Maltese police visited Tripoli to investigate telephone calls, including one where Shqaqi gave details of his trip from Libya to Malta, proceeding to Rome on his Way to Damascus.">
+
+      <meta name="keywords" content="'9HABU','9H-ABU','Malta','Djerba','Lybia,'disappearance of flight','mysterious disappearance','Desmond Boomer','conspiracy theory','air crash investigation','cover up','plane crash investigation'" />
+      <meta name="author" content="Joe Mifsud Felix Agius" />
+      <meta name="category" content="newspaper" />
+      <meta name="created-day" content="06" />
+      <meta name="created-month" content="January" />
+      <meta name="created-year" content="2003" />
+
+      <!-- this is a downloaded google font  Use font-family: 'Cinzel', serif; in CSS-->
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="../styles.css">
+    
+    </head>
+
+    <!-- ******************************************************************************************* -->
+
+    <body id="body-top"> <!-- the jquery will scroll to this point -->
+        
+        <!-- ********************************************************************************** -->
+        <!-- navigation menu displayed across the top of the page                               -->
+        <!-- ********************************************************************************** -->
+        <header id="header-menu">
+            <h2><a href="#" target="_blank"><img src="../img/logo.jpg" alt="Piper Lance 9h-abu"></a></h2>
+            <nav>
+                <ul>
+                    <li><a href="#body-top">Top</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../death-in-the-mediterranean.html">An Investigation By Don Mullan</a></li>
+                    <li><a href="../maltese-board-of-inquiry-report.html">Maltese Board of Inquiry Report</a></li>
+                    <li><a href="../malta-tv-documentary.html">Malta TV Documentary</a></li>
+                    <li><a href="../contact-me.php">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- ********************************************************************************** -->
+
+        <!-- **************************************************************************** -->
+        <!-- section holding the images of the missing passengers                         -->
+        <!-- **************************************************************************** -->
+        <ul id="missing-passengers" class="the-missing" >
+
+            <passenger-details 
+                v-for="(missingperson, index) in passengers" v-bind:passenger="missingperson" :key="index">         
+            </passenger-details>                              
+            
+        </ul> <!-- end of "the-missing" -->
+        
+        <!-- **************************************************************************** -->
+        <!-- section for the text on the main page                                        -->
+        <!-- **************************************************************************** -->
+
+        <div id="main-text-area">
+
+            <div class="main-text main-text-wide">
+
+                <span class="header-blue">Cecilia Pellegrini, another translation from Kullhadd</span>
+
+                <p>From: Cecilia Pellegrini Petit (cpetit@attardco.com)<br>
+                To: cormac boomer (cormac.boomer@ntlwortd.com)<br>
+                Sent: O6 January 2003 11:28<br>
+                Subject: Fw: KULLHADDCEC26Nov95<br>
+                <br>
+                ----- Original Message -----<br>
+                <br>
+                From: Cecilia Pellegrini Petit <br>
+                To: dbmullan@indigo.ie<br>
+                Sent: Monday, January Q6, 2003 11:53 AM<br>
+                Subject: Fw: KULLHADDCEC26Nov95<br>
+                <br>
+                Dear Don,<br>
+                </p>
+                
+                <p>another Translation:<br>
+                <br>
+                Sent: Monday, January O6, 2003 6:50 AM<br>
+                Subject: KULLHADDCEC26Nov95<br>
+                <br>
+                Ref: KullHadd 26th November 1995<br>
+                <br>
+                Page 3<br>
+                <br>
+                    <strong>The Weapon was loaded in Bugibba</strong><br>
+                <br>
+                by Felix Agius and Joe Mifsud<br>
+                </p>
+                    
+                <p>One of the Shqaqi Killers was often in Malta. Early on the moming of the crime a person saw the two killers hide a parcel in a box which was mounted on the motorcycle. At the time, Shqaqi was coming from Tripoli on the Libyan ship that was approaching the Malta harbour.</p>
+
+                <p>This person maintains that the killers left at about 5am from a ﬂat in Bugibba on a motorcycle. Besides everything points to the fact killers had false Arab passports and spoke Arabic ﬂuently. lt is normal that anyone carrying out such an assignment would use passports of the country that commissioned the killing.</p>
+
+                <p>Shqaqi himself, in this instance, was using a false passport. as was the killer and the person who brought the motorcylce into Malta on the 12th August this year. lt is not the ﬁrst time that one or the killers visited Malta and resided in Sliema.</p>
+
+                <p>The Maltese police who visited Tripoli paid particular attention to the telephone calls, Amongst the most important call made, was the one wherein Shqaqi gave details of his trip from Libya to Malta, proceeding to Rome on his Way to Damascus.</p>
+                
+            </div> <!-- end of main-text -->
+
+        </div> <!-- end of main-text-area -->
+        
+        <!-- **************************************************************************** -->
+        <!-- section holding the links to latest articles, most popular, coming soon, links                                    -->
+        <!-- **************************************************************************** -->
+        
+        <div id="latest-popular-soon">
+
+              <div class="article-lists">
+                <p>{{ latestArticlesTitle }}...</p>
+                <ul>
+                    <latest 
+                        v-for="(article, index) in latestArticles"                 
+                        v-bind:latestarticle="article"                           
+                        :key="index">                                            
+                    </latest>                                                   
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ mostReadArticlesTitle }}...</p>
+                <ul>
+                    <most-read 
+                        v-for="(article, index) in mostReadArticles"                 
+                        v-bind:mostreadarticle="article"                           
+                        :key="index">                                            
+                    </most-read>                                        
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ comingSoonArticlesTitle }}...</p>
+                <ul>
+                    <coming-soon 
+                        v-for="(article, index) in comingSoonArticles"                 
+                        v-bind:comingsoonarticle="article"                           
+                        :key="index">                                            
+                    </coming-soon>                                      
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ relatedSitesTitle }}...</p>
+                <ul>
+                    <related-sites 
+                        v-for="(site, index) in relatedSites"                 
+                        v-bind:sitelist="site"                           
+                        :key="index">                                            
+                    </related-sites>         
+                </ul>
+              </div>
+        </div>              <!-- end of latest-popular-soon -->
+
+        <!-- **************************************************************************** -->
+        <!-- section holding the links to social media                                    -->
+        <!-- **************************************************************************** -->
+
+        <footer id="social-media">
+            <ul>
+                <li><a href="https://www.facebook.com/The-mysterious-disappearance-of-flight-9h-Abu-110054825767796/" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-youtube-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
+            </ul>   
+            <p>&copy; <script>document.write(new Date().getFullYear());</script> The Mysterious Disappearance Of Flight 9H-ABU</p>
+            <p>&ldquo;All Rights Reserved&mdash;Designed by Mark Boomer&rdquo; </p>
+        </footer>
+
+        <!-- **************************************************************************** -->
+        <!-- Load the VUE.js libraries to access Vue functionality                                    -->
+        <!-- **************************************************************************** -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+        <script src="../main.js"></script>
+
+    </body>
+</html>
