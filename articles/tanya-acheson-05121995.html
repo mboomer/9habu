@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8" >
+      <title>Article by Tayna Acheson, Belfast Telegraph</title>
+    
+      <meta name="viewport" content="width=device-width initial-scale=1"> <!-- sets initial scale to 100% -->
+      
+      <link rel="shortcut icon" type="image/ico" href="../img/icons/favicon.ico">
+      <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway&display=swap" rel="stylesheet">
+
+      <script src="https://kit.fontawesome.com/130d5316ba.js" crossorigin="anonymous"></script>
+                                                                                            
+      <meta name="description" content="Article written by Tanya Acheson of the Belfast Telegraph reporting on the disappearance of 9HABU" >
+
+      <meta name="keywords" content="'9HABU','9H-ABU','Malta','Djerba','Lybia,'disappearance of flight','mysterious disappearance','Desmond Boomer','conspiracy theory','air crash investigation','cover up','plane crash investigation'" />
+      <meta name="author" content="Tanya Acheson" />
+      <meta name="category" content="Newspaper" />
+      <meta name="created-day" content="05" />
+      <meta name="created-month" content="December" />
+      <meta name="created-year" content="1995" />
+
+      <!-- this is a downloaded google font  Use font-family: 'Cinzel', serif; in CSS-->
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="../styles.css">
+    
+    <style>
+            .newspaper-layout {
+                background-color: rgb(245, 245, 245);
+                width: 100%;
+                margin: auto;
+
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(10, auto);
+                grid-gap: 2px;
+            }
+            .newspaper-col {
+                padding: 1px;
+                font-size: 0.9em;
+            }
+            .newspaper-headline {    
+                grid-column: 1 / span 4;
+                grid-row: 1 / span 2;
+                color: black;
+                font-size: 9em;
+                font-family: "Times New Roman";
+                font-weight: bold;
+                letter-spacing: 5px;
+                text-align: center;
+            }
+            .newspaper-headline-img {width: 100%;}
+                .newspaper-headline-img img {width: 100%;}
+        
+            .newspaper-col-1 {grid-row: 1;}
+        
+            .newspaper-top-img {grid-row: 2;}
+                .newspaper-top-img img {width: 100%;}
+
+            .newspaper-col-2 {grid-row: 3;}
+
+            .newspaper-mid-img {grid-row: 4;}
+                .newspaper-mid-img img {width: 100%;}
+
+            .newspaper-col-3 {grid-row: 5;}
+            .newspaper-col-4 {grid-row: 6;}
+            .newspaper-col-5 {grid-row: 7;}
+
+            .newspaper-side-img {grid-row: 8;}
+                .newspaper-side-img img {width: 100%;}
+
+/* ******************************************************************************************   */
+/* apply to any device that has a screen width of 768px or higher                               */
+/* ******************************************************************************************   */
+        @media screen and (min-width: 768px) {
+            .newspaper-layout {
+                background-color: rgb(245, 245, 245);                
+                width: 100%;
+
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+                grid-template-rows: repeat(6, auto);
+                grid-gap: 2px;
+            }
+            .newspaper-col {
+                padding: 1px;
+                font-size: 0.9em;
+            }
+            .newspaper-headline {    
+                grid-column: 1 / span 4;
+                grid-row: 1 / span 2;
+                color: black;
+                font-size: 9em;
+                font-family: "Times New Roman";
+                font-weight: bold;
+                letter-spacing: 5px;
+                text-align: center;
+            }
+            .newspaper-headline-img {width: 100%; text-align: center; margin: auto;}
+                .newspaper-headline-img img {width: 100%;}
+            
+            .newspaper-col-1   {grid-column: 1 / span 1; grid-row: 1 / span 4;}
+            
+            .newspaper-top-img {display: flex; justify-content: center; grid-column: 2 / span 2; grid-row: 1 / span 1;}
+                .newspaper-top-img img {width: 100%;}
+            
+            .newspaper-mid-img {display: flex; align-items: center; grid-column: 2 / span 1; grid-row: 2 / span 2;}
+                .newspaper-mid-img img {width: 100%;}
+            
+            .newspaper-col-2   {grid-column: 2 / span 1; grid-row: 4 / span 2;}
+            .newspaper-col-3   {grid-column: 3 / span 1; grid-row: 2 / span 4;}
+
+            .newspaper-side-img {display: flex; justify-content: flex-start; grid-column: 4 / span 2; grid-row: 1 / span 6;}
+                .newspaper-side-img img {}
+        }
+/* ******************************************************************************************   */
+/* apply to any device that has a screen width of 992px or higher                               */
+/* ******************************************************************************************   */
+        @media screen and (min-width: 992px) {
+            .newspaper-layout {
+            
+                width: 100%;
+
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+                grid-template-rows: repeat(6, auto);
+                grid-gap: 2px;
+            }
+            .newspaper-col {
+                padding: 1px;
+                font-size: 0.9em;
+            }
+            .newspaper-headline {    
+                grid-column: 1 / span 4;
+                grid-row: 1 / span 2;
+                color: black;
+                font-size: 9em;
+                font-family: "Times New Roman";
+                font-weight: bold;
+                letter-spacing: 5px;
+                text-align: center;
+            }
+            .newspaper-headline-img {width: 100%; text-align: center; margin: auto;}
+                .newspaper-headline-img img {width: 100%;}
+            
+            .newspaper-col-1   {grid-column: 1 / span 1; grid-row: 1 / span 4;}
+            
+            .newspaper-top-img {display: flex; justify-content: center; grid-column: 2 / span 2; grid-row: 1 / span 1;}
+                .newspaper-top-img img {width: 100%;}
+            
+            .newspaper-mid-img {display: flex; align-items: center; grid-column: 2 / span 1; grid-row: 2 / span 2;}
+                .newspaper-mid-img img {width: 100%;}
+            
+            .newspaper-col-2   {grid-column: 2 / span 1; grid-row: 4 / span 2;}
+            .newspaper-col-3   {grid-column: 3 / span 1; grid-row: 2 / span 4;}
+
+            .newspaper-side-img {display: flex; justify-content: flex-start; grid-column: 4 / span 2; grid-row: 1 / span 6;}
+                .newspaper-side-img img {}
+        }
+
+/* ******************************************************************************************   */
+/* apply to any device that has a screen width of 1200px or higher                               */
+/* ******************************************************************************************   */
+        @media screen and (min-width: 1200px) {
+            .newspaper-layout {
+                width: 95%;
+                margin: auto;
+
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+                grid-template-rows: repeat(6, auto);
+                grid-gap: 2px;
+            }
+            .newspaper-col {
+                padding: 2px;
+                font-size: 1em;
+            }
+            .newspaper-headline {    
+                grid-column: 1 / span 4;
+                grid-row: 1 / span 2;
+                color: black;
+                font-size: 9em;
+                font-family: "Times New Roman";
+                font-weight: bold;
+                letter-spacing: 5px;
+                text-align: center;
+            }
+            .newspaper-headline-img {
+                width: 95%;
+                text-align: center;
+                margin: auto;
+            }
+            .newspaper-headline-img img {
+                width: 100%;
+            }
+            .newspaper-col-1   {grid-column: 1 / span 1; grid-row: 1 / span 4;}
+            
+            .newspaper-top-img {display: flex; justify-content: center; grid-column: 2 / span 2; grid-row: 1 / span 1;}
+                .newspaper-top-img img {width: 75%;}
+            
+            .newspaper-mid-img {display: flex; align-items: flex-start; grid-column: 2 / span 1; grid-row: 2 / span 2;}
+                .newspaper-mid-img img {width: 75%;}
+            
+            .newspaper-col-2   {grid-column: 2 / span 1; grid-row: 3 / span 2;}
+            .newspaper-col-3   {grid-column: 3 / span 1; grid-row: 2 / span 4;}
+
+            .newspaper-side-img {grid-column: 4 / span 2; grid-row: 1 / span 6;}
+                .newspaper-side-img img {width: 100%;}
+        }
+        </style>
+
+    </head>
+
+    <!-- ******************************************************************************************* -->
+
+    <body id="body-top"> <!-- the jquery will scroll to this point -->
+        
+        <!-- ********************************************************************************** -->
+        <!-- navigation menu displayed across the top of the page                               -->
+        <!-- ********************************************************************************** -->
+        <header id="header-menu">
+            <h2><a href="#" target="_blank"><img src="../img/logo.jpg" alt="Piper Lance 9h-abu"></a></h2>
+            <nav>
+                <ul>
+                    <li><a href="#body-top">Top</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../death-in-the-mediterranean.html">An Investigation By Don Mullan</a></li>
+                    <li><a href="../maltese-board-of-inquiry-report.html">Maltese Board of Inquiry Report</a></li>
+                    <li><a href="../malta-tv-documentary.html">Malta TV Documentary</a></li>
+                    <li><a href="../contact-me.php">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- ********************************************************************************** -->
+
+        <!-- **************************************************************************** -->
+        <!-- section holding the images of the missing passengers                         -->
+        <!-- **************************************************************************** -->
+        <ul id="missing-passengers" class="the-missing" >
+
+            <passenger-details 
+                v-for="(missingperson, index) in passengers" v-bind:passenger="missingperson" :key="index">         
+            </passenger-details>                              
+            
+        </ul> <!-- end of "the-missing" -->
+        
+        <!-- **************************************************************************** -->
+        <!-- section for the text on the main page                                        -->
+        <!-- **************************************************************************** -->
+
+        <div id="main-text-area">
+
+            <div class="main-text main-text-wide">
+
+                <span class="header-blue">Article by Tayna Acheson, Belfast Telegraph</span>
+                
+                <p></p>
+                
+                <div class="newspaper-headline-img"><img src="article-images/tanya-acheson-1-05121995.jpg" alt="Ex-councillors sins feed dead on lost flight"></div>
+
+                <div class="newspaper-layout">
+
+                    <div class="newspaper-col newspaper-col-1"><span style="font-size: 2em">Single-engine plane vanishes in Med Storm</span><br><br><hr>BY Tanya Acheson<hr><br>&nbsp;&nbsp;&nbsp;&nbsp;THE son of a former SDLP councillor is one of six people missing and feared  dead in a Mediterranean plane crash.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Dessie Boomer, 39, a diesel mechanic, was  on board the single engined plane on a 75  minute ﬂight from Tunisia to Malta when it  vanished during a violent storm.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;A huge rescue operation  was launched after the Piper  32 vanished in the early hours  of Sunday 200 miles south  west of the holiday island but no trace has been found. <br><br>&nbsp;&nbsp;&nbsp;&nbsp;Father-of-ﬁve Mr Boomer.  from Banbridge. is the son of  former Belfast City councillor  Cormac Boomer.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Today he said: "I do not  hold out any hope. The search  people are saying that they  havent given up hope but all  we can hope for is that they  ﬁnd the bodies."<br><br>&nbsp;&nbsp;&nbsp;&nbsp;His son. whose children are  aged between eight and 15.  was working for a Darlington  based company employed by  the Tunisian govemment on  oilﬁeld work. He was due to  retum home to Northem Ireland for Christmas.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;He was on board the ﬂight  from the Tunisian island of  Jerba along with another  Briton, a Pole and three  Maltese including the pilot. lt  lett at 4.46am and was due at  the international airport on  the George Cross island at 6.30am.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Last contact with the piper 32 was at 5:11am when it was  200 miles south west of Malta.  The alarm was raised at  6.18am and ships from the US  6th Fleet joined with Tunisian  and Maltese aircraft in a  search operation.<br></div>
+
+                    <div class="newspaper-top-img"><img src="article-images/tanya-acheson-3-05121995.jpg" alt="Missing In The Med"></div>
+                    
+                    <div class="newspaper-col newspaper-col-2">&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;The weather was described as  as "stormy".<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Mr Boomer Snr. a well-  know ﬁgure in local politics.  said at his home in Riverdale,  west Belfast: "He had made  the trip before and he told me  it had been a hair-raising  experience. The plane was</div>
+
+                    <div class="newspaper-mid-img"><img src="article-images/tanya-acheson-2-05121995.jpg" alt="Cormac Boomer"></div>
+                
+                    <div class="newspaper-col newspaper-col-3">&nbsp;&nbsp;&nbsp;&nbsp;being bounced around like a  rubber ball." <br><br>&nbsp;&nbsp;&nbsp;&nbsp;He said his son had been  working in Tunisia for four  months and had previously   worked in Saudi Arabia during the Gulf War".<br><br>&nbsp;&nbsp;&nbsp;&nbsp;"We are devasted to  think that he came through 25  years living in Andersonstown  and then for this happen, added Mr Boomer.<br><br>&nbsp;&nbsp;&nbsp;&nbsp; A close friend of the family, who live at Larchwood Court, Banbridge said, "His wife Mandy and his children are totally devasted  He was a devoted father  loving and worked so  hard for his family."<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Parish priest Fr Matthew O'Hare  said the community  was stunned to learn of Mr.  Boomers disappearance.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;A Maltese government  spokesman said military   from the US base in  Sigonella, Scily, had joined  the search south of Malta but  no trace had been found or survivors or wreckage.</div>
+                    
+                    <div class="newspaper-side-img"><img src="article-images/tanya-acheson-4-05121995.jpg" alt="Desmond Boomer"></div>
+                
+                </div>
+                    
+            </div> <!-- end of main-text -->
+
+        </div> <!-- end of main-text-area -->
+        
+        <!-- ****************************************************************************** -->
+        <!-- section holding the links to latest articles, most popular, coming soon, links -->
+        <!-- ****************************************************************************** -->
+        
+        <div id="latest-popular-soon">
+
+              <div class="article-lists">
+                <p>{{ latestArticlesTitle }}...</p>
+                <ul>
+                    <latest 
+                        v-for="(article, index) in latestArticles"                 
+                        v-bind:latestarticle="article"                           
+                        :key="index">                                            
+                    </latest>                                                   
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ mostReadArticlesTitle }}...</p>
+                <ul>
+                    <most-read 
+                        v-for="(article, index) in mostReadArticles"                 
+                        v-bind:mostreadarticle="article"                           
+                        :key="index">                                            
+                    </most-read>                                        
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ comingSoonArticlesTitle }}...</p>
+                <ul>
+                    <coming-soon 
+                        v-for="(article, index) in comingSoonArticles"                 
+                        v-bind:comingsoonarticle="article"                           
+                        :key="index">                                            
+                    </coming-soon>                                      
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ relatedSitesTitle }}...</p>
+                <ul>
+                    <related-sites 
+                        v-for="(site, index) in relatedSites"                 
+                        v-bind:sitelist="site"                           
+                        :key="index">                                            
+                    </related-sites>         
+                </ul>
+              </div>
+        </div>              <!-- end of latest-popular-soon -->
+
+        <!-- **************************************************************************** -->
+        <!-- section holding the links to social media                                    -->
+        <!-- **************************************************************************** -->
+
+        <footer id="social-media">
+            <ul>
+                <li><a href="https://www.facebook.com/The-mysterious-disappearance-of-flight-9h-Abu-110054825767796/" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-youtube-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
+            </ul>   
+            <p>&copy; <script>document.write(new Date().getFullYear());</script> The Mysterious Disappearance Of Flight 9H-ABU</p>
+            <p>&ldquo;All Rights Reserved&mdash;Designed by Mark Boomer&rdquo; </p>
+        </footer>
+
+        <!-- **************************************************************************** -->
+        <!-- Load the VUE.js libraries to access Vue functionality                                    -->
+        <!-- **************************************************************************** -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+        <script src="../main.js"></script>
+
+    </body>
+</html>

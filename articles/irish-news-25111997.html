@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" >
+        <title>Baffled Fathers Fight To Find His Lost Son</title>
+    
+        <meta name="viewport" content="width=device-width initial-scale=1"> <!-- sets initial scale to 100% -->
+      
+        <link rel="shortcut icon" type="image/ico" href="../img/icons/favicon.ico">
+        <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway&display=swap" rel="stylesheet">
+
+        <script src="https://kit.fontawesome.com/130d5316ba.js" crossorigin="anonymous"></script>
+                                                                                            
+        <meta name="description" content="Newspaper article published by the Irish News in 1997. It is an interview with Cormac Boomer on the second anniversary of Desmond Boomers disappearance" >
+
+        <meta name="keywords" content="'9HABU','9H-ABU','Malta','Djerba','Lybia,'disappearance of flight','mysterious disappearance','Desmond Boomer','conspiracy theory','air crash investigation','cover up','plane crash investigation'" />
+        <meta name="author" content="Liz Trainor" />
+        <meta name="category" content="Newspaper" />
+        <meta name="created-day" content="25" />
+        <meta name="created-month" content="November" />
+        <meta name="created-year" content="1997" />
+
+        <!-- this is a downloaded google font  Use font-family: 'Cinzel', serif; in CSS-->
+        <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+  
+        <link rel="stylesheet" href="../styles.css">
+    
+        <style>
+                .newspaper-layout {
+                    background-color: rgb(245, 245, 245);
+                    width: 100%;
+
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: repeat(10, auto);
+                    grid-gap: 1px;
+                }
+                .newspaper-col {
+                    padding: 1px;
+                    font-size: 0.9em;
+                }
+                .newspaper-headline {    
+                    grid-row: 1 / span 2;
+                    color: black;
+                    font-size: 5em;
+                    font-family: "Times New Roman";
+                    font-weight: bold;
+                    letter-spacing: 3px;
+                    text-align: center;
+                }
+                .newspaper-side-img {
+                    grid-row: 5;
+                    text-align: center;
+                }
+                .newspaper-side-img img {
+                    width: 50%;
+                }
+                .newspaper-col-1 {
+                    grid-row: 3;
+                }
+                .newspaper-col-2 {
+                    grid-row: 4;
+                }
+                .newspaper-col-3 {
+                    grid-row: 6;
+                }
+                .newspaper-col-4 {
+                    grid-row: 7;
+                }
+            
+/* ******************************************************************************************   */
+/* apply to any device that has a screen width of 768px or higher                               */
+/* ******************************************************************************************   */
+            @media screen and (min-width: 768px) {
+                .newspaper-layout {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    grid-template-rows: repeat(10, auto);
+                    grid-gap: 1px;
+                }
+                .newspaper-col {
+                    padding: 1px;
+                    font-size: 0.9em;
+                }
+                .newspaper-headline {    
+                    grid-column: 1 / span 4;
+                    grid-row: 1 / span 2;
+                    color: black;
+                    font-size: 5em;
+                    font-family: "Times New Roman";
+                    font-weight: bold;
+                    letter-spacing: 3px;
+                    text-align: center;
+                }
+                .newspaper-side-img {
+                    grid-column: 1 / span 2;
+                    grid-row: 5 / span 4;
+                    align-self: flex-start;
+                }
+                .newspaper-side-img img {
+                    width: 100%;
+                    height: 95vh;
+                }
+                .newspaper-col-1 {
+                    grid-column: 1 / span 1;
+                    grid-row: 3 / span 2;
+                    align-self: flex-start;
+                }
+                .newspaper-col-2 {
+                    grid-column: 2 / span 1;
+                    grid-row: 3 / span 2;
+                    align-self: flex-start;
+                }
+                .newspaper-col-3 {
+                    grid-row: 3 / span 8;
+                    align-self: flex-start;
+                }
+                .newspaper-col-4 {
+                    grid-row: 3 / span 8;
+                    align-self: flex-start;
+                }
+            }
+/* ******************************************************************************************   */
+/* apply to any device that has a screen width of 992px or higher                               */
+/* ******************************************************************************************   */
+            @media screen and (min-width: 992px) {
+                .newspaper-layout {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    grid-template-rows: repeat(10, auto);
+                    grid-gap: 2px;
+                }
+                .newspaper-col {
+                    padding: 2px;
+                    font-size: 1em;
+                }
+                .newspaper-headline {    
+                    grid-column: 1 / span 4;
+                    grid-row: 1 / span 2;
+                    color: black;
+                    font-size: 7em;
+                    font-family: "Times New Roman";
+                    font-weight: bold;
+                    letter-spacing: 5px;
+                    text-align: center;
+                }
+                .newspaper-side-img {
+                    grid-column: 1 / span 2;
+                    grid-row: 5 / span 4;
+                    align-self: flex-start;
+                }
+                .newspaper-side-img img {
+                    width: 100%;
+                    height: 95vh;
+                }
+                .newspaper-col-1 {
+                    grid-column: 1 / span 1;
+                    grid-row: 3 / span 2;
+                    align-self: flex-start;
+                }
+                .newspaper-col-2 {
+                    grid-column: 2 / span 1;
+                    grid-row: 3 / span 2;
+                    align-self: flex-start;
+                }
+                .newspaper-col-3 {
+                    grid-row: 3 / span 8;
+                    align-self: flex-start;
+                }
+                .newspaper-col-4 {
+                    grid-row: 3 / span 8;
+                    align-self: flex-start;
+                }
+            }
+            
+/* ******************************************************************************************   */
+/* apply to any device that has a screen width of 1200px or higher                               */
+/* ******************************************************************************************   */
+            @media screen and (min-width: 1200px) {
+                .newspaper-layout {
+                    width: 95%;
+                    margin: auto;
+
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    grid-template-rows: repeat(10, auto);
+                    grid-gap: 2px;
+                }
+                .newspaper-col {
+                    padding: 2px;
+                    font-size: 1em;
+                }
+                .newspaper-headline {    
+                    grid-column: 1 / span 4;
+                    grid-row: 1 / span 2;
+                    color: black;
+                    font-size: 9em;
+                    font-family: "Times New Roman";
+                    font-weight: bold;
+                    letter-spacing: 5px;
+                    text-align: center;
+                }
+                .newspaper-side-img {
+                    grid-column: 1 / span 2;
+                    grid-row: 5 / span 4;
+                    align-self: flex-start;
+                }
+                .newspaper-side-img img {
+                    width: 100%;
+                    height: 95vh;
+                }
+                .newspaper-col-1 {
+                    grid-column: 1 / span 1;
+                    grid-row: 3 / span 2;
+                    align-self: flex-start;
+                }
+                .newspaper-col-2 {
+                    grid-column: 2 / span 1;
+                    grid-row: 3 / span 2;
+                    align-self: flex-start;
+                }
+                .newspaper-col-3 {
+                    grid-row: 3 / span 8;
+                    align-self: flex-start;
+                }
+                .newspaper-col-4 {
+                    grid-row: 3 / span 8;
+                    align-self: flex-start;
+                }
+            }
+            </style>
+        </head>
+
+    <!-- ******************************************************************************************* -->
+
+    <body id="body-top"> <!-- the jquery will scroll to this point -->
+        
+        <!-- ********************************************************************************** -->
+        <!-- navigation menu displayed across the top of the page                               -->
+        <!-- ********************************************************************************** -->
+        <header id="header-menu">
+            <h2><a href="#" target="_blank"><img src="../img/logo.jpg" alt="Piper Lance 9h-abu"></a></h2>
+            <nav>
+                <ul>
+                    <li><a href="#body-top">Top</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../death-in-the-mediterranean.html">An Investigation By Don Mullan</a></li>
+                    <li><a href="../maltese-board-of-inquiry-report.html">Maltese Board of Inquiry Report</a></li>
+                    <li><a href="../malta-tv-documentary.html">Malta TV Documentary</a></li>
+                    <li><a href="../contact-me.php">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- ********************************************************************************** -->
+
+        <!-- **************************************************************************** -->
+        <!-- section holding the images of the missing passengers                         -->
+        <!-- **************************************************************************** -->
+        <ul id="missing-passengers" class="the-missing" >
+
+            <passenger-details 
+                v-for="(missingperson, index) in passengers" v-bind:passenger="missingperson" :key="index">         
+            </passenger-details>                              
+            
+        </ul> <!-- end of "the-missing" -->
+        
+        <!-- **************************************************************************** -->
+        <!-- section for the text on the main page                                        -->
+        <!-- **************************************************************************** -->
+
+        <div id="main-text-area">
+
+            <div class="main-text main-text-wide">
+
+                <span class="header-blue">Article published in the Irish News</span>
+
+                <p></p>
+                
+                <div class="newspaper-layout">
+
+                    <div class="newspaper-headline">Baffled fathers fight to find his lost son</div>
+                    
+                    <div class="newspaper-col newspaper-col-1" ><span style="font-size: 18px;" >&nbsp;&nbsp;&nbsp;&nbsp;Two years after his son disappeared, Cormac Boomer tells Liz Trainor he thinks a cover-up is in place.</span><br><br>&nbsp;&nbsp;&nbsp;&nbsp;A FORMER west Belfast councillor, whose son went missing after a mysterious plane crash off the coast of Tunisia two years ago, claims there has been a diplomatic</div>
+
+                    <div class="newspaper-col newspaper-col-2">&nbsp;&nbsp;&nbsp;&nbsp;cover-up over the incident.<br> Dessie Boomer (39) went missing along with five others from the ill-fated Piper Lance, ﬂight 9HABU, on the morning of December 3 1995.<br>&nbsp;&nbsp;&nbsp;&nbsp;The plane, carrying oil rig engineers who were working in Libya. was en route from Djerba in Tunisia to the island of Malta.<br>&nbsp;&nbsp;&nbsp;&nbsp;Mr Boomer was planning a Christmas reunion with his wife Mandy and five children at their Banbridge home.<br> But the charter ﬂight never reached its</div>
+                    
+                    <div class="newspaper-col newspaper-col-3">&nbsp;&nbsp;&nbsp;&nbsp;destination. Investigators claimed that the plane crashed after recovering pieces of wreck-age from the sea but no bodies were ever recovered.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Two years later his baffled father, Cormac says he is still trying to unravel events surrounding the disappearance of the ﬂight that December morning.<br>&nbsp;&nbsp;&nbsp;&nbsp;"Every time I try to get close to the cir-cumstances surrounding the event I come up against a diplomatic stone wall.<br>&nbsp;&nbsp;&nbsp;&nbsp;I believe there is a cover-up between the British. Maltese and Tunisian govern-ments over what happened that morning", Mr Boomer claimed.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;He believes the plane was sabotaged and has his own theory to explain why; after two years of delving into the circumstances surrounding the incident he said he now believes that his son and the others on board were kidnapped by a Libyan anti-government mafia gang in retaliation over an undercover diplomatic incident.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Mr Boomer, who is conducting a painstaking search with the families of others missing from the flight, says he will not give up until he has firm evidence that his son died in a crash.<br> Wreckage from the ﬂight and some of the pilots personal belongings were recovered from the sea by Tunisian fishermen but Mr Boomer claims the evidence appeared nine months after the reported crash.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;"There is no evidence to suggest that he was on that flight,“ Mr Boomer said. <br>&nbsp;&nbsp;&nbsp;&nbsp;"During the inquiry documentation of a recorded conversation with the pilot suggested that there were only two people on board with him.<br>&nbsp;&nbsp;&nbsp;&nbsp;"And the evidence recovered at the scene. in my view as an engineer, is not wreckage from the plane."<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Mr Boomer, who has been to Malta on six occasions to attend the inquiry, said he believes all the evidence points to a "cover-up". <br>&nbsp;&nbsp;&nbsp;&nbsp;He said: “There was a five nation search for the plane after it disappeared and nothing was found yet nine months later they come up with pieces of wreckage recovered by two fishermen who noone has seen or spoken to.<br>&nbsp;&nbsp;&nbsp;&nbsp;“As well as that I have had no response from any of the organisations which l have contacted officially. They don’t even come back.” <br>&nbsp;&nbsp;&nbsp;&nbsp;He has, however, called in the support</div>
+                    
+                    <div class="newspaper-col newspaper-col-4">&nbsp;&nbsp;&nbsp;&nbsp;of Interpol and Scotland Yard as well as the British and Irish foreign offices.<br>&nbsp;&nbsp;&nbsp;&nbsp; His son‘s mysterious disappearance was raised in the Dail last week by Labour TD Emmet Stagg.<br>&nbsp;&nbsp;&nbsp;&nbsp;In a written reply Foreign Aﬂairs Minister David Andrews told Mr Boomer that the commission of inquiry set up by the Ministry of Transport in Malta last January was close to completing its deliberations.<br>&nbsp;&nbsp;&nbsp;&nbsp; “I know it sounds like something from a 007 movie, but I will not give up my search for my son for there is no evidence to suggest he was on that plane.<br>&nbsp;&nbsp;&nbsp;&nbsp; "The next sitting oi the inquiry could well be the last so that will be interesting," he said<br>&nbsp;&nbsp;&nbsp;&nbsp; "I could well believe that our son is no longer in this world and if we could see<br>
+                    <br>
+                        <img style="width: 100%;" src="article-images/irish-news-3-25121997.jpg" alt="quote">
+                    <br>
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;the evidence we could come to terms with it.<br>&nbsp;&nbsp;&nbsp;&nbsp;"But as yet there is nothing to suggest that he is dead and  until some factual evidence is produced I can't believe he is dead," the former councillor said. <br>&nbsp;&nbsp;&nbsp;&nbsp;An official at the British foreign office said yesterday that the inquiry in Malta had come to a halt after Tunisia refused to release a tape recording of the pilot‘s conversation with air traffic control in Djerba.<br>&nbsp;&nbsp;&nbsp;&nbsp;The official said that the British embassy in Tunis had made a personal request asking them to release the tape to the inquiry team.<br>&nbsp;&nbsp;&nbsp;&nbsp; “We realise that this is distressing for the families involved and we are aware of a number oi theories surrounding the incident but have no evidence to substantiate any ot the claims.‘ the official said.</div>
+                    
+                    <div class="newspaper-col newspaper-side-img">
+                        <img src="article-images/irish-news-1-25121997.jpg" alt="Desmond Boomer">
+                    </div>
+                    
+                </div>                
+
+
+                
+<!--
+                <div class="newspaper-layout">
+
+                    <div class="newspaper-headline">Baffled fathers fight to find his lost son</div>
+
+                    <div class="newspaper-col newspaper-col-1"><span style="font-size: 18px;" >Two years after his son disappeared, Cormac Boomer tells Liz Trainor he thinks a cover-up is in place.</span>A FORMER west Belfast councillor, whose son went missing after a mysterious plane crash off the coast of Tunisia two years ago, claims there has been a diplomatic</div>
+
+                    <div class="newspaper-col newspaper-col-2">cover-up over the incident. Dessie Boomer (39) went missing along with five others from the ill-fated Piper Lance, ﬂight 9HABU, on the morning of December 3 1995. The plane, carrying oil rig engineers who were working in Libya. was en route from Djerba in Tunisia to the island of Malta. Mr Boomer was planning a Christmas reunion with his wife Mandy and five children at their Banbridge home. But the charter ﬂight never reached its</div>
+                    
+                    <div class="newspaper-col newspaper-col-3">destination. Investigators claimed that the plane crashed after recovering pieces of wreck-age from the sea but no bodies were ever recovered.<br>
+                    Two years later his baffled father, Cormac says he is still trying to unravel events surrounding the disappearance of the ﬂight that December morning. "Every time I try to get close to the cir-cumstances surrounding the event I come up against a diplomatic stone wall. I believe there is a cover-up between the British. Maltese and Tunisian govern-ments over what happened that morning", Mr Boomer claimed.<br>
+                    He believes the plane was sabotaged and has his own theory to explain why; after two years of delving into the circumstances surrounding the incident he said he now believes that his son and the others on board were kidnapped by a Libyan anti-government mafia gang in retaliation over an undercover diplomatic incident.<br>
+                    Mr Boomer, who is conducting a painstaking search with the families of others missing from the flight, says he will not give up until he has firm evidence that his son died in a crash. Wreckage from the ﬂight and some of the pilots personal belongings were recovered from the sea by Tunisian fishermen but Mr Boomer claims the evidence appeared nine months after the reported crash.<br>
+                    "There is no evidence to suggest that he was on that flight,“ Mr Boomer said. "During the inquiry documentation of a recorded conversation with the pilot suggested that there were only two people on board with him. "And the evidence recovered at the scene. in my view as an engineer, is not wreckage from the plane."<br>
+                    Mr Boomer, who has been to Malta on six occasions to attend the inquiry, said he believes all the evidence points to a "cover-up". He said: “There was a five nation search for the plane after it disappeared and nothing was found yet nine months later they come up with pieces of wreckage recovered by two fishermen who noone has seen or spoken to. “As well as that I have had no response from any of the organisations which l have contacted officially. They don’t even come back.” He has, however, called in the support</div>
+
+                    <div class="newspaper-col newspaper-col-4">of lnterpol and Scotland Yard as well as the British and Irish foreign offices. His son‘s mysterious disappearance was raised in the Dail last week by Labour TD Emmet Stagg.<br>
+                    In a written reply Foreign Aﬂairs Minister David Andrews told Mr Boomer that the commission of inquiry set up by the Ministry of Transport in Malta last January was close to completing its deliberations. “I know it sounds like something from a 007 movie, but I will not give up my search for my son for there is no evidence to suggest he was on that plane. "The next sitting oi the inquiry could well be the last so that will be interesting," he said "I could well believe that our son is no longer in this world and if we could see<br>
+                    <br>
+                        <img src="article-images/irish-news-3-25121997.jpg" alt="quote">
+                    <br>
+                    the evidence we could come to terms with it. "But as yet there is nothing to suggest that he is dead and  until some factual evidence is produced I can't believe he is dead," the former councillor said. An official at the British foreign office said yesterday that the inquiry in Malta had come to a halt after Tunisia refused to release a tape recording of the pilot‘s conversation with air traffic control in Djerba.<br>
+                    The official said that the British embassy in Tunis had made a personal request asking them to release the tape to the inquiry team. “We realise that this is distressing for the families involved and we are aware of a number oi theories surrounding the incident but have no evidence to substantiate any ot the claims.‘ the official said.</div>
+
+                    <div class="newspaper-col newspaper-side-img">
+                        <img src="article-images/irish-news-1-25121997.jpg" alt="Desmond Boomer">
+                    </div>
+-->
+                
+            </div> <!-- end of main-text -->
+
+        </div> <!-- end of main-text-area -->
+        
+        <!-- **************************************************************************** -->
+        <!-- section holding the links to latest articles, most popular, coming soon, links                                    -->
+        <!-- **************************************************************************** -->
+        
+        <div id="latest-popular-soon">
+
+              <div class="article-lists">
+                <p>{{ latestArticlesTitle }}...</p>
+                <ul>
+                    <latest 
+                        v-for="(article, index) in latestArticles"                 
+                        v-bind:latestarticle="article"                           
+                        :key="index">                                            
+                    </latest>                                                   
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ mostReadArticlesTitle }}...</p>
+                <ul>
+                    <most-read 
+                        v-for="(article, index) in mostReadArticles"                 
+                        v-bind:mostreadarticle="article"                           
+                        :key="index">                                            
+                    </most-read>                                        
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ comingSoonArticlesTitle }}...</p>
+                <ul>
+                    <coming-soon 
+                        v-for="(article, index) in comingSoonArticles"                 
+                        v-bind:comingsoonarticle="article"                           
+                        :key="index">                                            
+                    </coming-soon>                                      
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ relatedSitesTitle }}...</p>
+                <ul>
+                    <related-sites 
+                        v-for="(site, index) in relatedSites"                 
+                        v-bind:sitelist="site"                           
+                        :key="index">                                            
+                    </related-sites>         
+                </ul>
+              </div>
+        </div>              <!-- end of latest-popular-soon -->
+
+        <!-- **************************************************************************** -->
+        <!-- section holding the links to social media                                    -->
+        <!-- **************************************************************************** -->
+
+        <footer id="social-media">
+            <ul>
+                <li><a href="https://www.facebook.com/The-mysterious-disappearance-of-flight-9h-Abu-110054825767796/" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-youtube-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
+            </ul>   
+            <p>&copy; <script>document.write(new Date().getFullYear());</script> The Mysterious Disappearance Of Flight 9H-ABU</p>
+            <p>&ldquo;All Rights Reserved&mdash;Designed by Mark Boomer&rdquo; </p>
+        </footer>
+
+        <!-- **************************************************************************** -->
+        <!-- Load the VUE.js libraries to access Vue functionality                                    -->
+        <!-- **************************************************************************** -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+        <script src="../main.js"></script>
+
+    </body>
+</html>

@@ -113,6 +113,34 @@ var latMosComRel = new Vue ({
     data: {
         latestArticlesTitle: "Latest Articles",
         latestArticles: [
+                            {   latestname     : "irish-news-2511197.html",
+                                latesttitle    : "Baffled Fathers Fight To Find His Lost Son",
+                                latestlocation : "/articles/irish-news-25111997.html"
+                            },
+                            {   latestname     : "stephanie-bell-02031997.html",
+                                latesttitle    : "Article by Stephanie Bell, Sunday Life",
+                                latestlocation : "/articles/stephanie-bell-02031997.html"
+                            },
+                            {   latestname     : "translation-08111995.html",
+                                latesttitle    : "Translation of article regarding Excelair",
+                                latestlocation : "/articles/translation-08111995.html"
+                            },
+                            {   latestname     : "final-report-comment-01122000.html",
+                                latesttitle    : "Comment from Cormac Boomer on final inquiry report",
+                                latestlocation : "/articles/final-report-comment-01122000.html"
+                            },
+                            {   latestname     : "tanya-acheson-05121995.html",
+                                latesttitle    : "Article by Tayna Acheson, Belfast Telegraph",
+                                latestlocation : "/articles/tanya-acheson-05121995.html"
+                            },
+                            {   latestname     : "nigel-gould-01101996.html",
+                                latesttitle    : "Article by Nigel Gould, Belfast Telegraph",
+                                latestlocation : "/articles/nigel-gould-01101996.html"
+                            },
+                            {   latestname     : "don-mullan-03122000.html",
+                                latesttitle    : "Article by Don Mullan, Ireland On Sunday",
+                                latestlocation : "/articles/don-mullan-03122000.html"
+                            },
                             {   latestname     : "email-cecilia-cormac-10121995.html",
                                 latesttitle    : "Commercial flights by unlicensed pilots",
                                 latestlocation : "/articles/email-cecilia-cormac-10121995.html"
