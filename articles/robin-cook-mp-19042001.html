@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8" >
+      <title>Letter from Donald Corrie MP to The Secretary Of State For Foreign &amp; Commonwealth Affairs</title>
+    
+      <meta name="viewport" content="width=device-width initial-scale=1"> <!-- sets initial scale to 100% -->
+      
+      <link rel="shortcut icon" type="image/ico" href="../img/icons/favicon.ico">
+      <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway&display=swap" rel="stylesheet">
+
+      <script src="https://kit.fontawesome.com/130d5316ba.js" crossorigin="anonymous"></script>
+                                                                                            
+      <meta name="description" content="Letter from Donald Corrie MP, on behalf of Julie Donohue, to Robin Cooke MP, the then Secretary Of State For Foreign &amp; Commonwealth Affairs, seeking an update on what, if any, progress has been made in forcing Malta to carry out a sea bed search for 9habu" >
+
+      <meta name="keywords" content="'9HABU','9H-ABU','Malta','Djerba','Lybia,'disappearance of flight','mysterious disappearance','Desmond Boomer','conspiracy theory','air crash investigation','cover up','plane crash investigation'" />
+      <meta name="author" content="Peter F. Sheppard" />
+      <meta name="category" content="ATC tape" />
+      <meta name="created-day" content="08" />
+      <meta name="created-month" content="March" />
+      <meta name="created-year" content="1999" />
+
+      <!-- this is a downloaded google font  Use font-family: 'Cinzel', serif; in CSS-->
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="../styles.css">
+    
+    </head>
+
+    <!-- ******************************************************************************************* -->
+
+    <body id="body-top"> <!-- the jquery will scroll to this point -->
+        
+        <!-- ********************************************************************************** -->
+        <!-- navigation menu displayed across the top of the page                               -->
+        <!-- ********************************************************************************** -->
+        <header id="header-menu">
+            <h2><a href="#" target="_blank"><img src="../img/logo.jpg" alt="Piper Lance 9h-abu"></a></h2>
+            <nav>
+                <ul>
+                    <li><a href="#body-top">Top</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../death-in-the-mediterranean.html">An Investigation By Don Mullan</a></li>
+                    <li><a href="../maltese-board-of-inquiry-report.html">Maltese Board of Inquiry Report</a></li>
+                    <li><a href="../malta-tv-documentary.html">Malta TV Documentary</a></li>
+                    <li><a href="../contact-me.php">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- ********************************************************************************** -->
+
+        <!-- **************************************************************************** -->
+        <!-- section holding the images of the missing passengers                         -->
+        <!-- **************************************************************************** -->
+        <ul id="missing-passengers" class="the-missing" >
+
+            <passenger-details 
+                v-for="(missingperson, index) in passengers" v-bind:passenger="missingperson" :key="index">         
+            </passenger-details>                              
+            
+        </ul> <!-- end of "the-missing" -->
+        
+        <!-- **************************************************************************** -->
+        <!-- section for the text on the main page                                        -->
+        <!-- **************************************************************************** -->
+
+        <div id="main-text-area">
+
+            <div class="main-text main-text-wide">
+
+                <span class="header-blue">Letter from Donald Corrie MP to The Secretary Of State For Foreign &amp; Commonwealth Affairs</span>
+
+                <div style="text-align: center;">
+                    <p><strong>DONALD CORRIE MP</strong></p>
+                    <img src="article-images/robin-cooke-logo.jpg" alt="House Of Commons"/>
+                    <p><strong>HOUSE OF COMMONS<br>
+                    LONDON SW1A 0AA</strong></p>
+                </div>
+                
+                <p>The Right Honourable Robin Cooke MP<br>
+                    <br>
+                    The Secretary Of State For Foreign &amp; Commonwealth Affairs<br> 
+                    Foreign And COmmonwealth Office<br>
+                    Whitehall<br>
+                    London SW1A 2AH
+                </p>
+
+                <p style="text-align: right">our ref: gn.don<br>19 April 2001</p>
+                
+                <p>Dear Robin</p>
+                    
+                <p><strong>Crash of Piper Lance near Malta - 3 December 1995</strong></p>
+                    
+                <p>I wrote to you on 14 July 2000 on behalf of my constituent, Julie Donohue, if 4 Long Crook, South Queensferry, whose father, Michael Williams, was killed in an air crash near Malta in December 1995.</p>
+                    
+                <p>The reply, from Keith Vaz, (ref: 124337/00) indicated that some efforts were being made to identify suitable equipment to carry out a sea bed search. Ms. Donohue was asked to supply whatever details she had of the crash. I understand that she did so, including the co-ordinates of the site, but that ther has been no further about progress since then.</p> 
+                    
+                <p>Families of other victims of the same crash have been making enquiries as to who else might help put pressure on the Maltese government to undertake a thorough search for the wreckage. They have contacted teh European Commission but teh response is that "...it falls within teh competence of the British Authorities to look after the interests of their citizens anywhere in the world".</p>
+                    
+                <p>Please let me know what progress there has been on this case and do what you can to ensure that a proper investigation of the site is carried out.</p>
+                    
+                <p>Your Sincerely</p>
+                    
+                <p><img src="article-images/robin-cooke.sig.jpg" alt="donald corrie signature"></p>
+                    
+                <p>Donald Corrie MP</p>
+                
+            </div> <!-- end of main-text -->
+
+        </div> <!-- end of main-text-area -->
+        
+        <!-- **************************************************************************** -->
+        <!-- section holding the links to latest articles, most popular, coming soon, links                                    -->
+        <!-- **************************************************************************** -->
+        
+        <div id="latest-popular-soon">
+
+              <div class="article-lists">
+                <p>{{ latestArticlesTitle }}...</p>
+                <ul>
+                    <latest 
+                        v-for="(article, index) in latestArticles"                 
+                        v-bind:latestarticle="article"                           
+                        :key="index">                                            
+                    </latest>                                                   
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ mostReadArticlesTitle }}...</p>
+                <ul>
+                    <most-read 
+                        v-for="(article, index) in mostReadArticles"                 
+                        v-bind:mostreadarticle="article"                           
+                        :key="index">                                            
+                    </most-read>                                        
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ comingSoonArticlesTitle }}...</p>
+                <ul>
+                    <coming-soon 
+                        v-for="(article, index) in comingSoonArticles"                 
+                        v-bind:comingsoonarticle="article"                           
+                        :key="index">                                            
+                    </coming-soon>                                      
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ relatedSitesTitle }}...</p>
+                <ul>
+                    <related-sites 
+                        v-for="(site, index) in relatedSites"                 
+                        v-bind:sitelist="site"                           
+                        :key="index">                                            
+                    </related-sites>         
+                </ul>
+              </div>
+        </div>              <!-- end of latest-popular-soon -->
+
+        <!-- **************************************************************************** -->
+        <!-- section holding the links to social media                                    -->
+        <!-- **************************************************************************** -->
+
+        <footer id="social-media">
+            <ul>
+                <li><a href="https://www.facebook.com/The-mysterious-disappearance-of-flight-9h-Abu-110054825767796/" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-youtube-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
+            </ul>   
+            <p>&copy; <script>document.write(new Date().getFullYear());</script> The Mysterious Disappearance Of Flight 9H-ABU</p>
+            <p>&ldquo;All Rights Reserved&mdash;Designed by Mark Boomer&rdquo; </p>
+        </footer>
+
+        <!-- **************************************************************************** -->
+        <!-- Load the VUE.js libraries to access Vue functionality                                    -->
+        <!-- **************************************************************************** -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+        <script src="../main.js"></script>
+
+    </body>
+</html>

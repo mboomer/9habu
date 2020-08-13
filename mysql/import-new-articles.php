@@ -24,93 +24,82 @@
  
     echo "Prepare and Bind completed";
 
-    $title = "Email from Don Mullan concerned about facts Magill article is based on";
-    $description = "Email from Don Mullan requesting confirmation of the images of the aircraft in Kullhadd article. The premise the article to Magill is founded, on the Bartolo theory that he was, wittingly or not. irresponsibly fingered by Kullhadd on 5th November by their showing one of his aircraft. Not necessarily 9H-ABU but an Excelair aircraft"; 
-    $category = "email"; 
-    $year = "2003";
-    $month = "January";
-    $day = "04";
-    $author = "Don Mullan";
-    $link = "email-don-concerned-about-facts-04012003.html";
+        $title = "Email from Don Mullan requesting details of the outbound flight";
+        $description = "Email from Don Mullan to Cormac Boomer and Garrett Harte regarding the posibility of getting an Irish or British TV station to make a documentary. Don is requesting details of the outbound flight and any further information relating to the passengers at the airport in Tunisia"; 
+        $category = "Documentary"; 
+        $year = "2001";
+        $month = "May";
+        $day = "30";
+        $author = "Don Mullan";
+        $link = "outbound-flight-30052001.html";
 
-    mysqli_stmt_execute($insertStatement);
+        mysqli_stmt_execute($insertStatement);
 
-    $title = "Baffled Fathers Fight To Find His Lost Son";
-    $description = "Newspaper article published by the Irish News in 1997. It is an interview with Cormac Boomer on the second anniversary of Desmond Boomers disappearance"; 
-    $category = "newspaper"; 
-    $year = "1997";
-    $month = "November";
-    $day = "25";
-    $author = "Liz Trainor";
-    $link = "irish-news-2511197.html";
+        $title = "Cormac Boomer responds to Don Mullans request for more information";
+        $description = "Cormac Boomer responds to Don Mullans request for more information on the outbound flight of 9HABU. Cormac mentions that Mr Alfred Fenech stated at three separate sittings of the Board that based on the report of Rodger Wood the plane would be unable to start up and totally incapable of taking off. Cormac also details when Desmond and Matthew phoned home that weekend to confim that the flight was delayed due to bad weather"; 
+        $category = "Documentary"; 
+        $year = "2001";
+        $month = "May";
+        $day = "30";
+        $author = "Cormac Boomer";
+        $link = "outbound-flight-response-30052001.html";
 
-    mysqli_stmt_execute($insertStatement);
+        mysqli_stmt_execute($insertStatement);
 
-    $title = "Article by Stephanie Bell, Sunday Life";
-    $description = "Newspaper article in Sunday Life by Stephanie Bell. Interview with Mandy Boomer on the 2nd anniversary of the disappearance of her husband on flight 9HABU"; 
-    $category = "newspaper"; 
-    $year = "1997";
-    $month = "March";
-    $day = "02";
-    $author = "Stephanie Bell";
-    $link = "stephanie-bell-02031997.html";
+        $title = "The Mystery Of 9H-ABU - The Search For My Missing Son";
+        $description = "Cormac Boomer documents how he came to believe that flight 9H-ABU did not crash in to the sea and how he and the other families started to look for answers other than those been given to them by the authorities"; 
+        $category = "personal"; 
+        $year = "2001";
+        $month = "May";
+        $day = "30";
+        $author = "Cormac Boomer";
+        $link = "cormac-boomer-30052001.html";
 
-    mysqli_stmt_execute($insertStatement);
+        mysqli_stmt_execute($insertStatement);
 
-    $title = "Translation of article regarding Excelair";
-    $description = "KUMPANIJA TA' AJRUPLANI MWAQQFA MILLI TOPERA. Excelair was stopped the 1st Hall of the Civil Court presided by judge Geoffrey Valenzia after a mandate against Excelair was made by Euro Serv Ltd. This mandate stated that Excelair was operating trips to Djerba in Tunisia after the trips by sea between Malta and Libya had been cancelled contrary to agreement that existed between the two companies"; 
-    $category = "newspaper"; 
-    $year = "1995";
-    $month = "November";
-    $day = "08";
-    $author = "unknown";
-    $link = "translation-08111995.html";
+        $title = "Email from Cecilia to Julie Julie Donohue with contact details";
+        $description = "Email from Cecilia to Julie Julie Donohue with contact details for Mandy Boomer and Cormac Boomer. Also discusses importance of necessary equipment being given to search the seabed for any remains of wreckage"; 
+        $category = "email"; 
+        $year = "2001";
+        $month = "May";
+        $day = "07";
+        $author = "Cecilia Pellegrini";
+        $link = "cecilia-julie-07052001.html";
 
-    mysqli_stmt_execute($insertStatement);
+        mysqli_stmt_execute($insertStatement);
 
-    $title = "Comment from Cormac Boomer on final inquiry report";
-    $description = "Email from Cormac Boomer to Don Mullan, Don requested a comment from Cormac on the final report from the inquiry. Cormac confirmed he had written to Brian Cowan TD as advised by Don."; 
-    $category = "inquiry"; 
-    $year = "2000";
-    $month = "November";
-    $day = "01";
-    $author = "Cormac Boomer";
-    $link = "final-report-comment-0112000.html";
+        $title = "Letter from Donald Corrie MP to The Secretary Of State For Foreign &amp; Commonwealth Affairs";
+        $description = "Letter from Donald Corrie MP, on behalf of Julie Donohue, to Robin Cooke MP, the then Secretary Of State For Foreign &amp; Commonwealth Affairs, seeking an update on what, if any, progress has been made in forcing Malta to carry out a sea bed search for 9habu"; 
+        $category = "Letter"; 
+        $year = "2001";
+        $month = "April";
+        $day = "19";
+        $author = "Donald Corrie MP";
+        $link = "robin-cooke-mp-19042001.html";
 
-    mysqli_stmt_execute($insertStatement);
+        mysqli_stmt_execute($insertStatement);
 
-    $title = "Article by Tayna Acheson, Belfast Telegraph";
-    $description = "Article written by Tanya Acheson of the Belfast Telegraph reporting on the disappearance of 9HABU"; 
-    $category = "Newspaper"; 
-    $year = "1995";
-    $month = "December";
-    $day = "05";
-    $author = "Tanya Acheson";
-    $link = "tanya-acheson-05121995.html";
+        $title = "Letter from Geoff Williams asking Robin Cooke MP for support";
+        $description = "Letter from Geoff Williams asking Robin Cooke MP, the then British Foreign Secretary for support, the Government of Malta having applied to join the European Community should be called to account over the handling of the investigation into the disappearance of these two European Citizens"; 
+        $category = "Letter"; 
+        $year = "2001";
+        $month = "February";
+        $day = "05";
+        $author = "Geoff Williams";
+        $link = "robin-cooke-mp-05022001.html";
 
-    mysqli_stmt_execute($insertStatement);
+        mysqli_stmt_execute($insertStatement);
 
-    $title = "Article by Nigel Gould, Belfast Telegraph. Tuesday October 1, 1996";
-    $description = "Newspaper article by Nigel Gould, Belfast Telegraph. Interview with Mandy Boomer discussing the tape recording that could hold the key to the truth behind the baffling disappearance in Tunisia nearly a year ago"; 
-    $category = "Newspaper"; 
-    $year = "1996";
-    $month = "October";
-    $day = "01";
-    $author = "Nigel Gould";
-    $link = "nigel-gould-01101996.html";
+        $title = "Letter from Geoff Williams to PM Tony Blair";
+        $description = "Letter from Geoff Williams to Prime Minister, Tony Blair. Geoff is highlighting that a response to his letter to Robin Cooke would have a matter of courtesy."; 
+        $category = "Letter"; 
+        $year = "2001";
+        $month = "June";
+        $day = "04";
+        $author = "Geoff Williams";
+        $link = "tony-blair-04062001.html";
 
-    mysqli_stmt_execute($insertStatement);
-
-    $title = "Article by Don Mullan, Ireland On Sunday";
-    $description = "Article by Don Mullan, published in the Ireland On Sunday, which details three scenarios that might explain the disappearance of flight 9HABU"; 
-    $category = "Newspaper"; 
-    $year = "2000";
-    $month = "December";
-    $day = "03";
-    $author = "Don Mullan";
-    $link = "don-mullan-03122000.html";
-
-    mysqli_stmt_execute($insertStatement);
+        mysqli_stmt_execute($insertStatement);
 
     echo "New records created successfully";
 

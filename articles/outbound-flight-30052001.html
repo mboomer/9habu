@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8" >
+      <title>Email from Don Mullan requesting details of the outbound flight</title>
+    
+      <meta name="viewport" content="width=device-width initial-scale=1"> <!-- sets initial scale to 100% -->
+      
+      <link rel="shortcut icon" type="image/ico" href="../img/icons/favicon.ico">
+      <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway&display=swap" rel="stylesheet">
+
+      <script src="https://kit.fontawesome.com/130d5316ba.js" crossorigin="anonymous"></script>
+                                                                                            
+      <meta name="description" content="Email from Don Mullan to Cormac Boomer and Garrett Harte regarding the posibility of getting an Irish or British TV station to make a documentary. Don is requesting details of the outbound flight and any further information relating to the passengers at the airport in Tunisia" >
+
+      <meta name="keywords" content="'9HABU','9H-ABU','Malta','Djerba','Lybia,'disappearance of flight','mysterious disappearance','Desmond Boomer','conspiracy theory','air crash investigation','cover up','plane crash investigation'" />
+      <meta name="author" content="Don Mullan" />
+      <meta name="category" content="Documentary" />
+      <meta name="created-day" content="30" />
+      <meta name="created-month" content="05" />
+      <meta name="created-year" content="2001" />
+
+      <!-- this is a downloaded google font  Use font-family: 'Cinzel', serif; in CSS-->
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="../styles.css">
+    
+    </head>
+
+    <!-- ******************************************************************************************* -->
+
+    <body id="body-top"> <!-- the jquery will scroll to this point -->
+        
+        <!-- ********************************************************************************** -->
+        <!-- navigation menu displayed across the top of the page                               -->
+        <!-- ********************************************************************************** -->
+        <header id="header-menu">
+            <h2><a href="#" target="_blank"><img src="../img/logo.jpg" alt="Piper Lance 9h-abu"></a></h2>
+            <nav>
+                <ul>
+                    <li><a href="#body-top">Top</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../death-in-the-mediterranean.html">An Investigation By Don Mullan</a></li>
+                    <li><a href="../maltese-board-of-inquiry-report.html">Maltese Board of Inquiry Report</a></li>
+                    <li><a href="../malta-tv-documentary.html">Malta TV Documentary</a></li>
+                    <li><a href="../contact-me.php">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- ********************************************************************************** -->
+
+        <!-- **************************************************************************** -->
+        <!-- section holding the images of the missing passengers                         -->
+        <!-- **************************************************************************** -->
+        <ul id="missing-passengers" class="the-missing" >
+
+            <passenger-details 
+                v-for="(missingperson, index) in passengers" v-bind:passenger="missingperson" :key="index">         
+            </passenger-details>                              
+            
+        </ul> <!-- end of "the-missing" -->
+        
+        <!-- **************************************************************************** -->
+        <!-- section for the text on the main page                                        -->
+        <!-- **************************************************************************** -->
+
+        <div id="main-text-area">
+
+            <div class="main-text main-text-wide">
+
+                <span class="header-blue">Email from Don Mullan requesting details of the outbound flight</span>
+
+                <p>From: "Don Mullan"<br><br>
+                    To: (mark@merge.co.uk)<br>
+                    Sent: Wednesday, May 30. 2001 6:57 PM<br>
+                    Subject: Fw: Outbound Flight Details.<br>
+                </p>
+
+                <p>--- Original Message ---<br>
+                    From: Don Mullan<br>
+                    To: cormac boomer<br>
+                    Cc: Garrett Harte<br>
+                    Sent: Wednesday, May 30, 2001 3:35 PM<br>
+                    Subject: Outbound Flight Details.<br>
+                    <br>
+                    Cormac<br>
+                </p>
+                
+                <p>Your help would be greatly appreciated regarding the details of the outbound flight.</p>
+
+                <p>You may already have done this, so perhaps you could fax it to me. However what l need is the following:</p>
+
+                <p>1. What time did Bartolo outbound ﬂight leave Malta on the evening of 2 Decemoer 1995?<br>2. Who were his passengers?<br>3. What mechanical problems did they experience with some details of the concerns expressed by passengers.<br>4. You mentioned that when relieved passengers were disembarking, one or two noticed a torn and worn belt. Can you give us details of what was seen and what was said. Didn't you say it was brought to Bartolos attention and he apparently pulled the belt and walked with it into the terminal building?<br>5. Who saw Desmond and the other passengers and what words were exchanged? What do we know of the last movements and communications of Desmond and the other passengers? Did Desmond phone home for example? If so, when and what did he say?<br>6. What was the opinion of the Piper Lance expert concerning the reported mechanical difﬁculties, particularly whether the plane could have been ﬂown after its arrival in Djerba.</p>
+
+                <p>It would also be helpful if you could give us details on when the alarm was raised, by whom and how the Maltese authorities responded. If you could set this out in a logical time sequence it would be very helpful</p>
+
+                <p>If possible Cormac. it would be very helpful if we could have this at your earliest convenience.</p>
+
+                <p>Thanks for all your help, Garrett and l are both anxious to proceed with this proposal immediately in the hope that we might get a commitment from an irish and British station to go ahead.</p>
+
+                <p>Talk to you later,</p>
+
+                <p>Don.</p>                
+
+            </div> <!-- end of main-text -->
+
+        </div> <!-- end of main-text-area -->
+        
+        <!-- **************************************************************************** -->
+        <!-- section holding the links to latest articles, most popular, coming soon, links                                    -->
+        <!-- **************************************************************************** -->
+        
+        <div id="latest-popular-soon">
+
+              <div class="article-lists">
+                <p>{{ latestArticlesTitle }}...</p>
+                <ul>
+                    <latest 
+                        v-for="(article, index) in latestArticles"                 
+                        v-bind:latestarticle="article"                           
+                        :key="index">                                            
+                    </latest>                                                   
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ mostReadArticlesTitle }}...</p>
+                <ul>
+                    <most-read 
+                        v-for="(article, index) in mostReadArticles"                 
+                        v-bind:mostreadarticle="article"                           
+                        :key="index">                                            
+                    </most-read>                                        
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ comingSoonArticlesTitle }}...</p>
+                <ul>
+                    <coming-soon 
+                        v-for="(article, index) in comingSoonArticles"                 
+                        v-bind:comingsoonarticle="article"                           
+                        :key="index">                                            
+                    </coming-soon>                                      
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ relatedSitesTitle }}...</p>
+                <ul>
+                    <related-sites 
+                        v-for="(site, index) in relatedSites"                 
+                        v-bind:sitelist="site"                           
+                        :key="index">                                            
+                    </related-sites>         
+                </ul>
+              </div>
+        </div>              <!-- end of latest-popular-soon -->
+
+        <!-- **************************************************************************** -->
+        <!-- section holding the links to social media                                    -->
+        <!-- **************************************************************************** -->
+
+        <footer id="social-media">
+            <ul>
+                <li><a href="https://www.facebook.com/The-mysterious-disappearance-of-flight-9h-Abu-110054825767796/" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-youtube-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
+            </ul>   
+            <p>&copy; <script>document.write(new Date().getFullYear());</script> The Mysterious Disappearance Of Flight 9H-ABU</p>
+            <p>&ldquo;All Rights Reserved&mdash;Designed by Mark Boomer&rdquo; </p>
+        </footer>
+
+        <!-- **************************************************************************** -->
+        <!-- Load the VUE.js libraries to access Vue functionality                                    -->
+        <!-- **************************************************************************** -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+        <script src="../main.js"></script>
+
+    </body>
+</html>

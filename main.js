@@ -113,69 +113,37 @@ var latMosComRel = new Vue ({
     data: {
         latestArticlesTitle: "Latest Articles",
         latestArticles: [
-                            {   latestname     : "irish-news-2511197.html",
-                                latesttitle    : "Baffled Fathers Fight To Find His Lost Son",
-                                latestlocation : "/articles/irish-news-25111997.html"
+                            {   latestname     : "outbound-flight-30052001.html",
+                                latesttitle    : "Don Mullan request info on outbound flight",
+                                latestlocation : "/articles/outbound-flight-30052001.html"
                             },
-                            {   latestname     : "stephanie-bell-02031997.html",
-                                latesttitle    : "Article by Stephanie Bell, Sunday Life",
-                                latestlocation : "/articles/stephanie-bell-02031997.html"
+                            {   latestname     : "outbound-flight-response-30052001.html",
+                                latesttitle    : "Response to outbound flight request",
+                                latestlocation : "/articles/outbound-flight-response-30052001.html"
                             },
-                            {   latestname     : "translation-08111995.html",
-                                latesttitle    : "Translation of article regarding Excelair",
-                                latestlocation : "/articles/translation-08111995.html"
+                            {   latestname     : "cormac-boomer-30052001.html",
+                                latesttitle    : "The search for my missing son",
+                                latestlocation : "/articles/cormac-boomer-30052001.html"
+                            },
+                            {   latestname     : "cecilia-julie-07052001.html",
+                                latesttitle    : "Email from Cecilia to Julie Julie Donohue",
+                                latestlocation : "/articles/cecilia-julie-07052001.html"
+                            },
+                            {   latestname     : "robin-cooke-mp-19042001.html",
+                                latesttitle    : "Letter to Robin Cooke, seeking update on progress",
+                                latestlocation : "/articles/robin-cooke-mp-19042001.html.html"
+                            },
+                            {   latestname     : "robin-cooke-mp-05022001.html",
+                                latesttitle    : "Letter from Geoff Williams to Robin Cooke",
+                                latestlocation : "/articles/robin-cooke-mp-05022001.html.html"
+                            },
+                            {   latestname     : "tony-blair-04062001.html",
+                                latesttitle    : "Geoff Williams, letter to PM Tony Blair",
+                                latestlocation : "/articles/tony-blair-04062001.html"
                             },
                             {   latestname     : "final-report-comment-01122000.html",
                                 latesttitle    : "Comment from Cormac Boomer on final inquiry report",
                                 latestlocation : "/articles/final-report-comment-01122000.html"
-                            },
-                            {   latestname     : "tanya-acheson-05121995.html",
-                                latesttitle    : "Article by Tayna Acheson, Belfast Telegraph",
-                                latestlocation : "/articles/tanya-acheson-05121995.html"
-                            },
-                            {   latestname     : "nigel-gould-01101996.html",
-                                latesttitle    : "Article by Nigel Gould, Belfast Telegraph",
-                                latestlocation : "/articles/nigel-gould-01101996.html"
-                            },
-                            {   latestname     : "don-mullan-03122000.html",
-                                latesttitle    : "Article by Don Mullan, Ireland On Sunday",
-                                latestlocation : "/articles/don-mullan-03122000.html"
-                            },
-                            {   latestname     : "email-cecilia-cormac-10121995.html",
-                                latesttitle    : "Commercial flights by unlicensed pilots",
-                                latestlocation : "/articles/email-cecilia-cormac-10121995.html"
-                            },
-                            {   latestname     : "email-don-cecilia-070103.html",
-                                latesttitle    : "Did Kullhadd implicate 9HABU and Bartolo",
-                                latestlocation : "/articles/email-don-cecilia-070103.html"
-                            },
-                            {   latestname     : "email-joe-mifsud-felix-agius-07012003.html",
-                                latesttitle    : "Joe Mifsud & Felix Agius - Shqaqis movements in Malta",
-                                latestlocation : "/articles/email-joe-mifsud-felix-agius-07012003.html"
-                            },
-                            {   latestname     : "email-kullhadd-translation-060103.html",
-                                latesttitle    : "Email translation of Kullhadd article",
-                                latestlocation : "/articles/email-kullhadd-translation-060103.html"
-                            },
-                            {   latestname     : "email-kullhadd-translation-2-060103.html",
-                                latesttitle    : "Email translation Kullhadd article (2)",
-                                latestlocation : "/articles/email-kullhadd-translation-2-060103.html"
-                            },
-                            {   latestname     : "email-daniel-don-070103.html",
-                                latesttitle    : "Daniel Aquilina - link between Bartolo and assassination",
-                                latestlocation : "/articles/email-daniel-don-070103.html"
-                            },
-                            {   latestname     : "email-cecilia-times-article-07012003.html",
-                                latesttitle    : "Email from Cecilia re: Sharon Spiteri article",
-                                latestlocation : "/articles/email-cecilia-times-article-07012003.html"
-                            },
-                            {   latestname     : "email-translation-kullhadd-07012003.html",
-                                latesttitle    : "Attacker lived in Sliema before and after assassination",
-                                latestlocation : "/articles/email-translation-kullhadd-07012003.html"
-                            },
-                            {   latestname     : "email-don-concerned-about-facts-04012003.html",
-                                latesttitle    : "Don Mullan concerned about facts for Magill article",
-                                latestlocation : "/articles/email-don-concerned-about-facts-04012003.html"
                             }
                         ],
         mostReadArticlesTitle: "Most Read",
