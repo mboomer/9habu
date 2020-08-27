@@ -141,9 +141,17 @@ var latMosComRel = new Vue ({
                                 latesttitle    : "Geoff Williams, letter to PM Tony Blair",
                                 latestlocation : "/articles/tony-blair-04062001.html"
                             },
-                            {   latestname     : "final-report-comment-01122000.html",
-                                latesttitle    : "Comment from Cormac Boomer on final inquiry report",
-                                latestlocation : "/articles/final-report-comment-01122000.html"
+                            {   latestname     : "maltese-independent-05032001.html",
+                                latesttitle    : "Gaddafi on Malta, Lockerbie",
+                                latestlocation : "/articles/maltese-independent-05032001.html"
+                            }
+                            {   latestname     : "jim-nicholson-16022001.html",
+                                latesttitle    : "Letter to Jim Nicholson MEP",
+                                latestlocation : "/articles/jim-nicholson-16022001.html"
+                            }
+                            {   latestname     : "gerry-adams-16022001.html",
+                                latesttitle    : "Letter to Gerry Adams MEP",
+                                latestlocation : "/articles/gerry-adams-16022001.html"
                             }
                         ],
         mostReadArticlesTitle: "Most Read",
@@ -167,7 +175,7 @@ var latMosComRel = new Vue ({
                         ],
         comingSoonArticlesTitle: "Coming Soon",
         comingSoonArticles: [ 
-                                {comingsoonname   : "Document Archive Search - upgrade"}
+                                {comingsoonname   : "10 New Documents Added to Archive"}
                             ],
         relatedSitesTitle: "Related Web Sites",
         relatedSites: [

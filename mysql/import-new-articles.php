@@ -101,6 +101,50 @@
 
         mysqli_stmt_execute($insertStatement);
 
+        $title = "Gaddafi on Malta, Lockerbie";
+        $description = "Article in The Malta Independent on a speech by Gaddafi after the sentencing of the Lockerbie tribunal where Gaddafi mentions Malta and Maltese persons throughout the speech"; 
+        $category = "Newspaper"; 
+        $year = "2001";
+        $month = "March";
+        $day = "05";
+        $author = "The Malta Independent";
+        $link = "maltese-independent-05032001.html";
+
+        mysqli_stmt_execute($insertStatement);
+
+        $title = "Letter To Jim Nicholson, no response from Foreign Office";
+        $description = "Letter To Jim Nicholson, from Cormac Boomer, advising the MEP that following his advice to contact teh Foreign Office, neither the Boomer or Williams families had received a response from the respective Foreign Offices"; 
+        $category = "Letter"; 
+        $year = "2001";
+        $month = "February";
+        $day = "16";
+        $author = "Cormac Boomer";
+        $link = "jim-nicholson-16022001.html";
+
+        mysqli_stmt_execute($insertStatement);
+
+        $title = "Letter to Gerry Adams MP, disappointing response from Foreign Office";
+        $description = "Letter To Gerry Adams MP, from Cormac Boomer, advising the MP that the response received from the Foreign Office in Dublin, was very disappointing"; 
+        $category = "Letter"; 
+        $year = "2001";
+        $month = "February";
+        $day = "16";
+        $author = "Cormac Boomer";
+        $link = "gerry-adams-16022001.html";
+
+        mysqli_stmt_execute($insertStatement);
+
+        $title = "";
+        $description = ""; 
+        $category = ""; 
+        $year = "";
+        $month = "";
+        $day = "";
+        $author = "";
+        $link = ".html";
+
+        mysqli_stmt_execute($insertStatement);
+
     echo "New records created successfully";
 
     mysqli_close();
