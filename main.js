@@ -131,11 +131,11 @@ var latMosComRel = new Vue ({
                             },
                             {   latestname     : "robin-cooke-mp-19042001.html",
                                 latesttitle    : "Letter to Robin Cooke, seeking update on progress",
-                                latestlocation : "/articles/robin-cooke-mp-19042001.html.html"
+                                latestlocation : "/articles/robin-cooke-mp-19042001.html"
                             },
                             {   latestname     : "robin-cooke-mp-05022001.html",
                                 latesttitle    : "Letter from Geoff Williams to Robin Cooke",
-                                latestlocation : "/articles/robin-cooke-mp-05022001.html.html"
+                                latestlocation : "/articles/robin-cooke-mp-05022001.html"
                             },
                             {   latestname     : "tony-blair-04062001.html",
                                 latesttitle    : "Geoff Williams, letter to PM Tony Blair",
@@ -144,11 +144,11 @@ var latMosComRel = new Vue ({
                             {   latestname     : "maltese-independent-05032001.html",
                                 latesttitle    : "Gaddafi on Malta, Lockerbie",
                                 latestlocation : "/articles/maltese-independent-05032001.html"
-                            }
+                            },
                             {   latestname     : "jim-nicholson-16022001.html",
                                 latesttitle    : "Letter to Jim Nicholson MEP",
                                 latestlocation : "/articles/jim-nicholson-16022001.html"
-                            }
+                            },
                             {   latestname     : "gerry-adams-16022001.html",
                                 latesttitle    : "Letter to Gerry Adams MEP",
                                 latestlocation : "/articles/gerry-adams-16022001.html"

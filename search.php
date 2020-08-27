@@ -1,13 +1,7 @@
 <?php
-//    if ($_GET["q"] == "Search...") {
-//        header("Location: search.php");
-//    }
 
-    $servername = "mysql.9habu.com";
-    $username   = "9habu_db";
-    $password   = "9habu_document_archive";
-    $db         = "9habu_archive";
-        
+    require_once "../.php/inc/db.9habu.inc.php";        
+
     $searchString = $_GET["q"];
 
     // Create connection
@@ -32,7 +26,7 @@
 
         <script src="https://kit.fontawesome.com/130d5316ba.js" crossorigin="anonymous"></script>
 
-        <meta name="description" content="Document archoive search. Allows search on category, author, year, month and day" >
+        <meta name="description" content="Document archive search. Allows search on category, author, year, month and day" >
 
         <meta name="keywords" content="'9HABU','9H-ABU','Malta','Djerba','Lybia,'disappearance of flight','mysterious disappearance','Desmond Boomer','conspiracy theory','air crash investigation','cover up','plane crash investigation'" />
         <meta name="author" content="Mark Boomer" />
@@ -45,26 +39,9 @@
         <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
   
         <link rel="stylesheet" href="../styles.css">
+
         <link rel="stylesheet" href="search-style.css" />
       
-        <script type="text/javascript">
-            function active() {
-                var searchBar = document.getElementById("searchBox");
-                
-                if (searchBar.value == 'Search...') {
-                    searchBar.value = ''
-                    searchBar.placeholder = 'Search...'
-                }
-            }
-            function inactive() {
-                var searchBar = document.getElementById("searchBox");
-                
-                if (searchBar.value == '') {
-                    searchBar.value = 'Search...'
-                    searchBar.placeholder = ''
-                }
-            }
-        </script>
     </head>
 
     <!-- ******************************************************************************************* -->
@@ -121,12 +98,17 @@
                                 <legend>Category</legend>
                                 <select id="category" name="category">
                                 <option value="">Select...</option>
-                                <?php 
+                                <?php           
                                     $sqlCatg = "SELECT DISTINCT category FROM articles ORDER BY category ASC";
-                                    $rsCatg  = mysqli_query($conn, $sqlCatg);
 
-                                    while($rows = mysqli_fetch_assoc($rsCatg)) {
-                                        echo '<option value="'.$rows['category'].'">'.$rows['category'].'</option>';
+                                    $categories = mysqli_prepare($conn, $sqlCatg);
+                                    
+                                    mysqli_stmt_execute($categories);
+
+                                    $rsCatg = mysqli_stmt_get_result($categories);
+                                    
+                                    while($row = mysqli_fetch_assoc($rsCatg)) {
+                                        echo '<option value="'.$row['category'].'">'.$row['category'].'</option>';
                                     }
                                 ?>
                                 </select>
@@ -140,10 +122,15 @@
                                 <option value="">Select...</option>
                                 <?php 
                                     $sqlAuth = "SELECT DISTINCT author FROM articles ORDER BY author ASC";
-                                    $rsAuth  = mysqli_query($conn, $sqlAuth);
 
-                                    while($rows = mysqli_fetch_assoc($rsAuth)) {
-                                        echo '<option value="'.$rows['author'].'">'.$rows['author'].'</option>';
+                                    $authors = mysqli_prepare($conn, $sqlAuth);
+                                    
+                                    mysqli_stmt_execute($authors);
+
+                                    $rsAuth = mysqli_stmt_get_result($authors);                                
+                                    
+                                    while($row = mysqli_fetch_assoc($rsAuth)) {
+                                        echo '<option value="'.$row['author'].'">'.$row['author'].'</option>';
                                     }
                                 ?>
                             </select>
@@ -157,10 +144,15 @@
                                 <option value="">Select...</option>
                                 <?php 
                                     $sqlYear = "SELECT DISTINCT year FROM articles ORDER BY year ASC";
-                                    $rsYear  = mysqli_query($conn, $sqlYear);
 
-                                    while($rows = mysqli_fetch_assoc($rsYear)) {
-                                        echo '<option value="'.$rows['year'].'">'.$rows['year'].'</option>';
+                                    $years = mysqli_prepare($conn, $sqlYear);
+                                    
+                                    mysqli_stmt_execute($years);
+
+                                    $rsYear = mysqli_stmt_get_result($years);                                
+
+                                    while($row = mysqli_fetch_assoc($rsYear)) {
+                                        echo '<option value="'.$row['year'].'">'.$row['year'].'</option>';
                                     }
                                 ?>
                                 </select>
@@ -174,10 +166,15 @@
                                 <option value="">Select...</option>
                                 <?php 
                                     $sqlMnth = "SELECT DISTINCT month FROM articles ORDER BY year ASC";
-                                    $rsMnth  = mysqli_query($conn, $sqlMnth);
 
-                                    while($rows = mysqli_fetch_assoc($rsMnth)) {
-                                        echo '<option value="'.$rows['month'].'">'.$rows['month'].'</option>';
+                                    $months = mysqli_prepare($conn, $sqlMnth);
+                                    
+                                    mysqli_stmt_execute($months);
+
+                                    $rsMonths = mysqli_stmt_get_result($months);                                
+
+                                    while($row = mysqli_fetch_assoc($rsMonths)) {
+                                        echo '<option value="'.$row['month'].'">'.$row['month'].'</option>';
                                     }
                                 ?>
                                 </select>
@@ -191,10 +188,15 @@
                                 <option value="">Select...</option>
                                 <?php 
                                     $sqlDays = "SELECT DISTINCT day FROM articles ORDER BY day ASC";
-                                    $rsDays  = mysqli_query($conn, $sqlDays);
 
-                                    while($rows = mysqli_fetch_assoc($rsDays)) {
-                                        echo '<option value="'.$rows['day'].'">'.$rows['day'].'</option>';
+                                    $days = mysqli_prepare($conn, $sqlDays);
+                                    
+                                    mysqli_stmt_execute($days);
+
+                                    $rsDays = mysqli_stmt_get_result($days);                                
+
+                                    while($row = mysqli_fetch_assoc($rsDays)) {
+                                        echo '<option value="'.$row['day'].'">'.$row['day'].'</option>';
                                     }
                                 ?>
                                 </select>
@@ -267,6 +269,7 @@
                             }
 
                             while($row = mysqli_fetch_array($query)) {
+                                
                                 $id          = $row["id"];
                                 $title       = $row["title"];
                                 $description = $row["description"];
@@ -357,6 +360,31 @@
             <p>&copy; <script>document.write(new Date().getFullYear());</script> The Mysterious Disappearance Of Flight 9H-ABU</p>
             <p>&ldquo;All Rights Reserved&mdash;Designed by Mark Boomer&rdquo; </p>
         </footer>
+
+        <!-- **************************************************************************** -->
+        <!-- Search bar functions                                                         -->
+        <!-- **************************************************************************** -->
+        <script type="text/javascript">
+
+            function active() {
+                var searchBar = document.getElementById("searchBox");
+                
+                if (searchBar.value == 'Search...') {
+                    searchBar.value = ''
+                    searchBar.placeholder = 'Search...'
+                }
+            }
+            
+            function inactive() {
+                var searchBar = document.getElementById("searchBox");
+                
+                if (searchBar.value == '') {
+                    searchBar.value = 'Search...'
+                    searchBar.placeholder = ''
+                }
+            }
+        
+        </script>
 
         <!-- **************************************************************************** -->
         <!-- Load the VUE.js libraries to access Vue functionality                                    -->
