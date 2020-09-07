@@ -113,45 +113,49 @@ var latMosComRel = new Vue ({
     data: {
         latestArticlesTitle: "Latest Articles",
         latestArticles: [
-                            {   latestname     : "outbound-flight-30052001.html",
-                                latesttitle    : "Don Mullan request info on outbound flight",
-                                latestlocation : "/articles/outbound-flight-30052001.html"
+                            {   latestname     : "jim-nicholson-15022001.html",
+                                latesttitle    : "Letter from Jim Nicholson MEP",
+                                latestlocation : "/articles/jim-nicholson-15022001.html"
                             },
-                            {   latestname     : "outbound-flight-response-30052001.html",
-                                latesttitle    : "Response to outbound flight request",
-                                latestlocation : "/articles/outbound-flight-response-30052001.html"
+                            {   latestname     : "gerry-adams-mp-14022001.html",
+                                latesttitle    : "Gerry Adams, 'anything I can do, I will'",
+                                latestlocation : "/articles/gerry-adams-mp-14022001.html"
                             },
-                            {   latestname     : "cormac-boomer-30052001.html",
-                                latesttitle    : "The search for my missing son",
-                                latestlocation : "/articles/cormac-boomer-30052001.html"
+                            {   latestname     : "cormac-boomer-05022001.html",
+                                latesttitle    : "Dublin response leaves me feeling 'sick'",
+                                latestlocation : "/articles/cormac-boomer-05022001.html"
                             },
-                            {   latestname     : "cecilia-julie-07052001.html",
-                                latesttitle    : "Email from Cecilia to Julie Julie Donohue",
-                                latestlocation : "/articles/cecilia-julie-07052001.html"
+                            {   latestname     : "irish-foreign-affairs-31012001.html",
+                                latesttitle    : "Response from Irish Foreign Affairs Office, Dublin",
+                                latestlocation : "/articles/irish-foreign-affairs-31012001.html"
                             },
-                            {   latestname     : "robin-cooke-mp-19042001.html",
-                                latesttitle    : "Letter to Robin Cooke, seeking update on progress",
-                                latestlocation : "/articles/robin-cooke-mp-19042001.html"
+                            {   latestname     : "gerry-adams-mp-25012001.html",
+                                latesttitle    : "Letter to Gerry Adams MP",
+                                latestlocation : "/articles/gerry-adams-mp-25012001.html"
                             },
-                            {   latestname     : "robin-cooke-mp-05022001.html",
-                                latesttitle    : "Letter from Geoff Williams to Robin Cooke",
-                                latestlocation : "/articles/robin-cooke-mp-05022001.html"
+                            {   latestname     : "jim-dougal-25012001.html",
+                                latesttitle    : "Letter from Jim Dougal, EU unable to help",
+                                latestlocation : "/articles/jim-dougal-25012001.html"
                             },
-                            {   latestname     : "tony-blair-04062001.html",
-                                latesttitle    : "Geoff Williams, letter to PM Tony Blair",
-                                latestlocation : "/articles/tony-blair-04062001.html"
+                            {   latestname     : "ian-k-paisley-25012001.html",
+                                latesttitle    : "Letter to Dr. Ian Paisley MEP",
+                                latestlocation : "/articles/ian-k-paisley-25012001.html"
                             },
-                            {   latestname     : "maltese-independent-05032001.html",
-                                latesttitle    : "Gaddafi on Malta, Lockerbie",
-                                latestlocation : "/articles/maltese-independent-05032001.html"
+                            {   latestname     : "jim-dougal-09012001.html",
+                                latesttitle    : "Letter from Jim Dougal, contact addresses",
+                                latestlocation : "/articles/jim-dougal-09012001.html"
                             },
-                            {   latestname     : "jim-nicholson-16022001.html",
-                                latesttitle    : "Letter to Jim Nicholson MEP",
-                                latestlocation : "/articles/jim-nicholson-16022001.html"
+                            {   latestname     : "draft-magill-article-31122002.html",
+                                latesttitle    : "Draft of the article for Magill",
+                                latestlocation : "/articles/draft-magill-article-31122002.html"
                             },
-                            {   latestname     : "gerry-adams-16022001.html",
-                                latesttitle    : "Letter to Gerry Adams MEP",
-                                latestlocation : "/articles/gerry-adams-16022001.html"
+                            {   latestname     : "belfast-telegraph-19122000.html",
+                                latesttitle    : "Apology from Edmund Curran, Belfast Telegraph",
+                                latestlocation : "/articles/belfast-telegraph-19122000.html"
+                            },
+                            {   latestname     : "jim-dougal-19122000.html",
+                                latesttitle    : "Letter from Jim Dougal, can provide contact details",
+                                latestlocation : "/articles/jim-dougal-19122000.html"
                             }
                         ],
         mostReadArticlesTitle: "Most Read",
