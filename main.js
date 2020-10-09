@@ -113,49 +113,37 @@ var latMosComRel = new Vue ({
     data: {
         latestArticlesTitle: "Latest Articles",
         latestArticles: [
-                            {   latestname     : "jim-nicholson-15022001.html",
-                                latesttitle    : "Letter from Jim Nicholson MEP",
-                                latestlocation : "/articles/jim-nicholson-15022001.html"
+                            {   latestname     : "saturday-extra-09122000.html",
+                                latesttitle    : "Article in Saturday Extra",
+                                latestlocation : "/articles/saturday-extra-09122000.html"
                             },
-                            {   latestname     : "gerry-adams-mp-14022001.html",
-                                latesttitle    : "Gerry Adams, 'anything I can do, I will'",
-                                latestlocation : "/articles/gerry-adams-mp-14022001.html"
+                            {   latestname     : "mep-contact-details-01062001.html",
+                                latesttitle    : "NI Members Of The EU Parliament'",
+                                latestlocation : "/articles/mep-contact-details-01062001.html"
                             },
-                            {   latestname     : "cormac-boomer-05022001.html",
-                                latesttitle    : "Dublin response leaves me feeling 'sick'",
-                                latestlocation : "/articles/cormac-boomer-05022001.html"
+                            {   latestname     : "brian-cowan-12122000.html",
+                                latesttitle    : "Letter from Brian Cowan, TD",
+                                latestlocation : "/articles/brian-cowan-12122000.html"
                             },
-                            {   latestname     : "irish-foreign-affairs-31012001.html",
-                                latesttitle    : "Response from Irish Foreign Affairs Office, Dublin",
-                                latestlocation : "/articles/irish-foreign-affairs-31012001.html"
+                            {   latestname     : "fax-cecelia-28112000.html",
+                                latesttitle    : "Fax from Cormac to Cecelia - Inquiry Final Report",
+                                latestlocation : "/articles/fax-cecelia-28112000.html"
                             },
-                            {   latestname     : "gerry-adams-mp-25012001.html",
-                                latesttitle    : "Letter to Gerry Adams MP",
-                                latestlocation : "/articles/gerry-adams-mp-25012001.html"
+                            {   latestname     : "don-mullan-30112000.html",
+                                latesttitle    : "Email from Don To Cormac - Inquiry final report",
+                                latestlocation : "/articles/don-mullan-30112000.html"
                             },
-                            {   latestname     : "jim-dougal-25012001.html",
-                                latesttitle    : "Letter from Jim Dougal, EU unable to help",
-                                latestlocation : "/articles/jim-dougal-25012001.html"
+                            {   latestname     : "draft-magill-article-03122000.html",
+                                latesttitle    : "Draft of article for Magill - December 2000",
+                                latestlocation : "/articles/draft-magill-article-03122000.html"
                             },
-                            {   latestname     : "ian-k-paisley-25012001.html",
-                                latesttitle    : "Letter to Dr. Ian Paisley MEP",
-                                latestlocation : "/articles/ian-k-paisley-25012001.html"
+                            {   latestname     : "daniel-aquilina-19112000.html",
+                                latesttitle    : "Letter from Daniel Aquilina to Padraig Coyle",
+                                latestlocation : "/articles/daniel-aquilina-19112000.html"
                             },
-                            {   latestname     : "jim-dougal-09012001.html",
-                                latesttitle    : "Letter from Jim Dougal, contact addresses",
-                                latestlocation : "/articles/jim-dougal-09012001.html"
-                            },
-                            {   latestname     : "draft-magill-article-31122002.html",
-                                latesttitle    : "Draft of the article for Magill",
-                                latestlocation : "/articles/draft-magill-article-31122002.html"
-                            },
-                            {   latestname     : "belfast-telegraph-19122000.html",
-                                latesttitle    : "Apology from Edmund Curran, Belfast Telegraph",
-                                latestlocation : "/articles/belfast-telegraph-19122000.html"
-                            },
-                            {   latestname     : "jim-dougal-19122000.html",
-                                latesttitle    : "Letter from Jim Dougal, can provide contact details",
-                                latestlocation : "/articles/jim-dougal-19122000.html"
+                            {   latestname     : "daniel-aquilina-fax-10112000.html",
+                                latesttitle    : "Faxed instructions ignored by Padraig Coyle",
+                                latestlocation : "/articles/daniel-aquilina-fax-10112000.html"
                             }
                         ],
         mostReadArticlesTitle: "Most Read",

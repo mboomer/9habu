@@ -25,14 +25,14 @@
  
     echo "Prepare and Bind completed <br>";
 
-        $title = "Letter from Jim Nicholson, MEP, offering support for independant inquiry";
-        $description = "Letter from Jim Nicholson, MEP. to Cormac Boomer, where he states he will support an attempt to establish an International Independent Enquiry in Malta but notes the difficulty of achieving such"; 
-        $category = "Letter"; 
-        $year = "2001";
-        $month = "February";
-        $day = "15";
-        $author = "Jim Nicholson";
-        $link = "jim-nicholson-15022001.html";
+        $title = "Article published in Saturday Extra";
+        $description = "Newspaper article published in Saturday Extra. Cormac Boomer sought an apology from the Editor, Martin Breen"; 
+        $category = "Newspaper"; 
+        $year = "2000";
+        $month = "December";
+        $day = "09";
+        $author = "Martin Breen";
+        $link = "saturday-extra-09122000.html";
 
         if (mysqli_stmt_execute($insertStatement)) {
             echo "Article " . $link . " created <br>";
@@ -42,31 +42,30 @@
             ++$fail;
         }
 
-        $title = "Letter from Gerry Adams MP, anything I can do, I will";
-        $description = "Letter from Gerry Adams MP, informing Cormac Boomer that Joan O'Connor, Sinn Fein International Department, will make enquiries"; 
-        $category = "Letter"; 
+        $title = "NORTHERN IRELAND MEMBERS OF THE EUROPEAN PARLIAMENT";
+        $description = "NORTHERN IRELAND MEMBERS OF THE EUROPEAN PARLIAMENT"; 
+        $category = "Contacts"; 
         $year = "2001";
-        $month = "February";
-        $day = "14";
-        $author = "Gerry Adams, MP";
-        $link = "gerry-admas-mp-14022001.html";
-
-        if (mysqli_stmt_execute($insertStatement)) {
-            echo "Article " . $link . " created <br>";
-            ++$success;
-        } else {
-            echo "Article " . $link . " failed <br>";
-            ++$fail;
-        }
-
-        $title = "Fax from Cormac Boomer to Don Mullan re: response from Dublin/Feinna Fail";
-        $description = "Fax from Cormac Boomer to Don Mullan re: response from Dublin/Feinna Fail. Cormac expresses feeling 'sick' that governemnt is more oncerned about its good relations with Malta than it is about the loss of one of its citizen"; 
-        $category = "Irish Government"; 
-        $year = "2001";
-        $month = "February";
-        $day = "05";
+        $month = "June";
+        $day = "01";
         $author = "Cormac Boomer";
-        $link = "cormac-boomer-05022001.html";
+        $link = "mep-contact-details-01062001.html";
+
+        if (mysqli_stmt_execute($insertStatement)) {
+            echo "Article " . $link . " created <br>";
+            ++$success;
+        } else {
+            echo "Article " . $link . " failed <br>";
+            ++$fail;
+        }
+
+        $title = "Letter from Brian Cowan, TD";
+        $description = "Letter from Brian Cowan, TD. An acknowledgement of letter to Brian Cowan TD from his Private Secretary, today I received a phone call from John Lawton. He began by telling me that your article in the IOS had generated enquiries from other papers, he then moved to discussing my request for government support in my quest for information about my missing son, he enquired was there not some other channels that I might consider using ie legal action against the authorities in Malta. I pointed out that I had already spent considerable amounts of my own resources in my ongoing search and could not undertake an action of this kind as it would involve hiring legal representation here and in Malta. Hence my reason for asking for government support"; 
+        $year = "2000";
+        $month = "December";
+        $day = "12";
+        $author = "Cormac Boomer";
+        $link = "brian-cowan-12122000.html";
 
         if (mysqli_stmt_execute($insertStatement)) {
             echo "Article " . $link . " created <br>";
@@ -93,14 +92,14 @@
             ++$fail;
         }
 
-        $title = "Letter to Gerry Adams MP, providing documentation on the search";
-        $description = "Letter To Gerry Adams MP, from Cormac Boomer, providing documentation on the 5 year search for the missing passengers of 9HABU. Families are requesting respective governments through their Foreign Offices and European representatives to press the authorities in Malta to establish an international independant inquiry into this incident provided for under International Civil Aviation Regulations as part of our support for their application for membership"; 
-        $category = ""; 
-        $year = "2001";
-        $month = "January";
-        $day = "05";
+        $title = "Fax To Cecelia, Board Of Inquiry - Final Report";
+        $description = "The publication of the Board of Enquiry report into the aviation incident reported to have occurred on then morning of 3/12/95 when a single engine Piper aircraft Reg No 9HABU disappeared with six people on board when enroute from Djerba in Tunisia to Malta makes for interesting reading not because of their decision to blame the pilot (That “as an easy option) but for the Boards failure to properly investigate all the circumstances surrounding this incident and have the physical evidence scientifically checked and tested. In the course of their work which I closely observed the Board failed miserably to enforce its own writ They also failed to submit a detailed analysis of their ﬁndings and present it for government and public scrutiny. rather than dismiss ( which they did ) important items of relevant evidence under the heading of rumour and speculation . This report raises more questions than it answers, it is a whitewash and therefore lacks credibility"; 
+        $category = "Fax"; 
+        $year = "2000";
+        $month = "November";
+        $day = "28";
         $author = "Cormac Boomer";
-        $link = "gerry-adams-mp-25012001.html";
+        $link = "fax-cecelia-28112000.html";
 
         if (mysqli_stmt_execute($insertStatement)) {
             echo "Article " . $link . " created <br>";
@@ -110,14 +109,14 @@
             ++$fail;
         }
 
-        $title = "Letter from Jim Dougal, EU unable to help";
+        $title = "Email from Don Mullan To Cormac Boomer re: Inquiry final report";
         $description = "Letter from Jim Dougal, EU unable to help. European Commission cannot intervene as falls within the competence of the British authorities who look after the interests of their citizens anywhere in the world. The European Commission cannot help in problems relating to one individual citizen of a Member State and therefore does not have a mandate to act"; 
-        $category = "EU"; 
-        $year = "2001";
-        $month = "January";
-        $day = "25";
-        $author = "Jim Dougal";
-        $link = "jim-dougal-25012001.html";
+        $category = "Email"; 
+        $year = "2000";
+        $month = "November";
+        $day = "30";
+        $author = "Don Mullan";
+        $link = "don-mullan-30112000.html";
 
         if (mysqli_stmt_execute($insertStatement)) {
             echo "Article " . $link . " created <br>";
@@ -127,14 +126,14 @@
             ++$fail;
         }
 
-        $title = "Letter to Ian K. Paisley MEP, providing documentation on the search";
-        $description = "Letter To Ian K. Paisley MEP, from Cormac Boomer, providing documentation on the 5 year search for the missing passengers of 9HABU. Families are requesting respective governments through their Foreign Offices and European representatives to press the authorities in Malta to establish an international independant inquiry into this incident provided for under International Civil Aviation Regulations as part of our support for their application for membership"; 
-        $category = "EU"; 
-        $year = "2001";
-        $month = "January";
-        $day = "25";
-        $author = "Cormac Boomer";
-        $link = "ian-k-paisley-25012001.html";
+        $title = "Draft copy of the article for Magill - December 2000";
+        $description = "Draft copy of the article for Magill, written by Don Mullan, in December 2000, detailing the various theories surrounding the disappearance of the passengers on flight 9HABU"; 
+        $category = "Newspaper"; 
+        $year = "2000";
+        $month = "December";
+        $day = "03";
+        $author = "Don Mullan";
+        $link = "draft-magill-article-03122000.html";
 
         if (mysqli_stmt_execute($insertStatement)) {
             echo "Article " . $link . " created <br>";
@@ -144,14 +143,14 @@
             ++$fail;
         }
 
-        $title = "Letter from Jim Dougal, contact addresses for local MEPs";
-        $description = "Letter from Jim Dougal, contact addresses for local MEPs"; 
+        $title = "Letter from Daniel Aquilina to Padraig Coyle";
+        $description = "Letter from Daniel Aquilina to Padraig Coyle, expressing disappointment that Padriag had disregarded the instructions that Daniel had given regarding content"; 
         $category = "EU"; 
         $year = "2001";
         $month = "January";
         $day = "09";
         $author = "Jim Dougal";
-        $link = "jim-dougal-09012001.html";
+        $link = "daniel-aquilina-19112000.html";
 
         if (mysqli_stmt_execute($insertStatement)) {
             echo "Article " . $link . " created <br>";
@@ -161,48 +160,14 @@
             ++$fail;
         }
 
-        $title = "Draft copy of the article for Magill";
-        $description = "Draft copy of the article for Magill, written by Don Mullan, detailing the various theories surrounding the disappearance of the passengers on flight 9HABU"; 
-        $category = "Newspaper"; 
-        $year = "2002";
-        $month = "December";
-        $day = "31";
-        $author = "Don Mullan";
-        $link = "draft-magill-aticle-31122002.html";
-
-        if (mysqli_stmt_execute($insertStatement)) {
-            echo "Article " . $link . " created <br>";
-            ++$success;
-        } else {
-            echo "Article " . $link . " failed <br>";
-            ++$fail;
-        }
-
-        $title = "Apology from Edmund Curran, Belfast Telegraph";
-        $description = "Apology from Edmund Curran, Belfast Telegraph, the fact that the treatment of the story caused  annoyance displayed a lack of sensitivity and for that I apologise"; 
+        $title = "Fax from Daniel Aqualina to Padraig Coyle re: article";
+        $description = "Fax from Daniel Aquilina to Padraig Coyle that lays out very clearly the expectation that the article should avoid any mention of 'psychics' and that the family wanted to review the article before it was published. These requests were ignored by the journalist""; 
         $category = "Newspaper"; 
         $year = "2000";
-        $month = "December";
-        $day = "19";
-        $author = "Edmund Curran";
-        $link = "belfast-telegraph-19122000.html";
-
-        if (mysqli_stmt_execute($insertStatement)) {
-            echo "Article " . $link . " created <br>";
-            ++$success;
-        } else {
-            echo "Article " . $link . " failed <br>";
-            ++$fail;
-        }
-
-        $title = "Letter from Jim Dougal, can provide contact details";
-        $description = "Letter from Jim Dougal, can provide contact details for local representatives. Has passed on  correspondence to colleagues in Brussels in the Malta Unit of DG Enlargement and will be in contact as soon as he gets a reply"; 
-        $category = "EU"; 
-        $year = "2000";
-        $month = "December";
-        $day = "19";
-        $author = "Jim Dougal";
-        $link = "jim-dougal-19122000.html";
+        $month = "November";
+        $day = "10";
+        $author = "Daniel Aquilina";
+        $link = "daniel-aquilina-fax-10112000.html";
 
         if (mysqli_stmt_execute($insertStatement)) {
             echo "Article " . $link . " created <br>";
