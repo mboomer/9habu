@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8" >
+      <title>Article in Daily Telegraph re: David Shayler</title>
+    
+      <meta name="viewport" content="width=device-width initial-scale=1"> <!-- sets initial scale to 100% -->
+      
+      <link rel="shortcut icon" type="image/ico" href="../img/icons/favicon.ico">
+      <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway&display=swap" rel="stylesheet">
+
+      <script src="https://kit.fontawesome.com/130d5316ba.js" crossorigin="anonymous"></script>
+                                                                                            
+      <meta name="description" content="Article in Daily Telegraph reporting on Annie Machon, girlfriend of David Slayler, arriving in London to hand Special Branch detectives a dossier of documents Shayler had prepared alleging an MI6 plot to assassinate Col. Gaddafi" >
+
+      <meta name="keywords" content="'9HABU','9H-ABU','Malta','Djerba','Lybia,'disappearance of flight','mysterious disappearance','Desmond Boomer','conspiracy theory','air crash investigation','cover up','plane crash investigation'" />
+      <meta name="author" content="Michael Smith" />
+      <meta name="category" content="Newspaper" />
+      <meta name="created-day" content="01" />
+      <meta name="created-month" content="June" />
+      <meta name="created-year" content="2000" />
+
+        <!-- this is a downloaded google font  Use font-family: 'Cinzel', serif; in CSS-->
+        <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+  
+        <link rel="stylesheet" href="../styles.css">
+      
+      <style>
+            #eu-logo {
+                display: flex;
+                flex-flow: row wrap;
+            }  
+    </style>
+    
+    </head>
+
+    <!-- ******************************************************************************************* -->
+
+    <body id="body-top"> <!-- the jquery will scroll to this point -->
+        
+        <!-- ********************************************************************************** -->
+        <!-- navigation menu displayed across the top of the page                               -->
+        <!-- ********************************************************************************** -->
+        <header id="header-menu">
+            <h2><a href="#" target="_blank"><img src="../img/logo.jpg" alt="Piper Lance 9h-abu"></a></h2>
+            <nav>
+                <ul>
+                    <li><a href="#body-top">Top</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../death-in-the-mediterranean.html">An Investigation By Don Mullan</a></li>
+                    <li><a href="../maltese-board-of-inquiry-report.html">Maltese Board of Inquiry Report</a></li>
+                    <li><a href="../malta-tv-documentary.html">Malta TV Documentary</a></li>
+                    <li><a href="../contact-me.php">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- ********************************************************************************** -->
+
+        <!-- **************************************************************************** -->
+        <!-- section holding the images of the missing passengers                         -->
+        <!-- **************************************************************************** -->
+        <ul id="missing-passengers" class="the-missing" >
+
+            <passenger-details 
+                v-for="(missingperson, index) in passengers" v-bind:passenger="missingperson" :key="index">         
+            </passenger-details>                              
+            
+        </ul> <!-- end of "the-missing" -->
+        
+        <!-- **************************************************************************** -->
+        <!-- section for the text on the main page                                        -->
+        <!-- **************************************************************************** -->
+
+        <div id="main-text-area">
+
+            <div class="main-text main-text-wide">
+
+                <span class="header-blue">Article in Daily Telegraph, Annie Machon, handing Special Branch detectives a dossier of documents</span>
+
+                <p></p>
+                
+                <div id="eu-logo">
+                    <img style="padding-right: 15px;" src="article-images/daily-telegraph-2000.jpg" alt="Annie Machon Photo"/>
+                    <div>
+                        <span style="font-size: 2em">Shayler has<br>dossier sent<br>to the Yard</span><br>
+                        <br>
+                        <span style="text-align: center; font-weight: bold;">By Michael Smith</span><br>
+                        <br>
+                        THE girlfriend of David Slayler, the<br>
+                        &nbsp;&nbsp;&nbsp;renegade M15 officer, arrived in<br>
+                        London yesterday to hand Special<br>
+                        Branch detectives a dossier of,documents<br> 
+                        he had prepared alleging an<br>
+                        MI6 plot to assassinate Col. Gaddafi, the<br>
+                        Libyan leader.<br>
+                        &nbsp;&nbsp;&nbsp;Annie Machon, herself a former M15<br>
+                        officier, had travelled to Scotland Yard<br>
+                        from Paris where she and Shayler live,<br>
+                        to deliver the dossier.<br>
+                        &nbsp;&nbsp;&nbsp;In a letter accompanying his dossier<br>
+                        Shayler urged  Special Branch to<br>
+                        question Tony Blair, Robin Cook, the<br> 
+                        Foreign Secretary, Jack Straw, the <br>
+                        Home Secretary, and the heads of M15<br>
+                        and M16 as part of an investigation into<br>
+                        the alleged Gaddafi plot.<br>
+                        &nbsp;&nbsp;&nbsp;He said that the Prime Minister and <br>
+                        the Foreign Secretary should also be<br>
+                        investigated for, "Conspiracy to pervert<br>
+                        the course of justice because they<br>
+                        refused to act on his allegations.<br>
+                        &nbsp;&nbsp;&nbsp;Scotland Yard said the dossier was<br>
+                        &quot;being considered&quot;<br>
+                        &nbsp;&nbsp;&nbsp;Shayler, 34, from Middlesborough,<br>
+                        fled to France in 1997 to escape<br>
+                        prosecution for alledged breaches of the<br>
+                        Official Secrets Act after making a <br>
+                        series of newspaper allegations about<br>
+                        MI5 operations.<br>
+                        &nbsp;&nbsp;&nbsp;He subsequently spent four months<br>
+                        in a Paris jail as the British authorities<br>
+                        tried unsuccessfully to extradite him.<br>
+                        &nbsp;&nbsp;&nbsp;The Attorney General has since <br>
+                        instituted civil proceedings for<br>
+                        damages against Shayler in the High<br>
+                        Court.<br>
+                    </div>
+                </div>
+
+
+            </div> <!-- end of main-text -->
+
+        </div> <!-- end of main-text-area -->
+        
+        <!-- **************************************************************************** -->
+        <!-- section holding the links to latest articles, most popular, coming soon, links                                    -->
+        <!-- **************************************************************************** -->
+        
+        <div id="latest-popular-soon">
+
+              <div class="article-lists">
+                <p>{{ latestArticlesTitle }}...</p>
+                <ul>
+                    <latest 
+                        v-for="(article, index) in latestArticles"                 
+                        v-bind:latestarticle="article"                           
+                        :key="index">                                            
+                    </latest>                                                   
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ mostReadArticlesTitle }}...</p>
+                <ul>
+                    <most-read 
+                        v-for="(article, index) in mostReadArticles"                 
+                        v-bind:mostreadarticle="article"                           
+                        :key="index">                                            
+                    </most-read>                                        
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ comingSoonArticlesTitle }}...</p>
+                <ul>
+                    <coming-soon 
+                        v-for="(article, index) in comingSoonArticles"                 
+                        v-bind:comingsoonarticle="article"                           
+                        :key="index">                                            
+                    </coming-soon>                                      
+                </ul>
+              </div>
+
+              <div class="article-lists">
+                <p>{{ relatedSitesTitle }}...</p>
+                <ul>
+                    <related-sites 
+                        v-for="(site, index) in relatedSites"                 
+                        v-bind:sitelist="site"                           
+                        :key="index">                                            
+                    </related-sites>         
+                </ul>
+              </div>
+        </div>              <!-- end of latest-popular-soon -->
+
+        <!-- **************************************************************************** -->
+        <!-- section holding the links to social media                                    -->
+        <!-- **************************************************************************** -->
+
+        <footer id="social-media">
+            <ul>
+                <li><a href="https://www.facebook.com/The-mysterious-disappearance-of-flight-9h-Abu-110054825767796/" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-youtube-square"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
+            </ul>   
+            <p>&copy; <script>document.write(new Date().getFullYear());</script> The Mysterious Disappearance Of Flight 9H-ABU</p>
+            <p>&ldquo;All Rights Reserved&mdash;Designed by Mark Boomer&rdquo; </p>
+        </footer>
+
+        <!-- **************************************************************************** -->
+        <!-- Load the VUE.js libraries to access Vue functionality                                    -->
+        <!-- **************************************************************************** -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+        <script src="../main.js"></script>
+
+    </body>
+</html>

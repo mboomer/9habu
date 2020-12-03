@@ -25,14 +25,64 @@
  
     echo "Prepare and Bind completed <br>";
 
-        $title = "Article published in Saturday Extra";
-        $description = "Newspaper article published in Saturday Extra. Cormac Boomer sought an apology from the Editor, Martin Breen"; 
+        $title = "Letter from office of Prime Minister, Malta, acknowledging receipt of letter";
+        $description = "Letter from office of Prime Minister, Malta, acknowledging receipt of letter"; 
+        $category = "Letter"; 
+        $year = "2000";
+        $month = "April";
+        $day = "20";
+        $author = "Carol Farrugia";
+        $link = "cecilia-pm-20042000.html";
+
+        if (mysqli_stmt_execute($insertStatement)) {
+            echo "Article " . $link . " created <br>";
+            ++$success;
+        } else {
+            echo "Article " . $link . " failed <br>";
+            ++$fail;
+        }
+
+        $title = "AMEX Services Limited (MAPEL) held responsible";
+        $description = "Letter from Terese Gorny, AMEX Services Limited (MAPEL) were held to be responsible for Tadeusz's death. Currently waiting to hear if MAPEL will appeal the decision"; 
+        $category = "Legal"; 
+        $year = "2000";
+        $month = "June";
+        $day = "05";
+        $author = "Terese Gorna";
+        $link = "gorna-05062000.html";
+
+        if (mysqli_stmt_execute($insertStatement)) {
+            echo "Article " . $link . " created <br>";
+            ++$success;
+        } else {
+            echo "Article " . $link . " failed <br>";
+            ++$fail;
+        }
+
+        $title = "Malta Maritime Authority, sonar equipment broken";
+        $description = "Letter from Malta Maritime Authority, stating that the side scan sonar has broken down and attempts to repair have been unsuccessful. Unable to perform any searches"; 
+        $year = "2000";
+        $month = "June";
+        $day = "02";
+        $author = "J Bianco";
+        $link = "malta-maritime-auth-02062000.html";
+
+        if (mysqli_stmt_execute($insertStatement)) {
+            echo "Article " . $link . " created <br>";
+            ++$success;
+        } else {
+            echo "Article " . $link . " failed <br>";
+            ++$fail;
+        }
+
+        $title = "Emails with Antony Barnett, The Observer";
+        $description = "Emails between Cormac Boomer and Antony Barnett, The Observer. Antony interested in writing an article"; 
         $category = "Newspaper"; 
         $year = "2000";
-        $month = "December";
-        $day = "09";
-        $author = "Martin Breen";
-        $link = "saturday-extra-09122000.html";
+        $month = "May";
+        $day = "03";
+        $author = "Antony Barnett";
+        $link = "antony-barnett-03052000.html";
 
         if (mysqli_stmt_execute($insertStatement)) {
             echo "Article " . $link . " created <br>";
@@ -42,30 +92,14 @@
             ++$fail;
         }
 
-        $title = "NORTHERN IRELAND MEMBERS OF THE EUROPEAN PARLIAMENT";
-        $description = "NORTHERN IRELAND MEMBERS OF THE EUROPEAN PARLIAMENT"; 
-        $category = "Contacts"; 
-        $year = "2001";
-        $month = "June";
-        $day = "01";
-        $author = "Cormac Boomer";
-        $link = "mep-contact-details-01062001.html";
-
-        if (mysqli_stmt_execute($insertStatement)) {
-            echo "Article " . $link . " created <br>";
-            ++$success;
-        } else {
-            echo "Article " . $link . " failed <br>";
-            ++$fail;
-        }
-
-        $title = "Letter from Brian Cowan, TD";
-        $description = "Letter from Brian Cowan, TD. An acknowledgement of letter to Brian Cowan TD from his Private Secretary, today I received a phone call from John Lawton. He began by telling me that your article in the IOS had generated enquiries from other papers, he then moved to discussing my request for government support in my quest for information about my missing son, he enquired was there not some other channels that I might consider using ie legal action against the authorities in Malta. I pointed out that I had already spent considerable amounts of my own resources in my ongoing search and could not undertake an action of this kind as it would involve hiring legal representation here and in Malta. Hence my reason for asking for government support"; 
+        $title = "Letter from Cormac Boomer to Antony Barnett";
+        $description = "Letter from Cormac Boomer to Antony Barnett, detailing the documents sent to Antony Barnett to provide background on the dispappearance"; 
+        $category = "Letter"; 
         $year = "2000";
-        $month = "December";
-        $day = "12";
+        $month = "May";
+        $day = "08";
         $author = "Cormac Boomer";
-        $link = "brian-cowan-12122000.html";
+        $link = "antony-barnett-08052000.html";
 
         if (mysqli_stmt_execute($insertStatement)) {
             echo "Article " . $link . " created <br>";
@@ -75,31 +109,14 @@
             ++$fail;
         }
 
-        $title = "Response from Irish Foreign Affairs Office, Dublin";
-        $description = "Response from Irish Foreign Affairs Office, Dublin. Taoiseach. Mr. Bertie Ahern T.D. asked the Maltese authorities whether there was anything else they could do to assist. There was no further advice nor assistance the Maltese authorities could offer. With regard to the Irish Government seeking an independent judicial inquiry the Minister considers that such a move would imply a lack of confidence in the report of the Board of Inquiry and that would be likely damage our relations with Malta"; 
-        $category = "Irish Government"; 
-        $year = "2001";
-        $month = "January";
-        $day = "31";
-        $author = "Breifne O'Reilly";
-        $link = "irish-foreign-affairs-31012001.html";
-
-        if (mysqli_stmt_execute($insertStatement)) {
-            echo "Article " . $link . " created <br>";
-            ++$success;
-        } else {
-            echo "Article " . $link . " failed <br>";
-            ++$fail;
-        }
-
-        $title = "Fax To Cecelia, Board Of Inquiry - Final Report";
-        $description = "The publication of the Board of Enquiry report into the aviation incident reported to have occurred on then morning of 3/12/95 when a single engine Piper aircraft Reg No 9HABU disappeared with six people on board when enroute from Djerba in Tunisia to Malta makes for interesting reading not because of their decision to blame the pilot (That “as an easy option) but for the Boards failure to properly investigate all the circumstances surrounding this incident and have the physical evidence scientifically checked and tested. In the course of their work which I closely observed the Board failed miserably to enforce its own writ They also failed to submit a detailed analysis of their ﬁndings and present it for government and public scrutiny. rather than dismiss ( which they did ) important items of relevant evidence under the heading of rumour and speculation . This report raises more questions than it answers, it is a whitewash and therefore lacks credibility"; 
+        $title = "Fax from Cormac Boomer to Teresa Gorna re: action against MAPEL";
+        $description = "Fax from Cormac Boomer to Teresa Gorna re: action against MAPEL. Excelair and Unique Travel  were instructed by the Board of Enquiry to produce records of accounts and travel records for their services to Maple/Bartolo & Excelair. Mr. A Fenich the Engineering Manager stated he could not reconcile the condition of the plane as reported and recorded by Rodney Woods in his evidence to the court with that of the aircraft 9H-ABU which his company had serviced only four weeks previously"; 
         $category = "Fax"; 
         $year = "2000";
-        $month = "November";
-        $day = "28";
+        $month = "May";
+        $day = "02";
         $author = "Cormac Boomer";
-        $link = "fax-cecelia-28112000.html";
+        $link = "cormac-teresa-02052000.html";
 
         if (mysqli_stmt_execute($insertStatement)) {
             echo "Article " . $link . " created <br>";
@@ -109,14 +126,14 @@
             ++$fail;
         }
 
-        $title = "Email from Don Mullan To Cormac Boomer re: Inquiry final report";
-        $description = "Letter from Jim Dougal, EU unable to help. European Commission cannot intervene as falls within the competence of the British authorities who look after the interests of their citizens anywhere in the world. The European Commission cannot help in problems relating to one individual citizen of a Member State and therefore does not have a mandate to act"; 
-        $category = "Email"; 
+        $title = "Letter from Teresa Gorna to Cormac Boomer";
+        $description = "Letter from Teresa Gorna to Cormac Boomer, will be in London for trial against MAPEL, STill having difficulty gathering documents for trial"; 
+        $category = "Letter"; 
         $year = "2000";
-        $month = "November";
-        $day = "30";
-        $author = "Don Mullan";
-        $link = "don-mullan-30112000.html";
+        $month = "May";
+        $day = "02";
+        $author = "Teresa Gorna";
+        $link = "teresa-cormac-02052000.html";
 
         if (mysqli_stmt_execute($insertStatement)) {
             echo "Article " . $link . " created <br>";
@@ -126,14 +143,14 @@
             ++$fail;
         }
 
-        $title = "Draft copy of the article for Magill - December 2000";
-        $description = "Draft copy of the article for Magill, written by Don Mullan, in December 2000, detailing the various theories surrounding the disappearance of the passengers on flight 9HABU"; 
-        $category = "Newspaper"; 
+        $title = "Fax from Cormac Boomer to Cecilia Pellegrini re: Lockerbie Trial";
+        $description = "Fax from Cormac Boomer to Cecilia Pellegrini re: Lockerbie Article stating shock new evidence could wreck the case against the two Libyans accused of the Lockerbie bombing"; 
+        $category = "Fax"; 
         $year = "2000";
-        $month = "December";
-        $day = "03";
-        $author = "Don Mullan";
-        $link = "draft-magill-article-03122000.html";
+        $month = "May";
+        $day = "16";
+        $author = "Cormac Boomer";
+        $link = "cecilia-fax-28062001.html";
 
         if (mysqli_stmt_execute($insertStatement)) {
             echo "Article " . $link . " created <br>";
@@ -143,31 +160,166 @@
             ++$fail;
         }
 
-        $title = "Letter from Daniel Aquilina to Padraig Coyle";
-        $description = "Letter from Daniel Aquilina to Padraig Coyle, expressing disappointment that Padriag had disregarded the instructions that Daniel had given regarding content"; 
-        $category = "EU"; 
-        $year = "2001";
-        $month = "January";
-        $day = "09";
-        $author = "Jim Dougal";
-        $link = "daniel-aquilina-19112000.html";
-
-        if (mysqli_stmt_execute($insertStatement)) {
-            echo "Article " . $link . " created <br>";
-            ++$success;
-        } else {
-            echo "Article " . $link . " failed <br>";
-            ++$fail;
-        }
-
-        $title = "Fax from Daniel Aqualina to Padraig Coyle re: article";
-        $description = "Fax from Daniel Aquilina to Padraig Coyle that lays out very clearly the expectation that the article should avoid any mention of 'psychics' and that the family wanted to review the article before it was published. These requests were ignored by the journalist""; 
-        $category = "Newspaper"; 
+        $title = "Letter from Daniel Aquilina to Joseph Bianco";
+        $description = "Letter from Daniel Aquilina to Joseph Bianco regarding asking if the MMA Hydrographers would be available to help in a new search"; 
+        $category = "Search"; 
         $year = "2000";
-        $month = "November";
-        $day = "10";
+        $month = "May";
+        $day = "15";
         $author = "Daniel Aquilina";
-        $link = "daniel-aquilina-fax-10112000.html";
+        $link = "daniel-jbianco-15052000.html";
+
+        if (mysqli_stmt_execute($insertStatement)) {
+            echo "Article " . $link . " created <br>";
+            ++$success;
+        } else {
+            echo "Article " . $link . " failed <br>";
+            ++$fail;
+        }
+
+    echo "|----------------------------------------------------| <br>";
+    echo $success . " records created successfully <br>";
+    echo $fail    . " records failed <br>";
+    echo "|----------------------------------------------------| <br>";
+
+        $title = "Letter from Teresa Gorna to Cormac Boomer re: MAPEL trial";
+        $description = "Letter from Teresa Gorna to Cormac Boomer, thanking Cormac for the documents needed for the for trial. Judge found MAPEL negligent but has not delivered judgement yet. Also mentions that Padraig Coyle (BBC) was in contact"; 
+        $category = "MAPEL"; 
+        $year = "2000";
+        $month = "May";
+        $day = "22";
+        $author = "Teresa Gorna";
+        $link = "teresa-cormac-22052000.html";
+
+        if (mysqli_stmt_execute($insertStatement)) {
+            echo "Article " . $link . " created <br>";
+            ++$success;
+        } else {
+            echo "Article " . $link . " failed <br>";
+            ++$fail;
+        }
+
+    echo "|----------------------------------------------------| <br>";
+    echo $success . " records created successfully <br>";
+    echo $fail    . " records failed <br>";
+    echo "|----------------------------------------------------| <br>";
+
+        $title = "Fax from Cecilia to Cormac re: new evidence in Lockerbie trial";
+        $description = "Fax from Cecilia to Cormac re: new evidence in Lockerbie trial. Journalist Joe Mifsud reports from Camp Zeist on new evidence being presented by the owner of the printing press used to make the tags for luggage placed on the Pan Am flight"; 
+        $category = "Lockerbie"; 
+        $year = "2000";
+        $month = "May";
+        $day = "29";
+        $author = "Cecilia Pellegrini";
+        $link = "cecilia-cormac-29052000.html";
+
+        if (mysqli_stmt_execute($insertStatement)) {
+            echo "Article " . $link . " created <br>";
+            ++$success;
+        } else {
+            echo "Article " . $link . " failed <br>";
+            ++$fail;
+        }
+
+    echo "|----------------------------------------------------| <br>";
+    echo $success . " records created successfully <br>";
+    echo $fail    . " records failed <br>";
+    echo "|----------------------------------------------------| <br>";
+
+        $title = "Email from Cormac Boomer to Antony Barnett re: R Shayler";
+        $description = "Email from Cormac Boomer to Antony Barnett regarding R Shayler during his time working on the Libyan desk in 1995"; 
+        $category = "Newspaper"; 
+        $year = "2000";
+        $month = "April";
+        $day = "27";
+        $author = "Cormac Boomer";
+        $link = "cormac-barnett-27042000.html";
+
+        if (mysqli_stmt_execute($insertStatement)) {
+            echo "Article " . $link . " created <br>";
+            ++$success;
+        } else {
+            echo "Article " . $link . " failed <br>";
+            ++$fail;
+        }
+
+    echo "|----------------------------------------------------| <br>";
+    echo $success . " records created successfully <br>";
+    echo $fail    . " records failed <br>";
+    echo "|----------------------------------------------------| <br>";
+
+        $title = "Fax from Cecilia to Cormac re: new evidence in Lockerbie trial";
+        $description = "Fax from Cecilia to Cormac re: new evidence in Lockerbie trial. Journalist Joe Mifsud reports from Camp Zeist on new evidence being presented by the owner of the printing press used to make the tags for luggage placed on the Pan Am flight"; 
+        $category = "Lockerbie"; 
+        $year = "2000";
+        $month = "May";
+        $day = "29";
+        $author = "Cecilia Pellegrini";
+        $link = "cecilia-cormac-29052000.html";
+
+        if (mysqli_stmt_execute($insertStatement)) {
+            echo "Article " . $link . " created <br>";
+            ++$success;
+        } else {
+            echo "Article " . $link . " failed <br>";
+            ++$fail;
+        }
+
+    echo "|----------------------------------------------------| <br>";
+    echo $success . " records created successfully <br>";
+    echo $fail    . " records failed <br>";
+    echo "|----------------------------------------------------| <br>";
+
+        $title = "Fax from Cecilia to Cormac re: new evidence in Lockerbie trial";
+        $description = "Fax from Cecilia to Cormac re: new evidence in Lockerbie trial. Journalist Joe Mifsud reports from Camp Zeist on new evidence being presented by the owner of the printing press used to make the tags for luggage placed on the Pan Am flight"; 
+        $category = "Lockerbie"; 
+        $year = "2000";
+        $month = "May";
+        $day = "29";
+        $author = "Cecilia Pellegrini";
+        $link = "cecilia-cormac-29052000.html";
+
+        if (mysqli_stmt_execute($insertStatement)) {
+            echo "Article " . $link . " created <br>";
+            ++$success;
+        } else {
+            echo "Article " . $link . " failed <br>";
+            ++$fail;
+        }
+
+    echo "|----------------------------------------------------| <br>";
+    echo $success . " records created successfully <br>";
+    echo $fail    . " records failed <br>";
+    echo "|----------------------------------------------------| <br>";
+
+        $title = "Letter from Cecilia Pellegrini to Maltese PM Fenech Adami re: PM visit to Libya";
+        $description = "Letter from Cecilia Pellegrini to Maltese PM Fenech Adami asking PM Fenech Adami to ask for Libyan assistance during the visit as Carmel Bartolci (the pilot) flew through Libyan Airspace without authorisation and another important point regarding the Cospass Satellite which picked up a Distress Signal that was traced back to Libya, east of Tripoli"; 
+        $year = "2000";
+        $month = "April";
+        $day = "11";
+        $author = "Cecilia Pellegrini";
+        $link = "celilia-pm-adami-11042000.html";
+
+        if (mysqli_stmt_execute($insertStatement)) {
+            echo "Article " . $link . " created <br>";
+            ++$success;
+        } else {
+            echo "Article " . $link . " failed <br>";
+            ++$fail;
+        }
+
+    echo "|----------------------------------------------------| <br>";
+    echo $success . " records created successfully <br>";
+    echo $fail    . " records failed <br>";
+    echo "|----------------------------------------------------| <br>";
+
+        $title = "Article in Daily Telegraph re: David Shayler";
+        $description = "Article in Daily Telegraph reporting on Annie Machon, girlfriend of David Slayler, arriving in London to hand Special Branch detectives a dossier of documents Shayler had prepared alleging an MI6 plot to assassinate Col. Gaddafi"; 
+        $year = "2000";
+        $month = "June";
+        $day = "01";
+        $author = "Michael Smith";
+        $link = "daily-telegraph-shayler.html";
 
         if (mysqli_stmt_execute($insertStatement)) {
             echo "Article " . $link . " created <br>";

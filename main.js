@@ -113,37 +113,53 @@ var latMosComRel = new Vue ({
     data: {
         latestArticlesTitle: "Latest Articles",
         latestArticles: [
-                            {   latestname     : "saturday-extra-09122000.html",
-                                latesttitle    : "Article in Saturday Extra",
-                                latestlocation : "/articles/saturday-extra-09122000.html"
+                            {   latestname     : "cecilia-pm-20042000.html",
+                                latesttitle    : "Letter to Cecilia from office of Prime Minister, Malta",
+                                latestlocation : "/articles/cecilia-pm-20042000.html"
                             },
-                            {   latestname     : "mep-contact-details-01062001.html",
-                                latesttitle    : "NI Members Of The EU Parliament'",
-                                latestlocation : "/articles/mep-contact-details-01062001.html"
+                            {   latestname     : "gorna-05062000.html",
+                                latesttitle    : "AMEX Services Limited (MAPEL) held responsible",
+                                latestlocation : "/articles/gorna-05062000.html"
                             },
-                            {   latestname     : "brian-cowan-12122000.html",
-                                latesttitle    : "Letter from Brian Cowan, TD",
-                                latestlocation : "/articles/brian-cowan-12122000.html"
+                            {   latestname     : "malta-maritime-auth-02062000.html",
+                                latesttitle    : "Malta Maritime Authority, sonar equipment broken",
+                                latestlocation : "/articles/malta-maritime-auth-02062000.html"
                             },
-                            {   latestname     : "fax-cecelia-28112000.html",
-                                latesttitle    : "Fax from Cormac to Cecelia - Inquiry Final Report",
-                                latestlocation : "/articles/fax-cecelia-28112000.html"
+                            {   latestname     : "antony-barnett-03052000.html",
+                                latesttitle    : "Emails with Antony Barnett, The Observer",
+                                latestlocation : "/articles/antony-barnett-03052000.html"
                             },
-                            {   latestname     : "don-mullan-30112000.html",
-                                latesttitle    : "Email from Don To Cormac - Inquiry final report",
-                                latestlocation : "/articles/don-mullan-30112000.html"
+                            {   latestname     : "antony-barnett-08052000.html",
+                                latesttitle    : "Letter from Cormac Boomer to Antony Barnett",
+                                latestlocation : "/articles/antony-barnett-08052000.html"
                             },
-                            {   latestname     : "draft-magill-article-03122000.html",
-                                latesttitle    : "Draft of article for Magill - December 2000",
-                                latestlocation : "/articles/draft-magill-article-03122000.html"
+                            {   latestname     : "cormac-teresa-02052000.html",
+                                latesttitle    : "Fax from Cormac to Teresa re: action against MAPEL",
+                                latestlocation : "/articles/cormac-teresa-02052000.html"
                             },
-                            {   latestname     : "daniel-aquilina-19112000.html",
-                                latesttitle    : "Letter from Daniel Aquilina to Padraig Coyle",
-                                latestlocation : "/articles/daniel-aquilina-19112000.html"
+                            {   latestname     : "teresa-cormac-02052000.html",
+                                latesttitle    : "Letter from Teresa Gorna attending MAPEL trial",
+                                latestlocation : "/articles/teresa-cormac-02052000.html"
                             },
-                            {   latestname     : "daniel-aquilina-fax-10112000.html",
-                                latesttitle    : "Faxed instructions ignored by Padraig Coyle",
-                                latestlocation : "/articles/daniel-aquilina-fax-10112000.html"
+                            {   latestname     : "daniel-jbianco-15052000.html",
+                                latesttitle    : "Letter from Daniel Aquilina to Joseph Bianco",
+                                latestlocation : "/articles/daniel-jbianco-15052000.html"
+                            },
+                            {   latestname     : "cecilia-cormac-29052000.html",
+                                latesttitle    : "Fax from Cecilia new evidence in Lockerbie trial",
+                                latestlocation : "/articles/cecilia-cormac-29052000.html"
+                            },
+                            {   latestname     : "teresa-cormac-22052000.html",
+                                latesttitle    : "Letter from Teresa Gorna re: MAPEL trial",
+                                latestlocation : "/articles/teresa-cormac-22052000.html"
+                            },
+                            {   latestname     : "cormac-barnett-27042000.html",
+                                latesttitle    : "Fax from Cormac Boomer re: R Shayler",
+                                latestlocation : "/articles/cormac-barnett-27042000.html"
+                            },
+                            {   latestname     : "celilia-pm-adami-11042000.html",
+                                latesttitle    : "Letter from Cecilia to Maltese PM re: visit to Libya",
+                                latestlocation : "/articles/celilia-pm-adami-11042000.html"
                             }
                         ],
         mostReadArticlesTitle: "Most Read",
