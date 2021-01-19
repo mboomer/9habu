@@ -113,53 +113,29 @@ var latMosComRel = new Vue ({
     data: {
         latestArticlesTitle: "Latest Articles",
         latestArticles: [
-                            {   latestname     : "cecilia-pm-20042000.html",
-                                latesttitle    : "Letter to Cecilia from office of Prime Minister, Malta",
-                                latestlocation : "/articles/cecilia-pm-20042000.html"
-                            },
-                            {   latestname     : "gorna-05062000.html",
-                                latesttitle    : "AMEX Services Limited (MAPEL) held responsible",
-                                latestlocation : "/articles/gorna-05062000.html"
-                            },
-                            {   latestname     : "malta-maritime-auth-02062000.html",
-                                latesttitle    : "Malta Maritime Authority, sonar equipment broken",
-                                latestlocation : "/articles/malta-maritime-auth-02062000.html"
-                            },
-                            {   latestname     : "antony-barnett-03052000.html",
-                                latesttitle    : "Emails with Antony Barnett, The Observer",
-                                latestlocation : "/articles/antony-barnett-03052000.html"
-                            },
-                            {   latestname     : "antony-barnett-08052000.html",
-                                latesttitle    : "Letter from Cormac Boomer to Antony Barnett",
-                                latestlocation : "/articles/antony-barnett-08052000.html"
-                            },
-                            {   latestname     : "cormac-teresa-02052000.html",
-                                latesttitle    : "Fax from Cormac to Teresa re: action against MAPEL",
-                                latestlocation : "/articles/cormac-teresa-02052000.html"
-                            },
-                            {   latestname     : "teresa-cormac-02052000.html",
-                                latesttitle    : "Letter from Teresa Gorna attending MAPEL trial",
-                                latestlocation : "/articles/teresa-cormac-02052000.html"
-                            },
-                            {   latestname     : "daniel-jbianco-15052000.html",
-                                latesttitle    : "Letter from Daniel Aquilina to Joseph Bianco",
-                                latestlocation : "/articles/daniel-jbianco-15052000.html"
-                            },
-                            {   latestname     : "cecilia-cormac-29052000.html",
-                                latesttitle    : "Fax from Cecilia new evidence in Lockerbie trial",
-                                latestlocation : "/articles/cecilia-cormac-29052000.html"
-                            },
-                            {   latestname     : "teresa-cormac-22052000.html",
-                                latesttitle    : "Letter from Teresa Gorna re: MAPEL trial",
-                                latestlocation : "/articles/teresa-cormac-22052000.html"
-                            },
                             {   latestname     : "cormac-barnett-27042000.html",
                                 latesttitle    : "Fax from Cormac Boomer re: R Shayler",
                                 latestlocation : "/articles/cormac-barnett-27042000.html"
                             },
-                            {   latestname     : "celilia-pm-adami-11042000.html",
+                            {   latestname     : "cecilia-pm-adami-11042000.html",
                                 latesttitle    : "Letter from Cecilia to Maltese PM re: visit to Libya",
-                                latestlocation : "/articles/celilia-pm-adami-11042000.html"
+                                latestlocation : "/articles/cecilia-pm-adami-11042000.html"
+                            },
+                            {   latestname     : "daily-telegraph-shayler.html",
+                                latesttitle    : "Article in Daily Telegraph re: David Shayler",
+                                latestlocation : "/articles/daily-telegraph-shayler.html"
+                            },
+                            {   latestname     : "cormac-don-01022000.html",
+                                latesttitle    : "Letter from Cormac Boomer to Don Mullan",
+                                latestlocation : "/articles/cormac-don-01022000.html"
+                            },
+                            {   latestname     : "the-times-malta-25012000.html",
+                                latesttitle    : "The Times, Malta - pilot negligence",
+                                latestlocation : "/articles/the-times-malta-25012000.html"
+                            },                            
+                            {   latestname     : "cecilia-cormac-24012000.html",
+                                latesttitle    : "Superone TV announce Inquiry have finalised report",
+                                latestlocation : "/articles/cecilia-cormac-24012000.html"
                             }
                         ],
         mostReadArticlesTitle: "Most Read",
@@ -183,7 +159,7 @@ var latMosComRel = new Vue ({
                         ],
         comingSoonArticlesTitle: "Coming Soon",
         comingSoonArticles: [ 
-                                {comingsoonname   : "10 New Documents Added to Archive"}
+                                {comingsoonname   : "New Documents Added to Archive"}
                             ],
         relatedSitesTitle: "Related Web Sites",
         relatedSites: [
